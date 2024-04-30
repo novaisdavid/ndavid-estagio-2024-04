@@ -1,25 +1,37 @@
 package produto_stock_test
 
 import (
+	
 	produto_stock "Stock_Acme"
 	"testing"
 )
 
-func testando(t *testing.T, esperado, actual string){
+func testando(t *testing.T, esperado, actual int){
+
 	if esperado != actual {
-		t.Logf("%s != %s", esperado, actual)
+		t.Logf("%d != %d", esperado, actual)
+		t.Fail()
+	}
+}
+
+func testando2(t *testing.T, esperado produto_stock.Produto){
+
+	if esperado.Categoria != "" {
+		t.Logf("%s", esperado)
 		t.Fail()
 	}
 }
 
 func teste_cadastro_produto(t *testing.T){
 	//Arrange
-	d := "Sal_hymalaiano"
-	ca := "Ambiente_Frio"
-	c := "Alimento"
-	
-	//Act
-	produto_stock.(d,ca,c)
-	//Assert
-	
+	z := produto_stock.Produto{}
+	d := "arroz"
+	ca:= "local fresco"
+	cat:= ""
+
+	z.CadastroProduto(d,ca,cat)
+
+	//testando(t, 1, s)
+	testando2(t, z)
+
 }

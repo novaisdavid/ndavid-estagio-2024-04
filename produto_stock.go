@@ -1,20 +1,20 @@
 package produto_stock
 
 type Produto struct{
-	Descicao string
+	Descricao             string
 	CondicaoArmazenamento string
-	Categoria string
+	Categoria             string
 }
 
-func (p Produto) Now() string{
-	return ""
+
+func New() string {
+	return "q"
 }
-func (p *Produto) Cadastro_produto(d, ca, c string) {
-	/*p.Descicao = "Sal_hymalaiano"
-	p.CondicaoArmazenamento = "Ambiente_Frio"
-	p.Categoria = "Alimento"*/
-	
-	p.Descicao = d
+
+func (p *Produto ) CadastroProduto(d, ca, cat string) int{
+	p.Descricao = d
 	p.CondicaoArmazenamento = ca
-	p.Categoria = c
+	p.Categoria = cat
+
+	return 1	
 }

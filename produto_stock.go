@@ -7,14 +7,13 @@ type Produto struct{
 }
 
 
-func New() string {
-	return "q"
-}
-
-func (p *Produto ) CadastroProduto(d, ca, cat string) int{
+func (p *Produto ) CadastroProduto(d, ca, cat string){
 	p.Descricao = d
 	p.CondicaoArmazenamento = ca
 	p.Categoria = cat
 
-	return 1	
+}
+
+func (p Produto) VerProdutoCadastrado() string {
+	return p.Descricao +" "+p.CondicaoArmazenamento+" "+p.Categoria
 }

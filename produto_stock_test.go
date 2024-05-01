@@ -14,10 +14,10 @@ func testando(t *testing.T, esperado, actual int){
 	}
 }
 
-func testando2(t *testing.T, esperado produto_stock.Produto){
+func testando2(t *testing.T, esperado int, actual int){
 
-	if esperado.Categoria != "" {
-		t.Logf("%s", esperado)
+	if esperado != actual {
+		t.Logf("%d == %d", esperado, actual)
 		t.Fail()
 	}
 }
@@ -29,9 +29,8 @@ func teste_cadastro_produto(t *testing.T){
 	ca:= "local fresco"
 	cat:= ""
 
-	z.CadastroProduto(d,ca,cat)
-
+	i := z.CadastroProduto(d,ca,cat)
 	//testando(t, 1, s)
-	testando2(t, z)
+	testando2(t, 1, i)
 
 }

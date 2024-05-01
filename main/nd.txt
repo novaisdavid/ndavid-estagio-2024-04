@@ -1,0 +1,52 @@
+package main
+
+import (
+    "encoding/json"
+    "fmt"
+    "os"
+)
+
+// Definindo a estrutura de dados para representar um lote
+type Lote struct {
+    Identificador string
+    Localizacao   string
+    Quantidade    int
+    DataEntrada   string
+    DataValidade  string
+    EstadoQualidade string
+}
+
+func main() {
+    // Criando uma instância de Lote
+    lote := Lote{
+        Identificador:   "LOTE001",
+        Localizacao:     "Prateleira A, Corredor 1",
+        Quantidade:      100,
+        DataEntrada:     "2024-04-30",
+        DataValidade:    "2025-04-30",
+        EstadoQualidade: "OK",
+    }
+
+    // Convertendo a estrutura de dados em JSON
+    jsonData, err := json.MarshalIndent(lote, "", "    ")
+    if err != nil {
+        fmt.Println("Erro ao converter para JSON:", err)
+        return
+    }
+
+    // Escrevendo os dados JSON em um arquivo
+    file, err := os.Create("lote.json")
+    if err != nil {
+        fmt.Println("Erro ao criar o arquivo:", err)
+        return
+    }
+    defer file.Close()
+
+    _, err = file.Write(jsonData)
+    if err != nil {
+        fmt.Println("Erro ao escrever no arquivo:", err)
+        return
+    }
+
+    fmt.Println("Dados do lote foram salvos no arquivo lote.json com sucesso.")
+}

@@ -8,13 +8,31 @@ import (
 )
 
 func main(){
-	produto := produto_stock.Produto{}
+	produtos := []produto_stock.Produto{}
+	var r []byte
 
-	produto.CadastroProduto("aaa", "ssss", "eeeee")
-	fmt.Println(produto.VerProdutoCadastrado())
-	fmt.Println("Descrição: ", produto.Descricao)
-	r :=funcoes.ConverteDadosEmJson(produto)
+	for i:=0; i<10; i++ {
+	
+		p := produto_stock.Produto{
+			Descricao:            "arroz",
+			CondicaoArmazenamento: "pao" ,
+			Categoria:            "queijo",
+		}
+		produtos = append(produtos, p)//.CadastroProduto("arroz"+string(i), "pao"+string(i), "queijo"+string(i))
+	}
+	//produto.CadastroProduto("arroz", "pao", "queijo")
 
-	fmt.Println("Resultado da concersão: ",r)
-	repositorioDados.CriaRepositorio()
+	for _, prod := range produtos {
+		fmt.Println(prod.VerProdutoCadastrado())
+		fmt.Println("Descrição: ", prod.Descricao)
+		r =funcoes.ConverteDadosEmJson(prod)
+		//repositorioDados.SalavaDadosNoRepositorio(r)
+	}
+	
+	
+
+	//fmt.Println("Resultado da concersão: ",r)
+	//repositorioDados.CriaRepositorio()
+	//repositorioDados.SalavaDadosNoRepositorio(r)
+	//repositorioDados.LeDadosDoRepositorio()
 }

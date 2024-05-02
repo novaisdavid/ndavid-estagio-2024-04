@@ -10,7 +10,7 @@ import (
 type Lote struct{
 
 	IdentificadorLote string
-	localizacao     string
+	Localizacao       string
 	Quantidade          int
 	DataDeEntrada     string
 	DataDeValidade    string
@@ -18,14 +18,17 @@ type Lote struct{
 }
 
 
-func (l *Lote) CadastrarLote(lt Lote) {
+func (l *Lote) CadastrarLote(lt []Lote) {
 
-	l.IdentificadorLote = lt.IdentificadorLote
-	l.localizacao = lt.localizacao
-	l.Quantidade = lt.Quantidade
-	l.DataDeEntrada = lt.DataDeEntrada
-	l.DataDeValidade = lt.DataDeValidade
-	l.Produto = lt.Produto
+	for _, l := range lt {
+		l.IdentificadorLote = l.IdentificadorLote
+		l.Localizacao = l.Localizacao
+		l.Quantidade = l.Quantidade
+		l.DataDeEntrada = l.DataDeEntrada
+		l.DataDeValidade = l.DataDeValidade
+		l.Produto = l.Produto
+	}
+	
 	
 	
 }
@@ -36,7 +39,7 @@ func (l Lote) BuscaLotePorIdentificador(id string){
 
 		fmt.Println("===== Lote encontrado ======== ")
 		fmt.Println("Identificador do Lote: ",l.IdentificadorLote)
-		fmt.Println("Localização: ",l.Prateleira)
+		fmt.Println("Localização: ",l.Localizacao)
 		fmt.Println("Quantidade existente: ",l.Quantidade)
 		fmt.Println("Data Entrada: ",l.DataDeEntrada)
 		fmt.Println("Data Validade: ",l.DataDeValidade)
@@ -48,7 +51,7 @@ func (l Lote) BuscaLotePorIdentificador(id string){
 		return 
 	}
 
-	fmt.Println("LOte Não encontrado!", id)
+	fmt.Println("Lote Não encontrado por: ", id)
 }
 
 func (l Lote) BuscaLotePorDataValidade(data string){
@@ -57,7 +60,7 @@ func (l Lote) BuscaLotePorDataValidade(data string){
 
 		fmt.Println("===== Lote encontrado ======== ")
 		fmt.Println("Identificador do Lote: ",l.IdentificadorLote)
-		fmt.Println("Localização: ",l.localizacao)
+		fmt.Println("Localização: ",l.Localizacao)
 		fmt.Println("Quantidade existente: ",l.Quantidade)
 		fmt.Println("Data Entrada: ",l.DataDeEntrada)
 		fmt.Println("Data Validade: ",l.DataDeValidade)
@@ -68,7 +71,7 @@ func (l Lote) BuscaLotePorDataValidade(data string){
 		fmt.Println("}")
 		return 
 	}
-	fmt.Println("Lote Não encontrado!", data)
+	fmt.Println("Lote Não encontrado por: ", data)
 }
 
 func (l Lote) VerQuantidadeExisteNumLote(id string){
@@ -76,7 +79,7 @@ func (l Lote) VerQuantidadeExisteNumLote(id string){
 	if l.IdentificadorLote == id {
 		fmt.Println("===== Lote Encontrado ======== ")
 		fmt.Println("Identificador do Lote: ", l.IdentificadorLote)
-		fmt.Println("Localização: ", l.localizacao)
+		fmt.Println("Localização: ", l.Localizacao)
 		fmt.Println("Quantidade existente: ", l.Quantidade)
 		return
 	}

@@ -25,13 +25,13 @@ func TestCadastrarLote(t *testing.T){
 		Categoria:            "queijo",
 	}
 	
-	l:= lote.Lote{
-		IdentificadorLote: "LOTE001",
+	l:= []lote.Lote{
+		{IdentificadorLote : "LOTE001",
 		Localizacao : "11-22-33",        
 		Quantidade: 100,         
 		DataDeEntrada : "29/12/2002" ,   
 		DataDeValidade: "21/23/2024" ,   
-		Produto: p   ,       
+		Produto: p   ,},       
 	}
 
 	z.CadastrarLote(l)
@@ -48,13 +48,13 @@ func TestBuscaUmLotePorIdentificado(t *testing.T){
 		Categoria:            "queijo",
 	}
 	
-	l:= lote.Lote{
-		IdentificadorLote: "LOTE001",
-		Localizacao : "11-22-33"
+	l:= []lote.Lote{
+		{IdentificadorLote: "LOTE001",
+		Localizacao : "11-22-33",
 		Quantidade: 100,         
 		DataDeEntrada : "29/12/2002" ,   
 		DataDeValidade: "21/23/2024" ,   
-		Produto: p   ,       
+		Produto: p   ,},       
 	}
 
 	z.CadastrarLote(l)
@@ -73,14 +73,13 @@ func TestBuscaUmLotePorDataValidade(t *testing.T){
 		Categoria:            "queijo",
 	}
 	
-	l:= lote.Lote{
-		IdentificadorLote: "LOTE001",
-		Prateleira : "P2",       
-		Corredor: "C2", 
+	l:= []lote.Lote{
+		{IdentificadorLote: "LOTE001",
+		Localizacao: "11-22-33", 
 		Quantidade: 100,         
 		DataDeEntrada : "29/12/2002" ,   
 		DataDeValidade: "21/23/2024" ,   
-		Produto: p   ,       
+		Produto: p   ,},       
 	}
 
 	z.CadastrarLote(l)
@@ -99,14 +98,13 @@ func TestVerQuantidadeExisteNumLote(t *testing.T){
 		Categoria:            "queijo",
 	}
 	
-	l:= lote.Lote{
-		IdentificadorLote: "LOTE001",
-		Prateleira : "P2",       
-		Corredor: "C2", 
+	l:= []lote.Lote{
+		{IdentificadorLote: "LOTE001",
+		Localizacao: "11-22-33",
 		Quantidade: 100,         
 		DataDeEntrada : "29/12/2002" ,   
 		DataDeValidade: "21/23/2024" ,   
-		Produto: p   ,       
+		Produto: p   ,},       
 	}
 
 	z.CadastrarLote(l)

@@ -27,8 +27,7 @@ func TestCadastrarLote(t *testing.T){
 	
 	l:= lote.Lote{
 		IdentificadorLote: "LOTE001",
-		Prateleira : "P2",       
-		Corredor: "C2", 
+		Localizacao : "11-22-33",        
 		Quantidade: 100,         
 		DataDeEntrada : "29/12/2002" ,   
 		DataDeValidade: "21/23/2024" ,   
@@ -51,8 +50,7 @@ func TestBuscaUmLotePorIdentificado(t *testing.T){
 	
 	l:= lote.Lote{
 		IdentificadorLote: "LOTE001",
-		Prateleira : "P2",       
-		Corredor: "C2", 
+		Localizacao : "11-22-33"
 		Quantidade: 100,         
 		DataDeEntrada : "29/12/2002" ,   
 		DataDeValidade: "21/23/2024" ,   

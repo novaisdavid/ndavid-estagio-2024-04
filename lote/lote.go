@@ -10,21 +10,18 @@ import (
 type Lote struct{
 
 	IdentificadorLote string
-	Prateleira        string
-	Corredor          string
+	localizacao     string
 	Quantidade          int
 	DataDeEntrada     string
 	DataDeValidade    string
 	Produto           produto_stock.Produto
 }
 
-//var nomeArquivo = "lote"
 
 func (l *Lote) CadastrarLote(lt Lote) {
 
 	l.IdentificadorLote = lt.IdentificadorLote
-	l.Prateleira = lt.Prateleira
-	l.Corredor = lt.Corredor
+	l.localizacao = lt.localizacao
 	l.Quantidade = lt.Quantidade
 	l.DataDeEntrada = lt.DataDeEntrada
 	l.DataDeValidade = lt.DataDeValidade
@@ -39,8 +36,7 @@ func (l Lote) BuscaLotePorIdentificador(id string){
 
 		fmt.Println("===== Lote encontrado ======== ")
 		fmt.Println("Identificador do Lote: ",l.IdentificadorLote)
-		fmt.Println("Pratileira: ",l.Prateleira)
-		fmt.Println("Corredor: ",l.Corredor)
+		fmt.Println("Localização: ",l.Prateleira)
 		fmt.Println("Quantidade existente: ",l.Quantidade)
 		fmt.Println("Data Entrada: ",l.DataDeEntrada)
 		fmt.Println("Data Validade: ",l.DataDeValidade)
@@ -61,8 +57,7 @@ func (l Lote) BuscaLotePorDataValidade(data string){
 
 		fmt.Println("===== Lote encontrado ======== ")
 		fmt.Println("Identificador do Lote: ",l.IdentificadorLote)
-		fmt.Println("Pratileira: ",l.Prateleira)
-		fmt.Println("Corredor: ",l.Corredor)
+		fmt.Println("Localização: ",l.localizacao)
 		fmt.Println("Quantidade existente: ",l.Quantidade)
 		fmt.Println("Data Entrada: ",l.DataDeEntrada)
 		fmt.Println("Data Validade: ",l.DataDeValidade)
@@ -81,6 +76,7 @@ func (l Lote) VerQuantidadeExisteNumLote(id string){
 	if l.IdentificadorLote == id {
 		fmt.Println("===== Lote Encontrado ======== ")
 		fmt.Println("Identificador do Lote: ", l.IdentificadorLote)
+		fmt.Println("Localização: ", l.localizacao)
 		fmt.Println("Quantidade existente: ", l.Quantidade)
 		return
 	}

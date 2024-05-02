@@ -4,7 +4,7 @@ import (
 	
 	produto_stock "Stock_Acme"
 	lote "Stock_Acme/lote"
-	"fmt"
+	//"fmt"
 	"testing"
 )
 
@@ -38,10 +38,83 @@ func TestCadastrarLote(t *testing.T){
 	z.CadastrarLote(l)
 
 
-	fmt.Println("p: ",p, " ..."," l: ",l)
 }
 
-func TestVerUmLote(t *testing.T){
+func TestBuscaUmLotePorIdentificado(t *testing.T){
+
+	z:= lote.Lote{}
+	p := produto_stock.Produto{
+		Descricao:            "arroz",
+		CondicaoArmazenamento: "pao" ,
+		Categoria:            "queijo",
+	}
 	
+	l:= lote.Lote{
+		IdentificadorLote: "LOTE001",
+		Prateleira : "P2",       
+		Corredor: "C2", 
+		Quantidade: 100,         
+		DataDeEntrada : "29/12/2002" ,   
+		DataDeValidade: "21/23/2024" ,   
+		Produto: p   ,       
+	}
 
+	z.CadastrarLote(l)
+
+	z.BuscaLotePorIdentificador("LOTE001")
+	
+	
 }
+
+func TestBuscaUmLotePorDataValidade(t *testing.T){
+
+	z:= lote.Lote{}
+	p := produto_stock.Produto{
+		Descricao:            "arroz",
+		CondicaoArmazenamento: "pao" ,
+		Categoria:            "queijo",
+	}
+	
+	l:= lote.Lote{
+		IdentificadorLote: "LOTE001",
+		Prateleira : "P2",       
+		Corredor: "C2", 
+		Quantidade: 100,         
+		DataDeEntrada : "29/12/2002" ,   
+		DataDeValidade: "21/23/2024" ,   
+		Produto: p   ,       
+	}
+
+	z.CadastrarLote(l)
+
+	z.BuscaLotePorDataValidade("21/23/2024")
+	
+	
+}
+
+func TestVerQuantidadeExisteNumLote(t *testing.T){
+
+	z:= lote.Lote{}
+	p := produto_stock.Produto{
+		Descricao:            "arroz",
+		CondicaoArmazenamento: "pao" ,
+		Categoria:            "queijo",
+	}
+	
+	l:= lote.Lote{
+		IdentificadorLote: "LOTE001",
+		Prateleira : "P2",       
+		Corredor: "C2", 
+		Quantidade: 100,         
+		DataDeEntrada : "29/12/2002" ,   
+		DataDeValidade: "21/23/2024" ,   
+		Produto: p   ,       
+	}
+
+	z.CadastrarLote(l)
+
+	z.VerQuantidadeExisteNumLote("LOTE001")
+	
+	
+}
+

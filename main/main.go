@@ -1,13 +1,11 @@
 package main
 
 import (
-	produto_stock "Stock_Acme"
-	 "Stock_Acme/funcoes"
-	 "Stock_Acme/repositorioDados"
-	"fmt"
+	 funcoes "Stock_Acme/funcoes"
+	
 )
 
 func main(){
-
+   funcoes.Comeco()
 	
 }

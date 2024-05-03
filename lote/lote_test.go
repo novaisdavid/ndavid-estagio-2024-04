@@ -54,12 +54,26 @@ func TestBuscaUmLotePorIdentificado(t *testing.T){
 		Quantidade: 100,         
 		DataDeEntrada : "29/12/2002" ,   
 		DataDeValidade: "21/23/2024" ,   
-		Produto: p   ,},       
+		Produto: p   ,},  
+		
+		{IdentificadorLote: "LOTE002",
+		Localizacao : "55-66-77",
+		Quantidade: 200,         
+		DataDeEntrada : "29/12/2002" ,   
+		DataDeValidade: "21/23/2024" ,   
+		Produto: p   ,}, 
+
+		{IdentificadorLote: "LOTE003",
+		Localizacao : "11-77-44",
+		Quantidade: 50,         
+		DataDeEntrada : "29/12/2012" ,   
+		DataDeValidade: "21/23/2015" ,   
+		Produto: p   ,},
 	}
 
 	z.CadastrarLote(l)
 
-	z.BuscaLotePorIdentificador("LOTE001")
+	z.BuscaLotePorIdentificador("LOTE001", l)
 	
 	
 }

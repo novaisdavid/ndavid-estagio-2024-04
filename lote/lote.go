@@ -2,8 +2,6 @@ package lote
 
 import (
 	produto_stock "Stock_Acme"
-	//funcoes "Stock_Acme/funcoes"
-	//epositorioDados "Stock_Acme/repositorioDados"
 	"fmt"
 )
 
@@ -33,23 +31,27 @@ func (l *Lote) CadastrarLote(lt []Lote) {
 	
 }
 
-func (l Lote) BuscaLotePorIdentificador(id string){
-    
-	if l.IdentificadorLote == id {
+func (l Lote) BuscaLotePorIdentificador(id string, lotes []Lote){
+	
+	for _, lote := range lotes {
 
-		fmt.Println("===== Lote encontrado ======== ")
-		fmt.Println("Identificador do Lote: ",l.IdentificadorLote)
-		fmt.Println("Localização: ",l.Localizacao)
-		fmt.Println("Quantidade existente: ",l.Quantidade)
-		fmt.Println("Data Entrada: ",l.DataDeEntrada)
-		fmt.Println("Data Validade: ",l.DataDeValidade)
-		fmt.Println("Produto { ")
-		fmt.Println("Categoria: ", l.Produto.Categoria)
-		fmt.Println("Descrição: ", l.Produto.Descricao)
-		fmt.Println("Condição Armazenamento: ", l.Produto.CondicaoArmazenamento)
-		fmt.Println("}")
-		return 
+		if lote.IdentificadorLote == id {
+
+			fmt.Println("===== Lote encontrado ======== ")
+			fmt.Println("Identificador do Lote: ",lote.IdentificadorLote)
+			fmt.Println("Localização: ",lote.Localizacao)
+			fmt.Println("Quantidade existente: ",lote.Quantidade)
+			fmt.Println("Data Entrada: ",lote.DataDeEntrada)
+			fmt.Println("Data Validade: ",lote.DataDeValidade)
+			fmt.Println("Produto { ")
+			fmt.Println("Categoria: ", lote.Produto.Categoria)
+			fmt.Println("Descrição: ", lote.Produto.Descricao)
+			fmt.Println("Condição Armazenamento: ", lote.Produto.CondicaoArmazenamento)
+			fmt.Println("}")
+			return 
+		}
 	}
+	
 
 	fmt.Println("Lote Não encontrado por: ", id)
 }

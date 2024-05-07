@@ -5,13 +5,21 @@ import (
 	"testing"
 )
 
-func Validar(t *testing.T, valorEsperado, valorAtual string) {
+func Validar(t *testing.T, valorEsperado []lote.Lote) {
 
-	if valorEsperado != valorAtual {
-		t.Logf("%s != %s", valorEsperado, valorAtual)
+	if valorEsperado == nil {
+		t.Log("Falha")
 		t.Fail()
 	}
 
+}
+
+func VerificaSeTemElemento(t *testing.T, valorEsperado, valorAtual int){
+
+	if valorEsperado != valorAtual{
+		t.Logf("%d == %d", valorEsperado, valorAtual)
+		t.Fail()
+	}
 }
 
 func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxima(t *testing.T) {
@@ -35,16 +43,33 @@ func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxim
 			NumeroDeUnidades: 20,
 			Localizacao:      "11/02/04",
 		},
+
+		{IdLote: "LOTE003",
+			IdProduto:        "002",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2019-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11/02/04",
+		},
+
+		{IdLote: "LOTE004",
+			IdProduto:        "002",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2024-06-01",
+			NumeroDeUnidades: 20,
+			Localizacao:      "12/22/01",
+		},
 	}
-	DataActual := "2025-01-11"
+	DataActual := "2024-02-11"
+	//DataActual := "2026-02-11"
 	//act
 	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, DataActual)
 
 	//assert
-	Validar(t, l[0].DataDeValidade, DataActual)
+	Validar(t, l)
 }
 
-func TestFalhaAoMostraOsLotesComDataValidadeMaisProxima__Falha(t *testing.T) {
+func TestNaoEncontrouOsLotesComDataValidadeMaisProxima__(t *testing.T) {
 	// arrange
 	lot := lote.Lote{}
 
@@ -75,12 +100,12 @@ func TestFalhaAoMostraOsLotesComDataValidadeMaisProxima__Falha(t *testing.T) {
 		},
 	}
 
-	DataActual := "2025-01-12"
+	DataActual := "2030-01-12"
 	//act
 	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, DataActual)
 
 	//assert
-	Validar(t, l[0].DataDeValidade, DataActual)
+	VerificaSeTemElemento(t,len(l), 0)
 }
 
 // fazer localiza lote

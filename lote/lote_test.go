@@ -65,6 +65,14 @@ func TestFalhaAoMostraOsLotesComDataValidadeMaisProxima__Falha(t *testing.T) {
 			NumeroDeUnidades: 20,
 			Localizacao:      "11/02/04",
 		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11/02/04",
+		},
 	}
 
 	DataActual := "2025-01-12"
@@ -74,3 +82,5 @@ func TestFalhaAoMostraOsLotesComDataValidadeMaisProxima__Falha(t *testing.T) {
 	//assert
 	Validar(t, l[0].DataDeValidade, DataActual)
 }
+
+// fazer localiza lote

@@ -30,6 +30,11 @@ func (l Lote) RetornaLoteComDataDeValidadeMaisProxima(lotes []Lote, dataAtual st
 	return lot
 }
 
+func (l Lote) MostraLotePorLOcalizacao(lotes []Lote){
+	
+
+}
+
 func (l *Lote) ValidadeMaisProxima() bool {
 	// Regra de cliente
 

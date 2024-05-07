@@ -33,7 +33,7 @@ func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxim
 			DataDeProducao:   "2022-02-12",
 			DataDeValidade:   "2025-01-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11/02/03",
+			Localizacao:      "11-02-03",
 		},
 
 		{IdLote: "LOTE002",
@@ -41,7 +41,7 @@ func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxim
 			DataDeProducao:   "2022-03-12",
 			DataDeValidade:   "2025-02-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11/02/04",
+			Localizacao:      "11-02-04",
 		},
 
 		{IdLote: "LOTE003",
@@ -49,7 +49,7 @@ func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxim
 			DataDeProducao:   "2022-03-12",
 			DataDeValidade:   "2019-02-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11/02/04",
+			Localizacao:      "11-02-04",
 		},
 
 		{IdLote: "LOTE004",
@@ -80,7 +80,7 @@ func TestNaoEncontrouOsLotesComDataValidadeMaisProxima__(t *testing.T) {
 			DataDeProducao:   "2022-02-12",
 			DataDeValidade:   "2025-01-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11/02/03",
+			Localizacao:      "11-02-03",
 		},
 
 		{IdLote: "LOTE002",
@@ -88,7 +88,7 @@ func TestNaoEncontrouOsLotesComDataValidadeMaisProxima__(t *testing.T) {
 			DataDeProducao:   "2022-03-12",
 			DataDeValidade:   "2025-02-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11/02/04",
+			Localizacao:      "11-02-04",
 		},
 
 		{IdLote: "LOTE002",
@@ -96,7 +96,7 @@ func TestNaoEncontrouOsLotesComDataValidadeMaisProxima__(t *testing.T) {
 			DataDeProducao:   "2022-03-12",
 			DataDeValidade:   "2029-02-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11/02/04",
+			Localizacao:      "1-02-04",
 		},
 	}
 
@@ -108,4 +108,80 @@ func TestNaoEncontrouOsLotesComDataValidadeMaisProxima__(t *testing.T) {
 	VerificaSeTemElemento(t,len(l), 0)
 }
 
+func TestRetornaTresLotesComDataValidadeMaisProxima__3(t *testing.T){
+
+	// arrange
+	lot := lote.Lote{}
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2025-01-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11-02-03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11-02-04",
+		},
+	}
+
+	DataActual := "2024-05-06"
+	//act
+	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, DataActual)
+
+	//assert
+	VerificaSeTemElemento(t,len(l), 3)
+}
+
 // fazer localiza lote
+
+func TestMostraLotePorLocalozacao___Lote(t *testing.T){
+	// arrange
+	lot := lote.Lote{}
+	localizacao := "11-02-11"
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2025-01-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11-02-03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "1-02-04",
+		},
+	}
+   
+	// act 
+	l:= lot.MostraLotePorLOcalizacao(l, localizcao)
+}

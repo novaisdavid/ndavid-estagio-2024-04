@@ -14,7 +14,6 @@ func Validar(t *testing.T, valorEsperado []lote.Lote) {
 
 }
 
-
 func VerificaSeTemElemento(t *testing.T, valorEsperado, valorAtual int){
 
 	if valorEsperado != valorAtual{
@@ -22,6 +21,7 @@ func VerificaSeTemElemento(t *testing.T, valorEsperado, valorAtual int){
 		t.Fail()
 	}
 }
+
 
 func VerificaSeLote(t *testing.T, valorEsperado lote.Lote){
 
@@ -39,6 +39,15 @@ func VerificaSeLoteNaoExiste(t *testing.T, valorEsperado lote.Lote){
 	
     }
 }
+
+func VerificaSeUnidadeMaiorQueDez(t *testing.T, valorEsperado, valorAtual int){
+	
+	if valorEsperado < valorAtual{
+		t.Logf("%d == %d", valorEsperado, valorAtual)
+		t.Fail()
+	}
+}
+
 func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxima(t *testing.T) {
 	// arrange
 	lot := lote.Lote{}
@@ -165,8 +174,6 @@ func TestRetornaTresLotesComDataValidadeMaisProxima__3(t *testing.T){
 	VerificaSeTemElemento(t,len(l), 3)
 }
 
-// fazer localiza lote
-
 func TestMostraLotePorLocalozacao___Lote(t *testing.T){
 	// arrange
 	lot := lote.Lote{}
@@ -257,4 +264,51 @@ func TestNaoEncontrouLotePorLocalozacaoComListaDeLotesVazia___(t *testing.T){
 
 	//assert
 	VerificaSeLoteNaoExiste(t,l)
+}
+
+func TestLocalizaLotesComNumeroUnidadeAcimade10__Lote(t *testing.T){
+	// arrange
+	lot := lote.Lote{}
+	localizacao := "21-12-11"
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2025-01-11",
+			NumeroDeUnidades: 9,
+			Localizacao:      "11-02-03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 10,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "1-02-04",
+		},
+
+		{IdLote: "LOTE004",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 30,
+			Localizacao:      "21-12-11",
+		},
+	}
+   
+	// act 
+	l := lot.MostraLotePorLocalizacao(lotes, localizacao)
+
+	VerificaSeUnidadeMaiorQueDez(t,l.NumeroDeUnidades, 10)
+
 }

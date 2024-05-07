@@ -42,6 +42,7 @@ func (l Lote) MostraLotePorLocalizacao(lotes []Lote, lc string) Lote{
 
 }
 
+// fazer reornrar varios lotes por localização
 func (l *Lote) ValidadeMaisProxima() bool {
 	// Regra de cliente
 

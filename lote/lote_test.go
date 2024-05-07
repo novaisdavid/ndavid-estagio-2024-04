@@ -206,7 +206,7 @@ func TestMostraLotePorLocalozacao___Lote(t *testing.T){
 	VerificaSeLote(t,l)
 }
 
-func TestNaoEncontrouLotePorLocalozacao___(t *testing.T){
+func TestNaoEncontrouLotePorLocalozacaoComListaDeLotesComElementos___(t *testing.T){
 	// arrange
 	lot := lote.Lote{}
 	localizacao := "13-02-03"
@@ -237,6 +237,20 @@ func TestNaoEncontrouLotePorLocalozacao___(t *testing.T){
 			Localizacao:      "1-02-04",
 		},
 	}
+   
+	// act 
+	l:= lot.MostraLotePorLocalizacao(lotes, localizacao)
+
+	//assert
+	VerificaSeLoteNaoExiste(t,l)
+}
+
+func TestNaoEncontrouLotePorLocalozacaoComListaDeLotesVazia___(t *testing.T){
+	// arrange
+	lot := lote.Lote{}
+	localizacao := "13-02-03"
+
+	lotes := []lote.Lote{}
    
 	// act 
 	l:= lot.MostraLotePorLocalizacao(lotes, localizacao)

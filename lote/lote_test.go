@@ -369,3 +369,5 @@ func TestNaoLocalizaLoteComNumeroUnidadeAcimade10__Lote(t *testing.T){
 	VerificaSeUnidadeMenorQue(t,l.NumeroDeUnidades, 10)
 
 }
+
+//fazer teste do retirarar unidades em lotes

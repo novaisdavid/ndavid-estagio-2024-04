@@ -371,3 +371,4 @@ func TestNaoLocalizaLoteComNumeroUnidadeAcimade10__Lote(t *testing.T){
 }
 
 //fazer teste do retirarar unidades em lotes
+// fazer teste que verifica os niveis de stoks

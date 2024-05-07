@@ -1,47 +1,86 @@
 package lote_test
 
 import (
-	
-	produto_stock "Stock_Acme"
 	lote "Stock_Acme/lote"
-	"fmt"
 	"testing"
 )
 
-func testando(t *testing.T, esperado, actual int){
+func Validar(t *testing.T, valorEsperado, valorAtual string) {
 
-	if esperado != actual {
-		t.Logf("%d != %d", esperado, actual)
+	if valorEsperado != valorAtual {
+		t.Logf("%s != %s", valorEsperado, valorAtual)
 		t.Fail()
 	}
+
 }
 
-func TestCadastrarLote(t *testing.T){
-	//produtos := produto_stock.Produto{}
-	z:= lote.Lote{}
-	p := produto_stock.Produto{
-		Descricao:            "arroz",
-		CondicaoArmazenamento: "pao" ,
-		Categoria:            "queijo",
+func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxima(t *testing.T) {
+	// arrange
+	lot := lote.Lote{}
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2025-01-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11/02/03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11/02/04",
+		},
 	}
-	
-	l:= lote.Lote{
-		IdentificadorLote: "LOTE001",
-		Prateleira : "P2",       
-		Corredor: "C2", 
-		Quantidade: 100,         
-		DataDeEntrada : "29/12/2002" ,   
-		DataDeValidade: "21/23/2024" ,   
-		Produto: p   ,       
+	DataActual := "2025-01-11"
+	//act
+	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, DataActual)
+
+	//assert
+	Validar(t, l[0].DataDeValidade, DataActual)
+}
+
+func TestFalhaAoMostraOsLotesComDataValidadeMaisProxima__Falha(t *testing.T) {
+	// arrange
+	lot := lote.Lote{}
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2025-01-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11/02/03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11/02/04",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11/02/04",
+		},
 	}
 
-	z.CadastrarLote(l)
+	DataActual := "2025-01-12"
+	//act
+	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, DataActual)
 
-
-	fmt.Println("p: ",p, " ..."," l: ",l)
+	//assert
+	Validar(t, l[0].DataDeValidade, DataActual)
 }
 
-func TestVerUmLote(t *testing.T){
-	
-
-}
+// fazer localiza lote

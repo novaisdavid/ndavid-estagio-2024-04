@@ -30,8 +30,15 @@ func (l Lote) RetornaLoteComDataDeValidadeMaisProxima(lotes []Lote, dataAtual st
 	return lot
 }
 
-func (l Lote) MostraLotePorLOcalizacao(lotes []Lote){
-	
+func (l Lote) MostraLotePorLOcalizacao(lotes []Lote, lc string) Lote{
+
+	for _, lote := range lotes {
+		if lote.Localizacao == lc {
+		    return lote
+		}
+	}
+
+	return Lote{}
 
 }
 

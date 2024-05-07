@@ -14,10 +14,19 @@ func Validar(t *testing.T, valorEsperado []lote.Lote) {
 
 }
 
+
 func VerificaSeTemElemento(t *testing.T, valorEsperado, valorAtual int){
 
 	if valorEsperado != valorAtual{
 		t.Logf("%d == %d", valorEsperado, valorAtual)
+		t.Fail()
+	}
+}
+
+func VerificaSeLote(t *testing.T, valorEsperado lote.Lote){
+
+	if valorEsperado.IdLote == "" {
+		t.Log("Falha")
 		t.Fail()
 	}
 }
@@ -153,7 +162,7 @@ func TestRetornaTresLotesComDataValidadeMaisProxima__3(t *testing.T){
 func TestMostraLotePorLocalozacao___Lote(t *testing.T){
 	// arrange
 	lot := lote.Lote{}
-	localizacao := "11-02-11"
+	localizacao := "11-02-03"
 
 	lotes := []lote.Lote{
 
@@ -183,5 +192,9 @@ func TestMostraLotePorLocalozacao___Lote(t *testing.T){
 	}
    
 	// act 
-	l:= lot.MostraLotePorLOcalizacao(l, localizcao)
+	l:= lot.MostraLotePorLOcalizacao(lotes, localizacao)
+
+	//assert
+	VerificaSeLote(t,l)
 }
+

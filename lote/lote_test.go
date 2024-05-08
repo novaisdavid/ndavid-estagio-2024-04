@@ -25,7 +25,7 @@ func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxim
 			DataDeProducao:   "2022-02-12",
 			DataDeValidade:   "2025-01-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11/02/03",
+			Localizacao:      "11-02-03",
 		},
 
 		{IdLote: "LOTE002",
@@ -33,15 +33,17 @@ func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxim
 			DataDeProducao:   "2022-03-12",
 			DataDeValidade:   "2025-02-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11/02/04",
+			Localizacao:      "11-02-04",
 		},
 	}
-	DataActual := "2025-01-11"
+
+	dataActual := "2025-01-11"
+
 	//act
-	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, DataActual)
+	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, dataActual)
 
 	//assert
-	Validar(t, l[0].DataDeValidade, DataActual)
+	Validar(t, l[0].DataDeValidade, dataActual)
 }
 
 func TestFalhaAoMostraOsLotesComDataValidadeMaisProxima__Falha(t *testing.T) {
@@ -55,7 +57,7 @@ func TestFalhaAoMostraOsLotesComDataValidadeMaisProxima__Falha(t *testing.T) {
 			DataDeProducao:   "2022-02-12",
 			DataDeValidade:   "2025-01-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11/02/03",
+			Localizacao:      "11-02-03",
 		},
 
 		{IdLote: "LOTE002",
@@ -63,7 +65,7 @@ func TestFalhaAoMostraOsLotesComDataValidadeMaisProxima__Falha(t *testing.T) {
 			DataDeProducao:   "2022-03-12",
 			DataDeValidade:   "2025-02-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11/02/04",
+			Localizacao:      "11-02-04",
 		},
 
 		{IdLote: "LOTE002",
@@ -71,7 +73,7 @@ func TestFalhaAoMostraOsLotesComDataValidadeMaisProxima__Falha(t *testing.T) {
 			DataDeProducao:   "2022-03-12",
 			DataDeValidade:   "2029-02-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11/02/04",
+			Localizacao:      "11-02-04",
 		},
 	}
 
@@ -83,4 +85,5 @@ func TestFalhaAoMostraOsLotesComDataValidadeMaisProxima__Falha(t *testing.T) {
 	Validar(t, l[0].DataDeValidade, DataActual)
 }
 
+// varios testes na funcao
 // fazer localiza lote

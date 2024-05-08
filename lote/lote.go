@@ -1,8 +1,8 @@
 package lote
 
 import (
-	"time"
 	"fmt"
+	"time"
 )
 
 type Lote struct {
@@ -14,28 +14,28 @@ type Lote struct {
 	Localizacao      string
 }
 
-func (l Lote) RetornaLoteComDataDeValidadeMaisProxima(lotes []Lote, dataAtual string) []Lote {
-	
+func (l Lote) RetornaLoteComDataDeValidadeMaisProxima(lotes []Lote, tempoValidade int) []Lote {
+
 	lot := []Lote{}
 
 	for _, lote := range lotes {
-		r:= l.ordenaDatasDoLote(lote.DataDeValidade, dataAtual)
-		if r !="" {
+		r := l.compara(lote.DataDeValidade, tempoValidade)
+
+		if r != "" {
 			lot = append(lot, lote)
 		}
 
-		
 	}
 	fmt.Println("SAIDA dos lotes: ", lot)
 
 	return lot
 }
 
-func (l Lote) MostraLotePorLocalizacao(lotes []Lote, lc string) Lote{
+func (l Lote) MostraLotePorLocalizacao(lotes []Lote, lc string) Lote {
 
 	for _, lote := range lotes {
 		if lote.Localizacao == lc {
-		    return lote
+			return lote
 		}
 	}
 
@@ -58,11 +58,24 @@ func (l *Lote) ValidadeMaisProxima() bool {
 	return true
 }
 
-func (l Lote) ordenaDatasDoLote(data, dataAtual string) string {
+/*func (l Lote) retornaDataDoLoteFormatado(data, dataAtual string) string {
 
 	data1, _ := time.Parse("2006-01-02", data)
 	data2, _ := time.Parse("2006-01-02", dataAtual)
+
 	if data1.After(data2) {
+		return data1.String()
+	}
+
+	return ""
+}*/
+
+func (l Lote) compara(data string, tempoValidade int) string {
+	dataAtual := time.Now()
+
+	data1, _ := time.Parse("2006-01-02", data)
+
+	if data1.Year()-dataAtual.Year() <= tempoValidade {
 		return data1.String()
 	}
 

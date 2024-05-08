@@ -621,10 +621,12 @@ func TestVerificaNivelDeStockExisteEmLotes__QuantidadeLotesComStock(t *testing.T
 	}
 
 	//act
-	r := lot.RetornaQunatidadeDeLotesComStocksDisponivel(lotes)
+	r := lot.RetornaQuantidadeLotesComStocksDisponivel(lotes)
 
 	//assert
-	VerificaResultado(t, r, 4)
+	VerificaResultado(t, len(r), 4)
 }
+
+
 
 // fazer teste que verifica os niveis de stoks

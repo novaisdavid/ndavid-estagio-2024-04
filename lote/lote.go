@@ -67,18 +67,18 @@ func (l Lote) AdicionarUnidadeNoLote(lotes []Lote, identificadorLote string, num
 	return -9999
 }
 
-func (l Lote) RetornaQunatidadeDeLotesComStocksDisponivel(lotes []Lote) int {
+func (l Lote) RetornaQuantidadeLotesComStocksDisponivel(lotes []Lote) []Lote {
 
-	qtd:= 0
+	lot := []Lote{}
 
 	for _, lote := range lotes {
 		if lote.NumeroDeUnidades > 0 {
-			qtd = qtd +1
+			lot = append(lot, lote)
 
 		}
 	}
 
-	return qtd
+	return lot
 }
 
 func (l Lote) compara(data string, tempoValidadeDias int) string {

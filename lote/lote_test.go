@@ -63,23 +63,23 @@ func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxim
 
 		{IdLote: "LOTE001",
 			IdProduto:        "001",
-			DataDeProducao:   "2022-04-12",
-			DataDeValidade:   "2025-05-11",
+			DataDeProducao:   "2022-06-12",
+			DataDeValidade:   "2025-07-11",
 			NumeroDeUnidades: 20,
 			Localizacao:      "11/02/03",
 		},
 
 		{IdLote: "LOTE002",
 			IdProduto:        "001",
-			DataDeProducao:   "2022-02-12",
-			DataDeValidade:   "2025-03-11",
+			DataDeProducao:   "2022-01-12",
+			DataDeValidade:   "2025-02-11",
 			NumeroDeUnidades: 20,
 			Localizacao:      "11/02/04",
 		},
 	}
-	tempoValidade := 0
+	tempoValidadeDias := 365
 	//act
-	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, tempoValidade)
+	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, tempoValidadeDias)
 
 	//assert
 	Validar(t, l)

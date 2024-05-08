@@ -14,12 +14,12 @@ type Lote struct {
 	Localizacao      string
 }
 
-func (l Lote) RetornaLoteComDataDeValidadeMaisProxima(lotes []Lote, tempoValidade int) []Lote {
+func (l Lote) RetornaLoteComDataDeValidadeMaisProxima(lotes []Lote, tempoValidadeDias int) []Lote {
 
 	lot := []Lote{}
 
 	for _, lote := range lotes {
-		r := l.compara(lote.DataDeValidade, tempoValidade)
+		r := l.compara(lote.DataDeValidade, tempoValidadeDias)
 
 		if r != "" {
 			lot = append(lot, lote)
@@ -70,12 +70,12 @@ func (l *Lote) ValidadeMaisProxima() bool {
 	return ""
 }*/
 
-func (l Lote) compara(data string, tempoValidade int) string {
+func (l Lote) compara(data string, tempoValidadeDias int) string {
 	dataAtual := time.Now()
 
 	data1, _ := time.Parse("2006-01-02", data)
-
-	if data1.Year()-dataAtual.Year() <= tempoValidade {
+	diferencaDatas := data1.Sub(dataAtual).Hours() / 24
+	if diferencaDatas <= float64(tempoValidadeDias) {
 		return data1.String()
 	}
 

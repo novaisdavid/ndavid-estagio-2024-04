@@ -43,32 +43,16 @@ func (l Lote) MostraLotePorLocalizacao(lotes []Lote, lc string) Lote {
 
 }
 
-// fazer reornrar varios lotes por localização
-func (l *Lote) ValidadeMaisProxima() bool {
-	// Regra de cliente
+func (l Lote) RetiraUnidadeNoLote(lotes []Lote, identificadorLote string, numeroUnidadeRetirar int) int {
 
-	// Comparar as datas aqui
+	for _, lote := range lotes {
+		if lote.IdLote == identificadorLote && lote.NumeroDeUnidades > numeroUnidadeRetirar {
+			return lote.NumeroDeUnidades - numeroUnidadeRetirar
 
-	// Hoje
-
-	// Intervalo (meses, semanas, anos, segundos)
-
-	// l.DataDeValidade
-
-	return true
-}
-
-/*func (l Lote) retornaDataDoLoteFormatado(data, dataAtual string) string {
-
-	data1, _ := time.Parse("2006-01-02", data)
-	data2, _ := time.Parse("2006-01-02", dataAtual)
-
-	if data1.After(data2) {
-		return data1.String()
+		}
 	}
-
-	return ""
-}*/
+	return -9999
+}
 
 func (l Lote) compara(data string, tempoValidadeDias int) string {
 	dataAtual := time.Now()
@@ -81,16 +65,3 @@ func (l Lote) compara(data string, tempoValidadeDias int) string {
 
 	return ""
 }
-
-/* acrescer as ideias
-
-func dataMaisProxima(data1, data2 time.Time) time.Time {
-    hoje := time.Now()
-    diferenca1 := diferencaDeDatas(data1, hoje)
-    diferenca2 := diferencaDeDatas(data2, hoje)
-    if diferenca1 < diferenca2 {
-        return data1
-    }
-    return data2
-}
-*/

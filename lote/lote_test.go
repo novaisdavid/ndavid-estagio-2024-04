@@ -39,6 +39,15 @@ func VerificaSeLoteNaoExiste(t *testing.T, valorEsperado lote.Lote) {
 	}
 }
 
+func VerificaSeProdutoLoteNaoExiste(t *testing.T, valorEsperado lote.Lote) {
+
+	if valorEsperado.IdProduto != "" {
+		t.Log("Falha")
+		t.Fail()
+
+	}
+}
+
 func VerificaSeUnidadeMaiorQue(t *testing.T, valorEsperado, valorAtual int) {
 
 	if valorEsperado < valorAtual {
@@ -765,6 +774,54 @@ func TestLocalizaProdutoNoLote__LoteDoProduto(t *testing.T) {
 
 	//assert
 	VerificaSeLote(t, p)
+}
+
+func TestNaoLocalizaProdutoNoLote__Vazio(t *testing.T) {
+	// arrange
+	lot := lote.Lote{}
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2025-01-11",
+			NumeroDeUnidades: 55,
+			Localizacao:      "11-02-03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "002",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 34,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE003",
+			IdProduto:        "003",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 68,
+			Localizacao:      "1-02-04",
+		},
+
+		{IdLote: "LOTE004",
+			IdProduto:        "004",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 90,
+			Localizacao:      "21-12-11",
+		},
+	}
+
+	identificadorProduto := "008"
+
+	//act
+	p := lot.LocalizaProdutoNoLote(lotes, identificadorProduto)
+
+	//assert
+	VerificaSeProdutoLoteNaoExiste(t, p)
 }
 
 // fazer teste que verifica os niveis de stoks

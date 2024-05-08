@@ -2,7 +2,6 @@ package encomenda
 
 import (
 	lote   "Stock_Acme/lote"
-	"fmt"
 	"time"
 )
 
@@ -14,13 +13,16 @@ type Encomenda struct {
 }
 
 
-func (e Encomenda) RetiraEncomenda(en Encomenda, lotes []lote.Lote) int {
+func (e Encomenda) RetiraEncomenda(en Encomenda, lotes []lote.Lote) Encomenda {
 	 
-	r :=en.produtoComDataValidadeProxima(lotes, en.IdentificadorProduto)
-	i := en.retiraUnidadeNoLote(r, en.IdentificadorProduto, en.Quantidade)
-	fmt.Println("Retirou: ", i)
-	fmt.Println("LOtes: ", r)
-	return 1
+	produtoDataValidadeproxima := en.produtoComDataValidadeProxima(lotes, en.IdentificadorProduto)
+	unidadeRetirada := en.retiraUnidadeNoLote(produtoDataValidadeproxima, en.IdentificadorProduto, en.Quantidade)
+
+	if len(produtoDataValidadeproxima) > 0 && unidadeRetirada >= 0 {
+		return en
+	}
+	
+	return Encomenda{}
 }
 
 
@@ -28,7 +30,7 @@ func (e Encomenda) RetiraEncomenda(en Encomenda, lotes []lote.Lote) int {
 func (e Encomenda) retiraUnidadeNoLote(lotes []lote.Lote, identificadorLote string, numeroUnidadeRetirar int) int {
 
 	for _, lote := range lotes {
-		if lote.IdLote == identificadorLote && lote.NumeroDeUnidades > numeroUnidadeRetirar && numeroUnidadeRetirar > 0 {
+		if lote.IdProduto == identificadorLote && lote.NumeroDeUnidades >= numeroUnidadeRetirar && numeroUnidadeRetirar > 0 {
 			lote.NumeroDeUnidades = lote.NumeroDeUnidades - numeroUnidadeRetirar
 			return lote.NumeroDeUnidades
 

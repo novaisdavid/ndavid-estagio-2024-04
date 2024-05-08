@@ -14,16 +14,14 @@ func Verifica(t *testing.T, valorEsperado, valorAtual int){
 	}
 }
 
-func TestEncomenda(t *testing.T){
-	// cliente---Nome
-	// o tipo de produto
-	// a quantidade que ele quer
+func TestEncomendaCincoUnidadeDeUmProduto__DadosEncomenda(t *testing.T){
+
 	encomend := encomenda.Encomenda{}
 
 	encomendar := encomenda.Encomenda{
 				Cliente: "Zafir",
 				IdentificadorProduto: "001",
-				Quantidade: 200,
+				Quantidade: 5,
 	}
 
 	lotes := []lote.Lote{
@@ -57,12 +55,13 @@ func TestEncomenda(t *testing.T){
 			DataDeProducao:   "2022-03-12",
 			DataDeValidade:   "2024-06-02",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11-02-04",
+			Localizacao:      "91-23-14",
 		},
 
 	}
 
 	v := encomend.RetiraEncomenda(encomendar, lotes)
 
-	Verifica(t, v, 2)
+	Verifica(t, v.Quantidade, 5)
 }
+

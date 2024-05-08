@@ -25,8 +25,6 @@ func (e Encomenda) RetiraEncomenda(en Encomenda, lotes []lote.Lote) Encomenda {
 	return Encomenda{}
 }
 
-
-// ao escolher o produto traz com a data de expiração mais proxima
 func (e Encomenda) retiraUnidadeNoLote(lotes []lote.Lote, identificadorLote string, numeroUnidadeRetirar int) int {
 
 	for _, lote := range lotes {

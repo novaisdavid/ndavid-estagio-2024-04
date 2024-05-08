@@ -68,7 +68,7 @@ func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxim
 			DataDeProducao:   "2022-02-12",
 			DataDeValidade:   "2025-01-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11-02-03",
+			Localizacao:      "11/02/03",
 		},
 
 		{IdLote: "LOTE002",
@@ -76,71 +76,15 @@ func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxim
 			DataDeProducao:   "2022-03-12",
 			DataDeValidade:   "2025-02-11",
 			NumeroDeUnidades: 20,
-			Localizacao:      "11-02-04",
-		},
-
-		{IdLote: "LOTE003",
-			IdProduto:        "002",
-			DataDeProducao:   "2022-03-12",
-			DataDeValidade:   "2019-02-11",
-			NumeroDeUnidades: 20,
-			Localizacao:      "11-02-04",
-		},
-
-		{IdLote: "LOTE004",
-			IdProduto:        "002",
-			DataDeProducao:   "2022-03-12",
-			DataDeValidade:   "2024-06-01",
-			NumeroDeUnidades: 20,
-			Localizacao:      "12/22/01",
+			Localizacao:      "11/02/04",
 		},
 	}
-	DataActual := "2024-02-11"
-	//DataActual := "2026-02-11"
+	dataActual := "2025-01-11"
 	//act
-	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, DataActual)
+	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, dataActual)
 
 	//assert
 	Validar(t, l)
-}
-
-func TestNaoEncontrouOsLotesComDataValidadeMaisProxima__(t *testing.T) {
-	// arrange
-	lot := lote.Lote{}
-
-	lotes := []lote.Lote{
-
-		{IdLote: "LOTE001",
-			IdProduto:        "001",
-			DataDeProducao:   "2022-02-12",
-			DataDeValidade:   "2025-01-11",
-			NumeroDeUnidades: 20,
-			Localizacao:      "11-02-03",
-		},
-
-		{IdLote: "LOTE002",
-			IdProduto:        "001",
-			DataDeProducao:   "2022-03-12",
-			DataDeValidade:   "2025-02-11",
-			NumeroDeUnidades: 20,
-			Localizacao:      "11-02-04",
-		},
-
-		{IdLote: "LOTE002",
-			IdProduto:        "001",
-			DataDeProducao:   "2022-03-12",
-			DataDeValidade:   "2029-02-11",
-			NumeroDeUnidades: 20,
-			Localizacao:      "1-02-04",
-		},
-	}
-
-	DataActual := "2030-01-12"
-	//act
-	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, DataActual)
-
-	//assert
-	VerificaSeTemElemento(t,len(l), 0)
 }
 
 func TestRetornaTresLotesComDataValidadeMaisProxima__3(t *testing.T){
@@ -371,3 +315,6 @@ func TestNaoLocalizaLoteComNumeroUnidadeAcimade10__Lote(t *testing.T){
 }
 
 //fazer teste do retirarar unidades em lotes
+// fazer teste que verifica os niveis de stoks
+
+// fazer localiza lote

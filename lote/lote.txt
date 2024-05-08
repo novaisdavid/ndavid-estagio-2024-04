@@ -1,5 +1,0 @@
-"{IdentificadorLote:LOTE001 Prateleira:P2 Corredor:C2 Quantidade:100 DataDeEntrada:29/12/2002 DataDeValidade:21/23/2024 Produto:{Descricao:arroz CondicaoArmazenamento:pao Categoria:queijo}}"
-"{IdentificadorLote:LOTE001 Prateleira:P2 Corredor:C2 Quantidade:100 DataDeEntrada:29/12/2002 DataDeValidade:21/23/2024 Produto:{Descricao:arroz CondicaoArmazenamento:pao Categoria:queijo}}"
-"{IdentificadorLote:LOTE001 Prateleira:P2 Corredor:C2 Quantidade:100 DataDeEntrada:29/12/2002 DataDeValidade:21/23/2024 Produto:{Descricao:arroz CondicaoArmazenamento:pao Categoria:queijo}}"
-"{IdentificadorLote:LOTE001 Prateleira:P2 Corredor:C2 Quantidade:100 DataDeEntrada:29/12/2002 DataDeValidade:21/23/2024 Produto:{Descricao:arroz CondicaoArmazenamento:pao Categoria:queijo}}"
-"{IdentificadorLote:LOTE001 Prateleira:P2 Corredor:C2 Quantidade:100 DataDeEntrada:29/12/2002 DataDeValidade:21/23/2024 Produto:{Descricao:arroz CondicaoArmazenamento:pao Categoria:queijo}}"

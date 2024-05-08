@@ -824,4 +824,3 @@ func TestNaoLocalizaProdutoNoLote__Vazio(t *testing.T) {
 	VerificaSeProdutoLoteNaoExiste(t, p)
 }
 
-// fazer teste que verifica os niveis de stoks

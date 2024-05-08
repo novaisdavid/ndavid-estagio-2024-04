@@ -53,7 +53,7 @@ func TestEncomendaCincoUnidadeDeUmProduto__DadosEncomenda(t *testing.T){
 		{IdLote: "LOTE003",
 			IdProduto:        "001",
 			DataDeProducao:   "2022-03-12",
-			DataDeValidade:   "2024-06-02",
+			DataDeValidade:   "2024-07-22",
 			NumeroDeUnidades: 20,
 			Localizacao:      "11-02-04",
 		},
@@ -61,7 +61,7 @@ func TestEncomendaCincoUnidadeDeUmProduto__DadosEncomenda(t *testing.T){
 		{IdLote: "LOTE004",
 			IdProduto:        "001",
 			DataDeProducao:   "2022-03-12",
-			DataDeValidade:   "2024-06-02",
+			DataDeValidade:   "2024-08-12",
 			NumeroDeUnidades: 20,
 			Localizacao:      "91-23-14",
 		},
@@ -129,7 +129,7 @@ func TestEncomendaSemCliente__Vazio(t *testing.T){
 		{IdLote: "LOTE004",
 			IdProduto:        "001",
 			DataDeProducao:   "2022-03-12",
-			DataDeValidade:   "2024-06-02",
+			DataDeValidade:   "2024-05-30",
 			NumeroDeUnidades: 20,
 			Localizacao:      "91-23-14",
 		},
@@ -141,14 +141,14 @@ func TestEncomendaSemCliente__Vazio(t *testing.T){
 	VerificaSeNaoEncomendou(t, v)
 }
 
-func TestDescontaNumeroUnidadeDeUmProdutoNoLote__QuantidadeExiste(t *testing.T){
+func TestDescontaNumeroUnidadeDeUmProdutoNoLote__DadosEncomendaComQuantidadeRetirada(t *testing.T){
 
 	encomend := encomenda.Encomenda{}
 
 	encomendar := encomenda.Encomenda{
 				Cliente: "Zafir",
 				IdentificadorProduto: "001",
-				Quantidade: 5,
+				Quantidade: 15,
 	}
 
 	lotes := []lote.Lote{
@@ -189,7 +189,7 @@ func TestDescontaNumeroUnidadeDeUmProdutoNoLote__QuantidadeExiste(t *testing.T){
 
 	v := encomend.RetiraEncomenda(encomendar, lotes)
 
-	Verifica(t, v.Quantidade, 5)
+	Verifica(t, v.Quantidade, 15)
 }
 
 // teste que está a descontar no lote

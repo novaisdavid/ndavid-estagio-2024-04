@@ -67,6 +67,20 @@ func (l Lote) AdicionarUnidadeNoLote(lotes []Lote, identificadorLote string, num
 	return -9999
 }
 
+func (l Lote) RetornaQunatidadeDeLotesComStocksDisponivel(lotes []Lote) int {
+
+	qtd:= 0
+
+	for _, lote := range lotes {
+		if lote.NumeroDeUnidades > 0 {
+			qtd = qtd +1
+
+		}
+	}
+
+	return qtd
+}
+
 func (l Lote) compara(data string, tempoValidadeDias int) string {
 	dataAtual := time.Now()
 

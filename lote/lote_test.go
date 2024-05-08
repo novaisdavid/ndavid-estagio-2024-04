@@ -532,6 +532,99 @@ func TestAdiconarNumeroUnidadeNoLote__NumeroDeUnidadeExistenteNoLote(t *testing.
 	VerificaResultado(t, n, 82)
 }
 
-// fazer teste que verifica os niveis de stoks
+func TestAdiconarNumeroUnidadeNoLoteNaoExistente__Retorna_Menos9999(t *testing.T) {
 
-// fazer localiza lote
+	// arrange
+	lot := lote.Lote{}
+	numeroUnidadeAdicionar := 10
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2025-01-11",
+			NumeroDeUnidades: 19,
+			Localizacao:      "11-02-03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 10,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE003",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 72,
+			Localizacao:      "1-02-04",
+		},
+
+		{IdLote: "LOTE004",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 99,
+			Localizacao:      "21-12-11",
+		},
+	}
+
+	identificadorLote := "LOTE0022"
+	//Act
+	n := lot.AdicionarUnidadeNoLote(lotes, identificadorLote, numeroUnidadeAdicionar)
+
+	//assert
+	VerificaResultado(t, n, -9999)
+}
+
+func TestVerificaNivelDeStockExisteEmLotes__QuantidadeLotesComStock(t *testing.T) {
+	// arrange
+	lot := lote.Lote{}
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2025-01-11",
+			NumeroDeUnidades: 19,
+			Localizacao:      "11-02-03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 10,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE003",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 72,
+			Localizacao:      "1-02-04",
+		},
+
+		{IdLote: "LOTE004",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 99,
+			Localizacao:      "21-12-11",
+		},
+	}
+
+	//act
+	r := lot.RetornaQunatidadeDeLotesComStocksDisponivel(lotes)
+
+	//assert
+	VerificaResultado(t, r, 4)
+}
+
+// fazer teste que verifica os niveis de stoks

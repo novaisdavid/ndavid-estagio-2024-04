@@ -389,6 +389,99 @@ func TestRetiraUnidadeNoLote__NumeroUnidadesRestanteNoLote(t *testing.T) {
 	VerificaResultado(t, n, 87)
 }
 
+func TestNaoRetiraNumeroUnidadeNegativaNoLote__Retorna_Menos9999(t *testing.T) {
+	// arrange
+	lot := lote.Lote{}
+	numeroUnidadeRetirar := -12
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2025-01-11",
+			NumeroDeUnidades: 19,
+			Localizacao:      "11-02-03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 10,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE003",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 72,
+			Localizacao:      "1-02-04",
+		},
+
+		{IdLote: "LOTE004",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 99,
+			Localizacao:      "21-12-11",
+		},
+	}
+
+	identificadorLote := "LOTE004"
+	//Act
+	n := lot.RetiraUnidadeNoLote(lotes, identificadorLote, numeroUnidadeRetirar)
+
+	VerificaResultado(t, n, -9999)
+}
+
+func TestNaoRetiraNumeroUnidadeNoLoteInexistente__Retorna_Menos9999(t *testing.T) {
+	// arrange
+	lot := lote.Lote{}
+	numeroUnidadeRetirar := 12
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2025-01-11",
+			NumeroDeUnidades: 19,
+			Localizacao:      "11-02-03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 10,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE003",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 72,
+			Localizacao:      "1-02-04",
+		},
+
+		{IdLote: "LOTE004",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 99,
+			Localizacao:      "21-12-11",
+		},
+	}
+
+	identificadorLote := "LOTE006"
+	//Act
+	n := lot.RetiraUnidadeNoLote(lotes, identificadorLote, numeroUnidadeRetirar)
+
+	VerificaResultado(t, n, -9999)
+}
 //fazer teste do retirarar unidades em lotes
 // fazer teste que verifica os niveis de stoks
 

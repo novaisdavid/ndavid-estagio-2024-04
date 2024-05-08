@@ -46,7 +46,7 @@ func (l Lote) MostraLotePorLocalizacao(lotes []Lote, lc string) Lote {
 func (l Lote) RetiraUnidadeNoLote(lotes []Lote, identificadorLote string, numeroUnidadeRetirar int) int {
 
 	for _, lote := range lotes {
-		if lote.IdLote == identificadorLote && lote.NumeroDeUnidades > numeroUnidadeRetirar {
+		if lote.IdLote == identificadorLote && lote.NumeroDeUnidades > numeroUnidadeRetirar && numeroUnidadeRetirar > 0 {
 			return lote.NumeroDeUnidades - numeroUnidadeRetirar
 
 		}

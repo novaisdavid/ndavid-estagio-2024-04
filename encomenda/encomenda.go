@@ -14,30 +14,37 @@ type Encomenda struct {
 }
 
 
-func (e Encomenda) RetiraEncomenda(en Encomenda, lotes []lote.Lote) {
+func (e Encomenda) RetiraEncomenda(en Encomenda, lotes []lote.Lote) int {
 	 
 	r :=en.produtoComDataValidadeProxima(lotes, en.IdentificadorProduto)
-	fmt.Println("DATAS: ", r)
+	i := en.retiraUnidadeNoLote(r, en.IdentificadorProduto, en.Quantidade)
+	fmt.Println("Retirou: ", i)
+	fmt.Println("LOtes: ", r)
+	return 1
 }
 
 
 // ao escolher o produto traz com a data de expiração mais proxima
+func (e Encomenda) retiraUnidadeNoLote(lotes []lote.Lote, identificadorLote string, numeroUnidadeRetirar int) int {
+
+	for _, lote := range lotes {
+		if lote.IdLote == identificadorLote && lote.NumeroDeUnidades > numeroUnidadeRetirar && numeroUnidadeRetirar > 0 {
+			lote.NumeroDeUnidades = lote.NumeroDeUnidades - numeroUnidadeRetirar
+			return lote.NumeroDeUnidades
+
+		}
+	}
+	return -9999
+}
 
 func (e Encomenda) produtoComDataValidadeProxima(lotes []lote.Lote, idProdduto string) []lote.Lote{
-	// Obtendo a data atual
 	dataAtual := time.Now()
-	// Inicializando com a primeira data de validade e índices
 	var indicesMaisProximos []int
 	dataMaisProxima := time.Time{}
-	// Iterando sobre os lotes para encontrar a data de validade mais próxima
 	
 	for i, lote := range lotes {
 		if lote.IdProduto == idProdduto {
-			dataValidade, err := time.Parse("2006-01-02", lote.DataDeValidade)
-			if err != nil {
-				fmt.Println("Erro ao analisar a data de validade:", err)
-				continue
-			}
+			dataValidade, _ := time.Parse("2006-01-02", lote.DataDeValidade)
 
 			if dataValidade.After(dataAtual) && (dataMaisProxima.IsZero() || dataValidade.Before(dataMaisProxima)) {
 				dataMaisProxima = dataValidade
@@ -48,16 +55,15 @@ func (e Encomenda) produtoComDataValidadeProxima(lotes []lote.Lote, idProdduto s
 		}
 	}
 
-	// Verificando se foram encontrados lotes
+	var loteEncontrado []lote.Lote
 	if len(indicesMaisProximos) > 0 {
-		fmt.Println("Lotes com data de validade mais próxima:")
 		for _, indice := range indicesMaisProximos {
-			fmt.Println(lotes[indice])
+			loteEncontrado = append(loteEncontrado, lotes[indice])
 		}
 	} else {
-		fmt.Println("Não há lotes com data de validade futura.")
+		loteEncontrado = []lote.Lote{}
 	}
 
-	return lotes
+	return loteEncontrado
 }
 

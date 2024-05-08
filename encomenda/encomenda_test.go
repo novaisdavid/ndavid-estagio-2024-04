@@ -6,6 +6,14 @@ import(
 	"testing"
 )
 
+func Verifica(t *testing.T, valorEsperado, valorAtual int){
+
+	if valorEsperado != valorAtual {
+		t.Logf("%d == %d", valorEsperado, valorAtual)
+		t.Fail()
+	}
+}
+
 func TestEncomenda(t *testing.T){
 	// cliente---Nome
 	// o tipo de produto
@@ -36,14 +44,25 @@ func TestEncomenda(t *testing.T){
 			Localizacao:      "11-02-04",
 		},
 
-		{IdLote: "LOTE002",
+		{IdLote: "LOTE003",
 			IdProduto:        "001",
 			DataDeProducao:   "2022-03-12",
 			DataDeValidade:   "2024-06-02",
 			NumeroDeUnidades: 20,
 			Localizacao:      "11-02-04",
 		},
+
+		{IdLote: "LOTE004",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2024-06-02",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11-02-04",
+		},
+
 	}
 
-	encomend.RetiraEncomenda(encomendar, lotes)
+	v := encomend.RetiraEncomenda(encomendar, lotes)
+
+	Verifica(t, v, 2)
 }

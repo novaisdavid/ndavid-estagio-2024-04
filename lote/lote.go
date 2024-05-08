@@ -1,8 +1,8 @@
 package lote
 
 import (
-	"time"
 	"fmt"
+	"time"
 )
 
 type Lote struct {
@@ -14,70 +14,91 @@ type Lote struct {
 	Localizacao      string
 }
 
-func (l Lote) RetornaLoteComDataDeValidadeMaisProxima(lotes []Lote, dataAtual string) []Lote {
-	
+func (l Lote) RetornaLoteComDataDeValidadeMaisProxima(lotes []Lote, tempoValidadeDias int) []Lote {
+
 	lot := []Lote{}
 
 	for _, lote := range lotes {
-		r:= l.ordenaDatasDoLote(lote.DataDeValidade, dataAtual)
-		if r !="" {
+		r := l.compara(lote.DataDeValidade, tempoValidadeDias)
+
+		if r != "" {
 			lot = append(lot, lote)
 		}
 
-		
 	}
 	fmt.Println("SAIDA dos lotes: ", lot)
 
 	return lot
 }
 
-func (l Lote) MostraLotePorLocalizacao(lotes []Lote, lc string) Lote{
+func (l Lote) MostraLotePorLocalizacao(lotes []Lote, lc string) Lote {
 
 	for _, lote := range lotes {
 		if lote.Localizacao == lc {
-		    return lote
+			return lote
 		}
 	}
 
 	return Lote{}
-
 }
 
-// fazer reornrar varios lotes por localização
-func (l *Lote) ValidadeMaisProxima() bool {
-	// Regra de cliente
+func (l Lote) RetiraUnidadeNoLote(lotes []Lote, identificadorLote string, numeroUnidadeRetirar int) int {
 
-	// Comparar as datas aqui
+	for _, lote := range lotes {
+		if lote.IdLote == identificadorLote && lote.NumeroDeUnidades > numeroUnidadeRetirar && numeroUnidadeRetirar > 0 {
+			lote.NumeroDeUnidades = lote.NumeroDeUnidades - numeroUnidadeRetirar
+			return lote.NumeroDeUnidades
 
-	// Hoje
-
-	// Intervalo (meses, semanas, anos, segundos)
-
-	// l.DataDeValidade
-
-	return true
+		}
+	}
+	return -9999
 }
 
-func (l Lote) ordenaDatasDoLote(data, dataAtual string) string {
+func (l Lote) AdicionarUnidadeNoLote(lotes []Lote, identificadorLote string, numeroUnidadeAdicionar int) int {
+
+	for _, lote := range lotes {
+		if lote.IdLote == identificadorLote && lote.NumeroDeUnidades > numeroUnidadeAdicionar && numeroUnidadeAdicionar > 0 {
+			lote.NumeroDeUnidades = lote.NumeroDeUnidades + numeroUnidadeAdicionar
+			return lote.NumeroDeUnidades
+
+		}
+	}
+	return -9999
+}
+
+func (l Lote) RetornaQuantidadeLotesComStocksDisponivel(lotes []Lote) []Lote {
+
+	lot := []Lote{}
+
+	for _, lote := range lotes {
+		if lote.NumeroDeUnidades > 0 {
+			lot = append(lot, lote)
+
+		}
+	}
+
+	return lot
+}
+
+func (l Lote) LocalizaProdutoNoLote(lotes []Lote, identificadorProduto string) Lote {
+
+	for _, lote := range lotes {
+		if lote.IdProduto == identificadorProduto {
+			return lote
+		}
+	}
+
+	return Lote{}
+}
+
+func (l Lote) compara(data string, tempoValidadeDias int) string {
+	dataAtual := time.Now()
 
 	data1, _ := time.Parse("2006-01-02", data)
-	data2, _ := time.Parse("2006-01-02", dataAtual)
-	if data1.After(data2) {
+	diferencaDatas := data1.Sub(dataAtual).Hours() / 24
+	if diferencaDatas <= float64(tempoValidadeDias) {
 		return data1.String()
 	}
 
 	return ""
 }
-
-/* acrescer as ideias
-
-func dataMaisProxima(data1, data2 time.Time) time.Time {
-    hoje := time.Now()
-    diferenca1 := diferencaDeDatas(data1, hoje)
-    diferenca2 := diferencaDeDatas(data2, hoje)
-    if diferenca1 < diferenca2 {
-        return data1
-    }
-    return data2
-}
-*/

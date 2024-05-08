@@ -47,7 +47,20 @@ func (l Lote) RetiraUnidadeNoLote(lotes []Lote, identificadorLote string, numero
 
 	for _, lote := range lotes {
 		if lote.IdLote == identificadorLote && lote.NumeroDeUnidades > numeroUnidadeRetirar && numeroUnidadeRetirar > 0 {
-			return lote.NumeroDeUnidades - numeroUnidadeRetirar
+			lote.NumeroDeUnidades = lote.NumeroDeUnidades - numeroUnidadeRetirar
+			return lote.NumeroDeUnidades
+
+		}
+	}
+	return -9999
+}
+
+func (l Lote) AdicionarUnidadeNoLote(lotes []Lote, identificadorLote string, numeroUnidadeAdicionar int) int {
+
+	for _, lote := range lotes {
+		if lote.IdLote == identificadorLote && lote.NumeroDeUnidades > numeroUnidadeAdicionar && numeroUnidadeAdicionar > 0 {
+			lote.NumeroDeUnidades = lote.NumeroDeUnidades + numeroUnidadeAdicionar
+			return lote.NumeroDeUnidades
 
 		}
 	}

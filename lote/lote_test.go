@@ -79,12 +79,12 @@ func TestMostraOsLotesComDataValidadeMaisProxima__LotesComDataValidadeMaisProxim
 			Localizacao:      "11/02/04",
 		},
 	}
-	DataActual := "2025-01-11"
+	dataActual := "2025-01-11"
 	//act
 	l := lot.RetornaLoteComDataDeValidadeMaisProxima(lotes, dataActual)
 
 	//assert
-	Validar(t, l[0].DataDeValidade, DataActual)
+	Validar(t, l)
 }
 
 func TestRetornaTresLotesComDataValidadeMaisProxima__3(t *testing.T){
@@ -204,5 +204,117 @@ func TestNaoEncontrouLotePorLocalozacaoComListaDeLotesComElementos___(t *testing
 	//assert
 	VerificaSeLoteNaoExiste(t,l)
 }
+
+func TestNaoEncontrouLotePorLocalozacaoComListaDeLotesVazia___(t *testing.T){
+	// arrange
+	lot := lote.Lote{}
+	localizacao := "13-02-03"
+
+	lotes := []lote.Lote{}
+   
+	// act 
+	l:= lot.MostraLotePorLocalizacao(lotes, localizacao)
+
+	//assert
+	VerificaSeLoteNaoExiste(t,l)
+}
+
+func TestLocalizaLoteComNumeroUnidadeAcimade10__Lote(t *testing.T){
+	// arrange
+	lot := lote.Lote{}
+	localizacao := "21-12-11"
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2025-01-11",
+			NumeroDeUnidades: 9,
+			Localizacao:      "11-02-03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 10,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "1-02-04",
+		},
+
+		{IdLote: "LOTE004",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 30,
+			Localizacao:      "21-12-11",
+		},
+	}
+   
+	// act 
+	l := lot.MostraLotePorLocalizacao(lotes, localizacao)
+
+	VerificaSeUnidadeMaiorQue(t,l.NumeroDeUnidades, 10)
+
+}
+
+func TestNaoLocalizaLoteComNumeroUnidadeAcimade10__Lote(t *testing.T){
+	// arrange
+	lot := lote.Lote{}
+	localizacao := "21-12-11"
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2025-01-11",
+			NumeroDeUnidades: 9,
+			Localizacao:      "11-02-03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 10,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 7,
+			Localizacao:      "1-02-04",
+		},
+
+		{IdLote: "LOTE004",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2029-02-11",
+			NumeroDeUnidades: 9,
+			Localizacao:      "21-12-11",
+		},
+	}
+   
+	// act 
+	l := lot.MostraLotePorLocalizacao(lotes, localizacao)
+
+	//assert
+	VerificaSeUnidadeMenorQue(t,l.NumeroDeUnidades, 10)
+
+}
+
+//fazer teste do retirarar unidades em lotes
+// fazer teste que verifica os niveis de stoks
 
 // fazer localiza lote

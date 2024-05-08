@@ -15,8 +15,8 @@ type Lote struct {
 }
 
 func (l Lote) RetornaLoteComDataDeValidadeMaisProxima(lotes []Lote, dataAtual string) []Lote {
+	
 	lot := []Lote{}
-	datas := []string{}
 
 	for _, lote := range lotes {
 		r:= l.ordenaDatasDoLote(lote.DataDeValidade, dataAtual)

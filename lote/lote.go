@@ -40,7 +40,6 @@ func (l Lote) MostraLotePorLocalizacao(lotes []Lote, lc string) Lote {
 	}
 
 	return Lote{}
-
 }
 
 func (l Lote) RetiraUnidadeNoLote(lotes []Lote, identificadorLote string, numeroUnidadeRetirar int) int {
@@ -79,6 +78,17 @@ func (l Lote) RetornaQuantidadeLotesComStocksDisponivel(lotes []Lote) []Lote {
 	}
 
 	return lot
+}
+
+func (l Lote) LocalizaProdutoNoLote(lotes []Lote, identificadorProduto string) Lote {
+
+	for _, lote := range lotes {
+		if lote.IdProduto == identificadorProduto {
+			return lote
+		}
+	}
+
+	return Lote{}
 }
 
 func (l Lote) compara(data string, tempoValidadeDias int) string {

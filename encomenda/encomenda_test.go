@@ -307,4 +307,4 @@ func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmUmLote__Vazio(t *testi
 
 	Verifica(t, v.Quantidade, 0)
 }
-//teste retirar uma unidade mais acima do existe num lote
+

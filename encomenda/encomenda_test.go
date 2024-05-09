@@ -4,6 +4,7 @@ import(
 	encomenda "Stock_Acme/encomenda"
 	lote      "Stock_Acme/lote"
 	"testing"
+	"fmt"
 )
 
 func Verifica(t *testing.T, valorEsperado, valorAtual int){
@@ -61,11 +62,18 @@ func TestEncomendaCincoUnidadeDeUmProduto__DadosEncomenda(t *testing.T){
 		{IdLote: "LOTE004",
 			IdProduto:        "001",
 			DataDeProducao:   "2022-03-12",
-			DataDeValidade:   "2024-08-12",
+			DataDeValidade:   "2024-05-01",
 			NumeroDeUnidades: 20,
 			Localizacao:      "91-23-14",
 		},
 
+		{IdLote: "LOTE005",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2024-05-12",
+			NumeroDeUnidades: 20,
+			Localizacao:      "91-23-14",
+		},
 	}
 
 	v := encomend.RetiraEncomenda(encomendar, lotes)
@@ -192,5 +200,57 @@ func TestDescontaNumeroUnidadeDeUmProdutoNoLote__DadosEncomendaComQuantidadeReti
 	Verifica(t, v.Quantidade, 15)
 }
 
-// teste que está a descontar no lote
+func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmMaisDeUmLote__DadosEcomenda(t *testing.T){
+
+	encomend := encomenda.Encomenda{}
+
+	encomendar := encomenda.Encomenda{
+				Cliente: "Zafir",
+				IdentificadorProduto: "001",
+				Quantidade: 50,
+	}
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2024-06-02",
+			NumeroDeUnidades: 30,
+			Localizacao:      "11-02-03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "002",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE003",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2024-06-02",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE004",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2024-06-12",
+			NumeroDeUnidades: 50,
+			Localizacao:      "91-23-14",
+		},
+
+	}
+
+	fmt.Println("============TESTE QUANTIDADE MAIOR ========= ")
+	v := encomend.RetiraEncomenda(encomendar, lotes)
+	fmt.Println("QUANTIDADE A RETIRAR: ",encomendar.Quantidade)
+	fmt.Println("VAlor Encomenda: ",v)
+
+	Verifica(t, v.Quantidade, 50)
+}
 //teste retirar uma unidade mais acima do existe num lote

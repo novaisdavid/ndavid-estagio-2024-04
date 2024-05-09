@@ -3,6 +3,7 @@ package encomenda
 import (
 	lote   "Stock_Acme/lote"
 	"time"
+	"fmt"
 )
 
 type Encomenda struct {
@@ -16,9 +17,13 @@ type Encomenda struct {
 func (e Encomenda) RetiraEncomenda(en Encomenda, lotes []lote.Lote) Encomenda {
 	 
 	produtoDataValidadeproxima := en.produtoComDataValidadeProxima(lotes, en.IdentificadorProduto)
-	unidadeRetirada := en.retiraUnidadeNoLote(produtoDataValidadeproxima, en.IdentificadorProduto, en.Quantidade)
+	unidadeRestante := en.retiraUnidadeNoLote(produtoDataValidadeproxima, en.IdentificadorProduto, en.Quantidade)
 
-	if len(produtoDataValidadeproxima) > 0 && unidadeRetirada >= 0 {
+	if len(produtoDataValidadeproxima) > 0 && unidadeRestante >= 0 {
+		fmt.Println(" Produtos Proximos;~: ", produtoDataValidadeproxima)
+		fmt.Println(" UNIDADES RESTANTES;~: ", unidadeRestante)
+		fmt.Println(" UNIDADES ENTROU;~: ", en.Quantidade)
+		fmt.Println(" STRUCT;~: ", en)
 		return en
 	}
 	
@@ -27,14 +32,23 @@ func (e Encomenda) RetiraEncomenda(en Encomenda, lotes []lote.Lote) Encomenda {
 
 func (e Encomenda) retiraUnidadeNoLote(lotes []lote.Lote, identificadorLote string, numeroUnidadeRetirar int) int {
 
+	unidadeSubstituta :=  numeroUnidadeRetirar
+	naoConseguiuRetirarUnidades := -9999
+
 	for _, lote := range lotes {
-		if lote.IdProduto == identificadorLote && lote.NumeroDeUnidades >= numeroUnidadeRetirar && numeroUnidadeRetirar > 0 {
-			lote.NumeroDeUnidades = lote.NumeroDeUnidades - numeroUnidadeRetirar
+		if lote.IdProduto == identificadorLote && lote.NumeroDeUnidades >= unidadeSubstituta && unidadeSubstituta > 0 {
+			lote.NumeroDeUnidades = lote.NumeroDeUnidades - unidadeSubstituta
+			fmt.Println("OIII222: ",lote)
 			return lote.NumeroDeUnidades
 
+		}else if lote.IdProduto == identificadorLote && lote.NumeroDeUnidades <= unidadeSubstituta && unidadeSubstituta > 0 {
+
+			unidadeSubstituta = unidadeSubstituta - lote.NumeroDeUnidades
+			lote.NumeroDeUnidades = lote.NumeroDeUnidades - lote.NumeroDeUnidades
+			fmt.Println("OIII: ",unidadeSubstituta)
 		}
 	}
-	return -9999
+	return naoConseguiuRetirarUnidades
 }
 
 func (e Encomenda) produtoComDataValidadeProxima(lotes []lote.Lote, idProdduto string) []lote.Lote{
@@ -58,8 +72,10 @@ func (e Encomenda) produtoComDataValidadeProxima(lotes []lote.Lote, idProdduto s
 	var loteEncontrado []lote.Lote
 	if len(indicesMaisProximos) > 0 {
 		for _, indice := range indicesMaisProximos {
+			
 			loteEncontrado = append(loteEncontrado, lotes[indice])
 		}
+		fmt.Println("NAZARE: ",loteEncontrado)
 	} else {
 		loteEncontrado = []lote.Lote{}
 	}

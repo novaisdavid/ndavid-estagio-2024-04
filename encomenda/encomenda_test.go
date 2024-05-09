@@ -18,7 +18,7 @@ func Verifica(t *testing.T, valorEsperado, valorAtual int){
 func VerificaSeNaoEncomendou(t *testing.T, valorEsperado  encomenda.Encomenda){
 
 	if valorEsperado.Cliente != "" {
-		t.Log("Sem Produto Para Encomendar")
+		t.Log("FALHA")
 		t.Fail()
 	}
 }
@@ -252,5 +252,59 @@ func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmMaisDeUmLote__DadosEco
 	fmt.Println("VAlor Encomenda: ",v)
 
 	Verifica(t, v.Quantidade, 50)
+}
+
+func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmUmLote__Vazio(t *testing.T){
+
+	encomend := encomenda.Encomenda{}
+
+	encomendar := encomenda.Encomenda{
+				Cliente: "Zafir",
+				IdentificadorProduto: "001",
+				Quantidade: 50,
+	}
+
+	lotes := []lote.Lote{
+
+		{IdLote: "LOTE001",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-02-12",
+			DataDeValidade:   "2024-11-02",
+			NumeroDeUnidades: 30,
+			Localizacao:      "11-02-03",
+		},
+
+		{IdLote: "LOTE002",
+			IdProduto:        "002",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2025-02-11",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE003",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2024-06-02",
+			NumeroDeUnidades: 20,
+			Localizacao:      "11-02-04",
+		},
+
+		{IdLote: "LOTE004",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2024-10-12",
+			NumeroDeUnidades: 50,
+			Localizacao:      "91-23-14",
+		},
+
+	}
+
+
+	v := encomend.RetiraEncomenda(encomendar, lotes)
+	fmt.Println("QUANTIDADE A RETIRAR: ",encomendar.Quantidade)
+	fmt.Println("VAlor Encomenda: ",v)
+
+	Verifica(t, v.Quantidade, 0)
 }
 //teste retirar uma unidade mais acima do existe num lote

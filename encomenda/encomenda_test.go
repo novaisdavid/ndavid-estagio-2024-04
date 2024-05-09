@@ -201,7 +201,7 @@ func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmMaisDeUmLote__DadosEco
 	encomendar := encomenda.Encomenda{
 		Cliente:              "Zafir",
 		IdentificadorProduto: "001",
-		Quantidade:           10,
+		Quantidade:           200,
 	}
 
 	lotes := []lote.Lote{
@@ -259,7 +259,7 @@ func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmMaisDeUmLote__DadosEco
 	fmt.Println("QUANTIDADE A RETIRAR: ", encomendar.Quantidade)
 	fmt.Println("Encomenda: ", v)
 
-	Verifica(t, v.Quantidade, 10)
+	Verifica(t, v.Quantidade, 20)
 }
 
 func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmUmLote__Vazio(t *testing.T) {
@@ -313,3 +313,5 @@ func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmUmLote__Vazio(t *testi
 
 	Verifica(t, v.Quantidade, 0)
 }
+
+// o intervalo de dias é 30 ou seja os produtos com menos de 30 dias são descartados

@@ -1,13 +1,13 @@
 package encomenda_test
 
-import(
+import (
 	encomenda "Stock_Acme/encomenda"
-	lote      "Stock_Acme/lote"
-	"testing"
+	lote "Stock_Acme/lote"
 	"fmt"
+	"testing"
 )
 
-func Verifica(t *testing.T, valorEsperado, valorAtual int){
+func Verifica(t *testing.T, valorEsperado, valorAtual int) {
 
 	if valorEsperado != valorAtual {
 		t.Logf("%d == %d", valorEsperado, valorAtual)
@@ -15,7 +15,7 @@ func Verifica(t *testing.T, valorEsperado, valorAtual int){
 	}
 }
 
-func VerificaSeNaoEncomendou(t *testing.T, valorEsperado  encomenda.Encomenda){
+func VerificaSeNaoEncomendou(t *testing.T, valorEsperado encomenda.Encomenda) {
 
 	if valorEsperado.Cliente != "" {
 		t.Log("FALHA")
@@ -23,14 +23,14 @@ func VerificaSeNaoEncomendou(t *testing.T, valorEsperado  encomenda.Encomenda){
 	}
 }
 
-func TestEncomendaCincoUnidadeDeUmProduto__DadosEncomenda(t *testing.T){
+func TestEncomendaCincoUnidadeDeUmProduto__DadosEncomenda(t *testing.T) {
 
 	encomend := encomenda.Encomenda{}
 
 	encomendar := encomenda.Encomenda{
-				Cliente: "Zafir",
-				IdentificadorProduto: "001",
-				Quantidade: 5,
+		Cliente:              "Zafir",
+		IdentificadorProduto: "001",
+		Quantidade:           5,
 	}
 
 	lotes := []lote.Lote{
@@ -62,7 +62,7 @@ func TestEncomendaCincoUnidadeDeUmProduto__DadosEncomenda(t *testing.T){
 		{IdLote: "LOTE004",
 			IdProduto:        "001",
 			DataDeProducao:   "2022-03-12",
-			DataDeValidade:   "2024-05-01",
+			DataDeValidade:   "2024-05-11",
 			NumeroDeUnidades: 20,
 			Localizacao:      "91-23-14",
 		},
@@ -81,32 +81,28 @@ func TestEncomendaCincoUnidadeDeUmProduto__DadosEncomenda(t *testing.T){
 	Verifica(t, v.Quantidade, 5)
 }
 
-func TestEncomendaCincoUnidadeDeUmProdutoSemProduto__Vazio(t *testing.T){
+func TestEncomendaCincoUnidadeDeUmProdutoSemProduto__Vazio(t *testing.T) {
 
 	encomend := encomenda.Encomenda{}
 
 	encomendar := encomenda.Encomenda{
-				Cliente: "Zafir",
-				IdentificadorProduto: "001",
-				Quantidade: 5,
+		Cliente:              "Zafir",
+		IdentificadorProduto: "001",
+		Quantidade:           5,
 	}
 
-	lotes := []lote.Lote{
-
-
-	}
+	lotes := []lote.Lote{}
 
 	v := encomend.RetiraEncomenda(encomendar, lotes)
 
 	VerificaSeNaoEncomendou(t, v)
 }
 
-func TestEncomendaSemCliente__Vazio(t *testing.T){
+func TestEncomendaSemCliente__Vazio(t *testing.T) {
 
 	encomend := encomenda.Encomenda{}
 
-	encomendar := encomenda.Encomenda{
-	}
+	encomendar := encomenda.Encomenda{}
 
 	lotes := []lote.Lote{
 
@@ -141,7 +137,6 @@ func TestEncomendaSemCliente__Vazio(t *testing.T){
 			NumeroDeUnidades: 20,
 			Localizacao:      "91-23-14",
 		},
-
 	}
 
 	v := encomend.RetiraEncomenda(encomendar, lotes)
@@ -149,14 +144,14 @@ func TestEncomendaSemCliente__Vazio(t *testing.T){
 	VerificaSeNaoEncomendou(t, v)
 }
 
-func TestDescontaNumeroUnidadeDeUmProdutoNoLote__DadosEncomendaComQuantidadeRetirada(t *testing.T){
+func TestDescontaNumeroUnidadeDeUmProdutoNoLote__DadosEncomendaComQuantidadeRetirada(t *testing.T) {
 
 	encomend := encomenda.Encomenda{}
 
 	encomendar := encomenda.Encomenda{
-				Cliente: "Zafir",
-				IdentificadorProduto: "001",
-				Quantidade: 15,
+		Cliente:              "Zafir",
+		IdentificadorProduto: "001",
+		Quantidade:           15,
 	}
 
 	lotes := []lote.Lote{
@@ -192,7 +187,6 @@ func TestDescontaNumeroUnidadeDeUmProdutoNoLote__DadosEncomendaComQuantidadeReti
 			NumeroDeUnidades: 20,
 			Localizacao:      "91-23-14",
 		},
-
 	}
 
 	v := encomend.RetiraEncomenda(encomendar, lotes)
@@ -200,21 +194,21 @@ func TestDescontaNumeroUnidadeDeUmProdutoNoLote__DadosEncomendaComQuantidadeReti
 	Verifica(t, v.Quantidade, 15)
 }
 
-func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmMaisDeUmLote__DadosEcomenda(t *testing.T){
+func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmMaisDeUmLote__DadosEcomenda(t *testing.T) {
 
 	encomend := encomenda.Encomenda{}
 
 	encomendar := encomenda.Encomenda{
-				Cliente: "Zafir",
-				IdentificadorProduto: "001",
-				Quantidade: 50,
+		Cliente:              "Zafir",
+		IdentificadorProduto: "001",
+		Quantidade:           200,
 	}
 
 	lotes := []lote.Lote{
 
 		{IdLote: "LOTE001",
 			IdProduto:        "001",
-			DataDeProducao:   "2022-02-12",
+			DataDeProducao:   "2022-05-12",
 			DataDeValidade:   "2024-06-02",
 			NumeroDeUnidades: 30,
 			Localizacao:      "11-02-03",
@@ -230,8 +224,8 @@ func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmMaisDeUmLote__DadosEco
 
 		{IdLote: "LOTE003",
 			IdProduto:        "001",
-			DataDeProducao:   "2022-03-12",
-			DataDeValidade:   "2024-06-02",
+			DataDeProducao:   "2022-05-11",
+			DataDeValidade:   "2024-05-11",
 			NumeroDeUnidades: 20,
 			Localizacao:      "11-02-04",
 		},
@@ -243,25 +237,39 @@ func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmMaisDeUmLote__DadosEco
 			NumeroDeUnidades: 50,
 			Localizacao:      "91-23-14",
 		},
+		{IdLote: "LOTE005",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2024-05-12",
+			NumeroDeUnidades: 70,
+			Localizacao:      "91-23-14",
+		},
 
+		{IdLote: "LOTE006",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2024-05-11",
+			NumeroDeUnidades: 70,
+			Localizacao:      "91-23-14",
+		},
 	}
 
-	fmt.Println("============TESTE QUANTIDADE MAIOR ========= ")
+	fmt.Println("============TESTE QUANTIDADE MAIOR  RETIRAR 50========= ")
 	v := encomend.RetiraEncomenda(encomendar, lotes)
-	fmt.Println("QUANTIDADE A RETIRAR: ",encomendar.Quantidade)
-	fmt.Println("VAlor Encomenda: ",v)
+	fmt.Println("QUANTIDADE A RETIRAR: ", encomendar.Quantidade)
+	fmt.Println("Encomenda: ", v)
 
-	Verifica(t, v.Quantidade, 50)
+	Verifica(t, v.Quantidade, 20)
 }
 
-func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmUmLote__Vazio(t *testing.T){
+func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmUmLote__Vazio(t *testing.T) {
 
 	encomend := encomenda.Encomenda{}
 
 	encomendar := encomenda.Encomenda{
-				Cliente: "Zafir",
-				IdentificadorProduto: "001",
-				Quantidade: 50,
+		Cliente:              "Zafir",
+		IdentificadorProduto: "001",
+		Quantidade:           50,
 	}
 
 	lotes := []lote.Lote{
@@ -297,14 +305,13 @@ func TestRetiraUmaQuantidadeMaiorDeProdutoDoQueExistenteEmUmLote__Vazio(t *testi
 			NumeroDeUnidades: 50,
 			Localizacao:      "91-23-14",
 		},
-
 	}
 
-
 	v := encomend.RetiraEncomenda(encomendar, lotes)
-	fmt.Println("QUANTIDADE A RETIRAR: ",encomendar.Quantidade)
-	fmt.Println("VAlor Encomenda: ",v)
+	fmt.Println("QUANTIDADE A RETIRAR: ", encomendar.Quantidade)
+	fmt.Println("VAlor Encomenda: ", v)
 
 	Verifica(t, v.Quantidade, 0)
 }
 
+// o intervalo de dias é 30 ou seja os produtos com menos de 30 dias são descartados

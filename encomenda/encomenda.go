@@ -16,10 +16,11 @@ type Encomenda struct {
 
 func (e Encomenda) RetiraEncomenda(en Encomenda, lotes []lote.Lote) Encomenda {
 	 
-	produtoDataValidadeproxima := en.produtoComDataValidadeProxima(lotes, en.IdentificadorProduto)
+	produtoDataValidadeproxima := en.produtoComDataValidadeProxima1(lotes, en.IdentificadorProduto)
 	unidadeRestante := en.retiraUnidadeNoLote(produtoDataValidadeproxima, en.IdentificadorProduto, en.Quantidade)
 
 	if len(produtoDataValidadeproxima) > 0 && unidadeRestante >= 0 {
+		fmt.Println("PRODUTOS MAIS PROXIMOS: ",produtoDataValidadeproxima)
 		return en
 	}
 	
@@ -40,7 +41,7 @@ func (e Encomenda) retiraUnidadeNoLote(lotes []lote.Lote, identificadorLote stri
 		}else if lote.IdProduto == identificadorLote && lote.NumeroDeUnidades <= unidadeSubstituta && unidadeSubstituta > 0 {
 
 			unidadeSubstituta = unidadeSubstituta - lote.NumeroDeUnidades
-			lote.NumeroDeUnidades = lote.NumeroDeUnidades - lote.NumeroDeUnidades
+			lote.NumeroDeUnidades -= lote.NumeroDeUnidades
 		}
 	}
 
@@ -76,5 +77,23 @@ func (e Encomenda) produtoComDataValidadeProxima(lotes []lote.Lote, idProdduto s
 	}
 
 	return loteEncontrado
+}
+
+func (e Encomenda) produtoComDataValidadeProxima1(lotes []lote.Lote, idProduto string) []lote.Lote {
+	dataAtual := time.Now()
+	var lotesEncontrados []lote.Lote
+	janelaTempo := 4 * 30 * 24 * time.Hour // Janela de tempo de 4 meses
+
+	for _, lote := range lotes {
+		if lote.IdProduto == idProduto {
+			dataValidade, _ := time.Parse("2006-01-02", lote.DataDeValidade)
+
+			if dataValidade.After(dataAtual) && dataValidade.Before(dataAtual.Add(janelaTempo)) {
+				lotesEncontrados = append(lotesEncontrados, lote)
+			}
+		}
+	}
+
+	return lotesEncontrados
 }
 

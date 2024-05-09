@@ -3,6 +3,7 @@ package lote_test
 import (
 	lote "Stock_Acme/lote"
 	"testing"
+	
 )
 
 func Validar(t *testing.T, valorEsperado []lote.Lote) {
@@ -84,6 +85,13 @@ func TestVerificaOsLotesComDataValidadeMaisProximaEmDias__LotesComDataValidadeMa
 			DataDeValidade:   "2025-02-11",
 			NumeroDeUnidades: 20,
 			Localizacao:      "11/02/04",
+		},
+		{IdLote: "LOTE005",
+			IdProduto:        "001",
+			DataDeProducao:   "2022-03-12",
+			DataDeValidade:   "2024-05-11",
+			NumeroDeUnidades: 0,
+			Localizacao:      "21-12-11",
 		},
 	}
 	tempoValidadeDias := 365
@@ -719,6 +727,7 @@ func TestRetornaQuantidadeLotesComStockVazios__QuantidadeDeLotesComStockVazio(t 
 			NumeroDeUnidades: 0,
 			Localizacao:      "21-12-11",
 		},
+		
 	}
 
 	//act

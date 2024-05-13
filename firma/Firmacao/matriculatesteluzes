@@ -1,0 +1,42 @@
+func TestMatricularFormando(t *testing.T) {
+	t.Run("Cria um formando", func(t *testing.T) {
+		// Arrange
+		repo := NewFormandoRepo()
+
+		// Act
+		service := NewService(repo)
+
+		service.MatricularFormando()
+
+		// Assert
+		if repo.Tamanho() != 1 {
+			t.Error("Tamanho deve ser 1")
+		}
+	})
+
+}
+
+type Service struct {
+	repo FormandoRepo
+}
+
+type FormandoRepo interface {
+	Tamanho() int
+}
+
+type FormandoRepoTest struct {
+}
+
+func (r FormandoRepoTest) Tamanho() int {
+	return 1
+}
+
+func NewFormandoRepo() FormandoRepo {
+	return FormandoRepoTest{}
+}
+
+func NewService(r FormandoRepo) Service {
+	return Service{repo: r}
+}
+
+func (s Service) MatricularFormando() {}

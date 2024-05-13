@@ -35,15 +35,18 @@ func TestCriarMatricula(t *testing.T) {
 		c1 := "Ingles"
 		c2 := "Online"
 		c.MatricularFormando(f.GetIdFormando(), c1, c2)
-		//Act
-        r := c.MostraEstudaMatriculado(f.GetIdFormando())
 
-		if r.IdFormando =="" {
+		//Act
+		c.Salvar()
+
+		//assert
+		if c.LerDados() == "" {
 			t.Fail()
 		}
+
 		
 		//Assert
 	})
 }
-// fazer um save dee
+
      

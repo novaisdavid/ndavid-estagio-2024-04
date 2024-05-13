@@ -14,6 +14,11 @@ type Matricula struct {
 }
 
 func (m *Matricula) MatricularFormando(idFormando, c, r string) {
+
+	if idFormando == "" || c == "" || r =="" {
+		return 
+	}
+
 	m.IdFormando = idFormando
 	m.Curso = c
 	m.Regime = r
@@ -29,6 +34,10 @@ func (m Matricula) MostraEstudaMatriculado(idFormando string) Matricula {
 
 func (m Matricula) Salvar() {
 	
+	if m.IdFormando == "" || m.Curso =="" || m.Regime =="" {
+		return
+	}
+
 	dados := fmt.Sprintf("IdFormando: %s\nCurso: %s\nRegime: %s\n", m.IdFormando, m.Curso, m.Regime)
 	nomeArquivo := "MatriculaFormando.txt"
 
@@ -53,6 +62,6 @@ func (m Matricula) LerDados() string{
 	}
 
 	fmt.Println(string(conteudo))
-	
+
 	return string(conteudo)
 }

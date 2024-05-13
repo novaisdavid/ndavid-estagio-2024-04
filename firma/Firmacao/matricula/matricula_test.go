@@ -47,6 +47,32 @@ func TestCriarMatricula(t *testing.T) {
 		
 		//Assert
 	})
+
+	t.Run("Criar Matricula do Formando sem dados do formando, não salva no repositorio", func(t *testing.T) {
+		//Arrange
+		f := formando.Formando{}
+		f.New("", "", "", "")
+		c := matricula.Matricula{}
+		c1 := "Ingles"
+		c2 := "Online"
+		c.MatricularFormando(f.GetIdFormando(), c1, c2)
+
+		//Act Assert
+		c.Salvar()
+	})
+
+	t.Run("Criar Matricula do Formando sem dados do curso, não salva no repositorio", func(t *testing.T) {
+		//Arrange
+		f := formando.Formando{}
+		f.New("002", "Novais", "novais@gmail.com", "991122233")
+		c := matricula.Matricula{}
+		c1 := ""
+		c2 := ""
+		c.MatricularFormando(f.GetIdFormando(), c1, c2)
+
+		//Act Assert
+		c.Salvar()
+	})
 }
 
      

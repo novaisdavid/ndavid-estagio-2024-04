@@ -2,10 +2,9 @@ package main
 
 import (
 	//"flag"
-
 	"fmt"
-
 	"github.com/spf13/cobra"
+	servico "Firma/servico"
 )
 
 func main() {
@@ -48,6 +47,8 @@ func main() {
 			fmt.Println("O TELEFONE : ", telefone)
 			fmt.Println("O CURSO: ", curso)
 			fmt.Println("O REGIME : ", regime)
+
+			servico.FazerMatriculadeFormando(nome, email, telefone,curso,regime)
 
 		},
 	}

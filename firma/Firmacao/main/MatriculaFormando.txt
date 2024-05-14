@@ -1,0 +1,18 @@
+IdFormando: 005
+IdCurso: c001
+
+IdFormando: 005
+IdCurso: c001
+
+IdFormando: 005
+IdCurso: c001
+
+IdFormando: 005
+IdCurso: c001
+
+IdFormando: 0023
+IdCurso: c001
+
+IdFormando: 29
+IdCurso: c001
+

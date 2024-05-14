@@ -9,20 +9,39 @@ import (
 )
 
 type Matricula struct {
-	IdFormando string
-	Curso      string
-	Regime     string
+	idFormando string
+	idCurso string
 }
 
-func (m *Matricula) MatricularFormando(idFormando, c, r string) {
-
-	if idFormando == "" || c == "" || r =="" {
-		return 
+func (m *Matricula) New(idFormando, idCurso string) *Matricula {
+	
+	if idFormando =="" || idCurso == "" {
+		return m
 	}
 
-	m.IdFormando = idFormando
-	m.Curso = c
-	m.Regime = r
+	m.idFormando = idFormando
+	m.idCurso = idCurso
+	return m
+
+}
+
+func (m *Matricula) GetIdFormando () string{
+	return m.idFormando
+}
+
+func (m *Matricula) MatricularFormando(idFormando, idCurso string) {
+	m.idFormando = idFormando
+	m.idCurso = idCurso
+
+}
+
+// fazendo save essa função é substituida
+func (m Matricula) MostraEstudaMatriculado(idFormando string) Matricula {
+	if m.idFormando == idFormando {
+		return m
+	}
+
+	return Matricula{}
 }
 
 func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
@@ -30,7 +49,7 @@ func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
 	fm := m.converteEmStruct(d)
 	fmt.Println("AQUI: ", fm)
 	for _, f := range fm {
-		if f.IdFormando == idFormando {
+		if f.idFormando == idFormando {
 			fmt.Println("EUUUUUU: ", fm)
 			return f
 		}
@@ -41,11 +60,11 @@ func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
 
 func (m Matricula) Salvar() {
 	
-	if m.IdFormando == "" || m.Curso =="" || m.Regime =="" {
+	if m.idFormando == "" || m.idCurso ==""{
 		return
 	}
 
-	dados := fmt.Sprintf("IdFormando: %s\nCurso: %s\nRegime: %s\n", m.IdFormando, m.Curso, m.Regime)
+	dados := fmt.Sprintf("IdFormando: %s\nIdCurso: %s\n", m.idFormando, m.idCurso)
 	nomeArquivo := "MatriculaFormando.txt"
 
 	arquivo, err := os.OpenFile(nomeArquivo, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
@@ -86,11 +105,9 @@ func (m Matricula) converteEmStruct(dados string) []Matricula {
             valor := strings.TrimSpace(campos[1])
             switch chave {
             case "IdFormando":
-                m.IdFormando = valor
+                m.idFormando = valor
             case "Curso":
-                m.Curso = valor
-            case "Regime":
-                m.Regime = valor
+                m.idCurso = valor
             }
 		}
 		

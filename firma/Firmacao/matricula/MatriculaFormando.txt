@@ -18,3 +18,13 @@ IdFormando: 001
 Curso: Ingles
 Regime: Online
 
+IdFormando: 001
+Curso: Ingles
+Regime: Online
+
+IdFormando: 001
+IdCurso: Ingles
+
+IdFormando: 001
+IdCurso: 0001
+

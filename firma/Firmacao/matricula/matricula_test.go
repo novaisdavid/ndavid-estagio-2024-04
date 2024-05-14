@@ -3,6 +3,7 @@ package matricula_test
 import (
 	formando "Firma/formando"
 	matricula "Firma/matricula"
+	curso    "Firma/curso"
 	"testing"
 )
 
@@ -33,8 +34,7 @@ func TestCriarMatricula(t *testing.T) {
 		f.New("001", "Zeca", "Zeca@gmail.com", "923456789")
 		c := matricula.Matricula{}
 		c1 := "Ingles"
-		c2 := "Online"
-		c.MatricularFormando(f.GetIdFormando(), c1, c2)
+		c.MatricularFormando(f.GetIdFormando(), c1)
 
 		//Act
 		c.Salvar()
@@ -51,19 +51,21 @@ func TestCriarMatricula(t *testing.T) {
 	t.Run("Criar Matricula do Formando sem dados do formando, não salva no repositorio", func(t *testing.T) {
 		//Arrange
 		f := formando.Formando{}
+		c := curso.Curso{}
+		m := matricula.Matricula{}
+
 		f.New("", "", "", "")
-		c := matricula.Matricula{}
-		c1 := "Ingles"
-		c2 := "Online"
-		c.MatricularFormando(f.GetIdFormando(), c1, c2)
+		c.New("0002","Programaçao", "1- Fluxo de dados 2-estrutura de repetição", 20, "online")
+
+		m.MatricularFormando(f.GetIdFormando(), c.GetIdCurso())
 
 		//Act 
-		c.Salvar()
+		m.Salvar()
 
 		//Assert
-		fm :=c.MostraUmEstudaMatriculado("")
+		fm :=m.MostraUmEstudaMatriculado("")
 		
-		if fm.IdFormando !="" {
+		if fm.GetIdFormando() !="" {
 			t.Fail()
 		}
 	})
@@ -71,19 +73,21 @@ func TestCriarMatricula(t *testing.T) {
 	t.Run("Criar Matricula do Formando sem dados do curso, não salva no repositorio", func(t *testing.T) {
 		//Arrange
 		f := formando.Formando{}
-		f.New("002", "Novais", "novais@gmail.com", "991122233")
-		c := matricula.Matricula{}
-		c1 := ""
-		c2 := ""
-		c.MatricularFormando(f.GetIdFormando(), c1, c2)
+		c := curso.Curso{}
+		m := matricula.Matricula{}
+
+		f.New("001", "Zeca", "Zeca@gmail.com", "923456789")
+		c.New("0001", "Ingles", "1-verbo to be 2-verbo to have", 20, "presencial")
+
+		m.MatricularFormando(f.GetIdFormando(), c.GetIdCurso())
 
 		//Act 
-		c.Salvar()
+		m.Salvar()
 
 		//Assert
-		fm :=c.MostraUmEstudaMatriculado("002")
+		fm :=m.MostraUmEstudaMatriculado("002")
 		
-		if fm.IdFormando !="" {
+		if fm.GetIdFormando()!="" {
 			t.Fail()
 		}
 	})

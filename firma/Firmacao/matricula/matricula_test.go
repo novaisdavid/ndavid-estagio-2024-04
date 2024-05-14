@@ -1,9 +1,9 @@
 package matricula_test
 
 import (
+	curso "Firma/curso"
 	formando "Firma/formando"
 	matricula "Firma/matricula"
-	curso    "Firma/curso"
 	"testing"
 )
 
@@ -31,20 +31,22 @@ func TestCriarMatricula(t *testing.T) {
 	t.Run("Criar Matricula do Formando", func(t *testing.T) {
 		//Arrange
 		f := formando.Formando{}
+		c := curso.Curso{}
+		m := matricula.Matricula{}
+
 		f.New("001", "Zeca", "Zeca@gmail.com", "923456789")
-		c := matricula.Matricula{}
-		c1 := "Ingles"
-		c.MatricularFormando(f.GetIdFormando(), c1)
+		c.New("003", "SAD", "1-Tomada de Decisao", 40, "online")
+
+		m.New(f.GetIdFormando(), c.GetIdCurso())
 
 		//Act
-		c.Salvar()
+		m.Salvar()
 
 		//assert
-		if c.LerDados() == "" {
+		if m.GetIdFormando() == "" {
 			t.Fail()
 		}
 
-		
 		//Assert
 	})
 
@@ -55,17 +57,16 @@ func TestCriarMatricula(t *testing.T) {
 		m := matricula.Matricula{}
 
 		f.New("", "", "", "")
-		c.New("0002","Programaçao", "1- Fluxo de dados 2-estrutura de repetição", 20, "online")
+		c.New("0002", "Programaçao", "1- Fluxo de dados 2-estrutura de repetição", 20, "online")
 
-		m.MatricularFormando(f.GetIdFormando(), c.GetIdCurso())
+		m.New(f.GetIdFormando(), c.GetIdCurso())
 
-		//Act 
+		//Act
 		m.Salvar()
 
 		//Assert
-		fm :=m.MostraUmEstudaMatriculado("")
-		
-		if fm.GetIdFormando() !="" {
+
+		if m.GetIdFormando() != "" {
 			t.Fail()
 		}
 	})
@@ -77,20 +78,17 @@ func TestCriarMatricula(t *testing.T) {
 		m := matricula.Matricula{}
 
 		f.New("001", "Zeca", "Zeca@gmail.com", "923456789")
-		c.New("0001", "Ingles", "1-verbo to be 2-verbo to have", 20, "presencial")
+		c.New("", "", "", 0, "")
 
-		m.MatricularFormando(f.GetIdFormando(), c.GetIdCurso())
+		m.New(f.GetIdFormando(), c.GetIdCurso())
 
-		//Act 
+		//Act
 		m.Salvar()
 
 		//Assert
-		fm :=m.MostraUmEstudaMatriculado("002")
-		
-		if fm.GetIdFormando()!="" {
+
+		if m.GetIdFormando() != "" {
 			t.Fail()
 		}
 	})
 }
-
-     

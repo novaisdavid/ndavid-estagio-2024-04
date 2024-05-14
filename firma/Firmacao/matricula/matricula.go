@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"	
 	"os"
+	"strings"
 )
 
 type Matricula struct {
@@ -24,9 +25,15 @@ func (m *Matricula) MatricularFormando(idFormando, c, r string) {
 	m.Regime = r
 }
 
-func (m Matricula) MostraEstudaMatriculado(idFormando string) Matricula {
-	if m.IdFormando == idFormando {
-		return m
+func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
+	d := m.LerDados()
+	fm := m.converteEmStruct(d)
+	fmt.Println("AQUI: ", fm)
+	for _, f := range fm {
+		if f.IdFormando == idFormando {
+			fmt.Println("EUUUUUU: ", fm)
+			return f
+		}
 	}
 
 	return Matricula{}
@@ -64,4 +71,36 @@ func (m Matricula) LerDados() string{
 	fmt.Println(string(conteudo))
 
 	return string(conteudo)
+}
+
+func (m Matricula) converteEmStruct(dados string) []Matricula {
+	 var matriculas []Matricula
+
+	linhas := strings.Split(string(dados), "\n")
+	fmt.Println("LINHAS: ", linhas)
+	for _, linha := range linhas {
+
+        campos := strings.SplitN(linha, ": ", 2)
+        if len(campos) == 2 {
+            chave := strings.TrimSpace(campos[0])
+            valor := strings.TrimSpace(campos[1])
+            switch chave {
+            case "IdFormando":
+                m.IdFormando = valor
+            case "Curso":
+                m.Curso = valor
+            case "Regime":
+                m.Regime = valor
+            }
+		}
+		
+		matriculas = append(matriculas,m)
+	}
+	
+ fmt.Println("SAIDA: ", matriculas)
+	if len(matriculas) == 0 {
+		return matriculas
+	}
+
+	return matriculas
 }

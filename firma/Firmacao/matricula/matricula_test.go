@@ -57,8 +57,15 @@ func TestCriarMatricula(t *testing.T) {
 		c2 := "Online"
 		c.MatricularFormando(f.GetIdFormando(), c1, c2)
 
-		//Act Assert
+		//Act 
 		c.Salvar()
+
+		//Assert
+		fm :=c.MostraUmEstudaMatriculado("")
+		
+		if fm.IdFormando !="" {
+			t.Fail()
+		}
 	})
 
 	t.Run("Criar Matricula do Formando sem dados do curso, não salva no repositorio", func(t *testing.T) {
@@ -70,8 +77,15 @@ func TestCriarMatricula(t *testing.T) {
 		c2 := ""
 		c.MatricularFormando(f.GetIdFormando(), c1, c2)
 
-		//Act Assert
+		//Act 
 		c.Salvar()
+
+		//Assert
+		fm :=c.MostraUmEstudaMatriculado("002")
+		
+		if fm.IdFormando !="" {
+			t.Fail()
+		}
 	})
 }
 

@@ -58,6 +58,47 @@ func main() {
 	cmd.Flags().StringVarP(&telefone, "telefone", "t", "", "telefone do formando")
 	cmd.Flags().StringVarP(&curso, "curso", "c", "", "curso do formando")
 	cmd.Flags().StringVarP(&regime, "regime", "r", "", "regime do formando")
+
+	var titulo, conteudoProgramatico, regimeC string
+	var horas int
+
+	cmd = &cobra.Command{
+		Use:   "curso",
+		Short: " cadastrar um novo curso",
+		Run: func(cmd *cobra.Command, args []string) {
+			if titulo == "" {
+				fmt.Println("O TITULO DO CURSO NAO PODE SER VAZIO: ")
+				return
+			}
+			if conteudoProgramatico == "" {
+				fmt.Println("O CONTEUDO PROGRAMÁTICO NÃO PODE SER VAZIO: ")
+				return
+			}
+			if regimeC == "" {
+				fmt.Println("O O REGIME NÃO PODE SER VAZIO: ")
+				return
+			}
+
+			if horas == 0 {
+				fmt.Println("AS HORAS NÃO PODE SER ZERO/VAZIO: ")
+				return
+			}
+			fmt.Println("O NOME DO CURSO : ", titulo)
+			fmt.Println("O CONTEUDO : ", conteudoProgramatico)
+			fmt.Println("O REGIME : ", regimeC)
+			fmt.Println("O HORAS: ", horas)
+
+			servico.CadastrarCursos(titulo, conteudoProgramatico, horas, regimeC)
+
+		},
+	}
+
+	cmd.Flags().StringVarP(&titulo, "titulo", "t", "", "o titulo do curos")
+	cmd.Flags().StringVarP(&conteudoProgramatico, "conteudo", "c", "", "o conteudo programático")
+	cmd.Flags().StringVarP(&regimeC, "regimec", "r", "", "regime do curso")
+	cmd.Flags().IntVarP(&horas,"horas","o",0,"horas do curso")
+
+
 	rootCmd.AddCommand(cmd)
 	rootCmd.Execute()
 }

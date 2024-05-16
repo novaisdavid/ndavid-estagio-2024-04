@@ -16,12 +16,13 @@ type Curso struct {
 	conteudoProgramatico string
 	horas                int
 	regime               string
+	estado               string
 	//data inicio
 	//data fim
 }
 
-func (c *Curso) New(id string, t string, cp string, h int, r string) *Curso {
-	if id == "" || t == "" || h == 0 || r == "" {
+func (c *Curso) New(id string, t string, cp string, h int, r string, e string) *Curso {
+	if id == "" || t == "" || h == 0 || r == "" || e =="" {
 		return c
 	}
 	c.idCurso = id
@@ -29,6 +30,7 @@ func (c *Curso) New(id string, t string, cp string, h int, r string) *Curso {
 	c.conteudoProgramatico = cp
 	c.horas = h
 	c.regime = r
+	c.estado = e
 	return c
 
 }
@@ -53,6 +55,11 @@ func (c *Curso) GetHora() int {
 func (c *Curso) GetConteudoProgramatico() int {
 
 	return c.horas
+}
+
+func (c *Curso) GetEstado() string {
+
+	return c.estado
 }
 
 func (c Curso) BuscaUmCursoPorNome(n string) Curso {
@@ -86,7 +93,7 @@ func (c Curso) BuscaUmCursoPorNomeRegime(n, r string) Curso {
 }
 func (c Curso) Salvar() {
 
-	if c.idCurso == "" || c.titulo == "" || c.horas == 0 || c.conteudoProgramatico == "" || c.regime == "" {
+	if c.idCurso == "" || c.titulo == "" || c.horas == 0 || c.conteudoProgramatico == "" || c.regime == "" || c.estado == "" {
 		return
 	}
 	dir, err := os.Getwd()
@@ -102,7 +109,9 @@ func (c Curso) Salvar() {
 		return
 	}
 
-	dados := fmt.Sprintf("IdCurso: %s\nTitulo: %s\nContéudo Pragramático: %s\nHoras: %d\nRegime: %s\n", c.idCurso, c.titulo, c.conteudoProgramatico, c.horas, c.regime)
+	dados := fmt.Sprintf("IdCurso: %s\nTitulo: %s\nContéudo Pragramático: %s\nHoras: %d\nRegime: %s\n Estado do Curso: %s\n",
+	 c.idCurso, c.titulo, c.conteudoProgramatico, c.horas, c.regime, c.estado)
+
 	nomeArquivo := novoDir + "/Curso.txt"
 	arquivo, err := os.OpenFile(nomeArquivo, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 

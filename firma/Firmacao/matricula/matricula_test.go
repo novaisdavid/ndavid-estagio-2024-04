@@ -75,7 +75,7 @@ func TestCriarMatriculaFormando(t *testing.T) {
 		m := matricula.Matricula{}
 
 		f.New("001", "Zeca", "Zeca@gmail.com", "923456789")
-		c.New("003", "SAD", "1-Tomada de Decisao", 40, "online")
+		c.New("003", "SAD", "1-Tomada de Decisao", 40, "online", "espera")
 
 		m.New(f.GetIdFormando(), c.GetIdCurso())
 
@@ -97,7 +97,7 @@ func TestCriarMatriculaFormando(t *testing.T) {
 		m := matricula.Matricula{}
 
 		f.New("", "", "", "")
-		c.New("0002", "Programaçao", "1- Fluxo de dados 2-estrutura de repetição", 20, "online")
+		c.New("0002", "Programaçao", "1- Fluxo de dados 2-estrutura de repetição", 20, "online", "espera")
 
 		m.New(f.GetIdFormando(), c.GetIdCurso())
 
@@ -118,7 +118,7 @@ func TestCriarMatriculaFormando(t *testing.T) {
 		m := matricula.Matricula{}
 
 		f.New("001", "Zeca", "Zeca@gmail.com", "923456789")
-		c.New("", "", "", 0, "")
+		c.New("", "", "", 0, "", "")
 
 		m.New(f.GetIdFormando(), c.GetIdCurso())
 

@@ -43,6 +43,7 @@ IdCurso: 003
 IdFormando: 001
 IdCurso: 003
 
+<<<<<<< HEAD
 IdFormando: 001
 IdCurso: 003
 
@@ -91,3 +92,5 @@ IdCurso: 003
 IdFormando: 001
 IdCurso: 003
 
+=======
+>>>>>>> 8df2725 (cursos teste)

@@ -238,3 +238,30 @@ Contéudo Pragramático: verbo to be
 Horas: 132
 Regime: presencial
 
+IdCurso: 103
+Titulo: cc
+Contéudo Pragramático: fluxo
+Horas: 12
+Regime: online
+
+IdCurso: 103
+Titulo: cc
+Contéudo Pragramático: fluxo
+Horas: 12
+Regime: online
+ Estado do Curso: espera
+
+IdCurso: 103
+Titulo: cc
+Contéudo Pragramático: fluxo
+Horas: 12
+Regime: online
+ Estado do Curso: espera
+
+IdCurso: 103
+Titulo: cc
+Contéudo Pragramático: fluxo
+Horas: 12
+Regime: online
+ Estado do Curso: espera
+

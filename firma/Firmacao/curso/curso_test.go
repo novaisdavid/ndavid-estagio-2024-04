@@ -2,6 +2,7 @@ package curso_test
 
 import (
 	"Firma/curso"
+	"fmt"
 	"testing"
 )
 
@@ -16,6 +17,11 @@ func TestCurso(t *testing.T) {
 		curs.IniciarCurso()
 		//assert
 		if curs.GetEstado() == "" {
+			fmt.Println(curs.GetNome())
+			fmt.Println(curs.GetHora())
+			fmt.Println(curs.GetConteudoProgramatico())
+			fmt.Println(curs.GetEstado())
+			fmt.Println(curs.GetDataInicio())
 			t.Fail()
 		}
 
@@ -31,6 +37,100 @@ func TestCurso(t *testing.T) {
 
 		//assert
 		if curs.GetEstado() == "inciado" {
+			fmt.Println(curs.GetNome())
+			fmt.Println(curs.GetHora())
+			fmt.Println(curs.GetConteudoProgramatico())
+			fmt.Println(curs.GetEstado())
+			fmt.Println(curs.GetDataInicio())
+			t.Fail()
+		}
+
+	})
+
+	t.Run("terminar um curso", func(t *testing.T) {
+		//arrange
+		curs := curso.Curso{}
+
+		curs.New("003", "cc", "fluxo", 12, "online")
+
+		curs.IniciarCurso()
+		//act
+		curs.ConcluirCurso()
+
+		//assert
+		if curs.GetEstado() != "concluido" {
+			fmt.Println(curs.GetNome())
+			fmt.Println(curs.GetHora())
+			fmt.Println(curs.GetConteudoProgramatico())
+			fmt.Println(curs.GetEstado())
+			fmt.Println(curs.GetDataInicio())
+			fmt.Println(curs.GetDataFim())
+			t.Fail()
+		}
+
+	})
+
+	t.Run("terminar um curso sem dados do curso", func(t *testing.T) {
+		//arrange
+		curs := curso.Curso{}
+
+		curs.New("", "", "", 0, "")
+
+		curs.IniciarCurso()
+		//act
+		curs.ConcluirCurso()
+
+		//assert
+		if curs.GetEstado() == "concluido" {
+			fmt.Println(curs.GetNome())
+			fmt.Println(curs.GetHora())
+			fmt.Println(curs.GetConteudoProgramatico())
+			fmt.Println(curs.GetEstado())
+			fmt.Println(curs.GetDataInicio())
+			fmt.Println(curs.GetDataFim())
+			t.Fail()
+		}
+
+	})
+
+	t.Run("terminar um curso sem ter de iniciar o curso", func(t *testing.T) {
+		//arrange
+		curs := curso.Curso{}
+		curs.New("003", "cc", "fluxo", 12, "online")
+
+		//act
+		curs.ConcluirCurso()
+
+		//assert
+		if curs.GetEstado() == "concluido" {
+			fmt.Println(curs.GetNome())
+			fmt.Println(curs.GetHora())
+			fmt.Println(curs.GetConteudoProgramatico())
+			fmt.Println(curs.GetEstado())
+			fmt.Println(curs.GetDataInicio())
+			fmt.Println(curs.GetDataFim())
+			t.Fail()
+		}
+
+	})
+
+	t.Run("terminar um curso sem dados do curso e sem iniciar", func(t *testing.T) {
+		//arrange
+		curs := curso.Curso{}
+		curs.New("", "", "", 0, "")
+		curs.IniciarCurso()
+
+		//act
+		curs.ConcluirCurso()
+
+		//assert
+		if curs.GetEstado() == "concluido" {
+			fmt.Println(curs.GetNome())
+			fmt.Println(curs.GetHora())
+			fmt.Println(curs.GetConteudoProgramatico())
+			fmt.Println(curs.GetEstado())
+			fmt.Println(curs.GetDataInicio())
+			fmt.Println(curs.GetDataFim())
 			t.Fail()
 		}
 

@@ -18,7 +18,8 @@ type Curso struct {
 	horas                int
 	regime               string
 	estado               string
-	dataInicio            string
+	dataInicio           string
+	dataFim              string
 	//data fim
 }
 
@@ -52,14 +53,24 @@ func (c *Curso) GetHora() int {
 	return c.horas
 }
 
-func (c *Curso) GetConteudoProgramatico() int {
+func (c *Curso) GetConteudoProgramatico() string {
 
-	return c.horas
+	return c.conteudoProgramatico
 }
 
 func (c *Curso) GetEstado() string {
 
 	return c.estado
+}
+
+func (c *Curso) GetDataInicio() string {
+
+	return c.dataInicio
+}
+
+func (c *Curso) GetDataFim() string {
+
+	return c.dataFim
 }
 
 func (c *Curso) IniciarCurso() {
@@ -68,9 +79,23 @@ func (c *Curso) IniciarCurso() {
 
 	dataatualEmString := dataatual.Format("2006-01-02")
 
-	if c.idCurso != "" && c.titulo != "" || c.horas != 0 || c.regime != "" {
+	if c.idCurso != "" && c.titulo != "" && c.horas != 0 && c.regime != "" {
 		c.estado = estado
 		c.dataInicio = dataatualEmString
+		return
+	}
+
+}
+
+func (c *Curso) ConcluirCurso() {
+	estado := "concluido"
+	dataatual := time.Now()
+
+	dataatualEmString := dataatual.Format("2006-01-02")
+
+	if c.idCurso != "" && c.titulo != "" && c.horas != 0 && c.regime != "" && c.dataInicio != "" {
+		c.estado = estado
+		c.dataFim = dataatualEmString
 		return
 	}
 

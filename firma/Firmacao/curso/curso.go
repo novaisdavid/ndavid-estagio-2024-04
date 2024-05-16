@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type Curso struct {
@@ -17,12 +18,12 @@ type Curso struct {
 	horas                int
 	regime               string
 	estado               string
-	//data inicio
+	dataInicio            string
 	//data fim
 }
 
-func (c *Curso) New(id string, t string, cp string, h int, r string, e string) *Curso {
-	if id == "" || t == "" || h == 0 || r == "" || e =="" {
+func (c *Curso) New(id string, t string, cp string, h int, r string) *Curso {
+	if id == "" || t == "" || h == 0 || r == "" {
 		return c
 	}
 	c.idCurso = id
@@ -30,7 +31,6 @@ func (c *Curso) New(id string, t string, cp string, h int, r string, e string) *
 	c.conteudoProgramatico = cp
 	c.horas = h
 	c.regime = r
-	c.estado = e
 	return c
 
 }
@@ -62,6 +62,20 @@ func (c *Curso) GetEstado() string {
 	return c.estado
 }
 
+func (c *Curso) IniciarCurso() {
+	estado := "inciado"
+	dataatual := time.Now()
+
+	dataatualEmString := dataatual.Format("2006-01-02")
+
+	if c.idCurso != "" && c.titulo != "" || c.horas != 0 || c.regime != "" {
+		c.estado = estado
+		c.dataInicio = dataatualEmString
+		return
+	}
+
+}
+
 func (c Curso) BuscaUmCursoPorNome(n string) Curso {
 
 	dados := c.LerDados()
@@ -91,6 +105,7 @@ func (c Curso) BuscaUmCursoPorNomeRegime(n, r string) Curso {
 
 	return Curso{}
 }
+
 func (c Curso) Salvar() {
 
 	if c.idCurso == "" || c.titulo == "" || c.horas == 0 || c.conteudoProgramatico == "" || c.regime == "" || c.estado == "" {
@@ -110,7 +125,7 @@ func (c Curso) Salvar() {
 	}
 
 	dados := fmt.Sprintf("IdCurso: %s\nTitulo: %s\nContéudo Pragramático: %s\nHoras: %d\nRegime: %s\n Estado do Curso: %s\n",
-	 c.idCurso, c.titulo, c.conteudoProgramatico, c.horas, c.regime, c.estado)
+		c.idCurso, c.titulo, c.conteudoProgramatico, c.horas, c.regime, c.estado)
 
 	nomeArquivo := novoDir + "/Curso.txt"
 	arquivo, err := os.OpenFile(nomeArquivo, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)

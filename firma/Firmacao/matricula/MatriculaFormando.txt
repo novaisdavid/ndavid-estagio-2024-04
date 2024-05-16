@@ -44,6 +44,9 @@ IdFormando: 001
 IdCurso: 003
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cae0b35 (funções de teste refatoradas)
 IdFormando: 001
 IdCurso: 003
 
@@ -74,6 +77,7 @@ IdCurso: 003
 IdFormando: 001
 IdCurso: 003
 
+<<<<<<< HEAD
 IdFormando: 001
 IdCurso: 003
 
@@ -94,3 +98,5 @@ IdCurso: 003
 
 =======
 >>>>>>> 8df2725 (cursos teste)
+=======
+>>>>>>> cae0b35 (funções de teste refatoradas)

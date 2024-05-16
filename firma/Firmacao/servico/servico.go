@@ -54,7 +54,7 @@ func CadastrarCursos(dados ...interface{}) {
 
 	if len(dados) >= 4 {
 
-		c.New(id, dados[0].(string), dados[1].(string), dados[2].(int), dados[3].(string), "")
+		c.New(id, dados[0].(string), dados[1].(string), dados[2].(int), dados[3].(string))
 	}
 
 	fmt.Println("")

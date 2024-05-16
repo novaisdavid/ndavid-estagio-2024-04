@@ -11,8 +11,9 @@ func TestCurso(t *testing.T) {
 		curs := curso.Curso{}
 
 		//act
-		curs.New("003", "cc", "fluxo", 12, "online", "iniciado")
+		curs.New("003", "cc", "fluxo", 12, "online")
 
+		curs.IniciarCurso()
 		//assert
 		if curs.GetEstado() == "" {
 			t.Fail()
@@ -25,10 +26,11 @@ func TestCurso(t *testing.T) {
 		curs := curso.Curso{}
 
 		//act
-		curs.New("", "", "", 0, "", "iniciado")
+		curs.New("", "", "", 0, "")
+		curs.IniciarCurso()
 
 		//assert
-		if curs.GetEstado() != "" {
+		if curs.GetEstado() == "inciado" {
 			t.Fail()
 		}
 
@@ -39,7 +41,7 @@ func TestCurso(t *testing.T) {
 		curs := curso.Curso{}
 
 		//act
-		curs.New("003", "cc", "fluxo", 12, "online", "")
+		curs.New("003", "cc", "fluxo", 12, "online")
 
 		//assert
 		if curs.GetEstado() != "" {
@@ -53,10 +55,10 @@ func TestCurso(t *testing.T) {
 		curs := curso.Curso{}
 
 		//act
-		curs.New("103", "", "fluxo", 12, "online", "espera")
+		curs.New("103", "", "fluxo", 12, "online")
 
 		//assert
-		if curs.GetEstado() != "" {
+		if curs.GetIdCurso() != "" {
 			t.Fail()
 		}
 
@@ -67,10 +69,10 @@ func TestCurso(t *testing.T) {
 		curs := curso.Curso{}
 
 		//act
-		curs.New("103", "", "fluxo", 12, "online", "espera")
+		curs.New("103", "", "fluxo", 12, "online")
 
 		//assert
-		if curs.GetEstado() != "" {
+		if curs.GetIdCurso() != "" {
 			t.Fail()
 		}
 
@@ -81,11 +83,26 @@ func TestCurso(t *testing.T) {
 		curs := curso.Curso{}
 
 		//act
-		curs.New("103", "cc", "fluxo", 12, "online", "espera")
+		curs.New("103", "cc", "fluxo", 12, "online")
 
 		curs.Salvar()
 		//assert
-		if curs.GetEstado() == "" {
+		if curs.GetIdCurso() == "" {
+
+			t.Fail()
+		}
+
+	})
+
+	t.Run("ler cursos salvos no arquivo no arquivo", func(t *testing.T) {
+		//arrange
+		curs := curso.Curso{}
+
+		//act
+		dados := curs.LerDados()
+
+		//assert
+		if dados == "" {
 
 			t.Fail()
 		}

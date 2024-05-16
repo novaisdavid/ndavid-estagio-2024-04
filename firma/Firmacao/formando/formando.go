@@ -20,3 +20,6 @@ func (f Formando) GetIdFormando() string {
 func (f Formando) GetNomeFormando() string {
 	return f.nome
 }
+func (f Formando) GetEmailFormando() string {
+	return f.email
+}

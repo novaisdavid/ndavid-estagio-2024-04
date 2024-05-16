@@ -7,24 +7,64 @@ import (
 	"testing"
 )
 
-func TestCriarMatricula(t *testing.T) {
-	t.Run("Verifica se recebe dados", func(t *testing.T) {
+func TestCriarMatriculaFormando(t *testing.T) {
+	t.Run("Falha se formando nao recebe ID", func(t *testing.T) {
 		//Arrange
-		f := formando.Formando{}
+		m := matricula.Matricula{}
 		//Act
-		f.New("001", "Zeca", "Zeca@gmail.com", "923456789")
+		m.New("777", "099")
 		//Assert
-		if f.GetNomeFormando() == "" {
+		if m.GetIdFormando() == "" {
 			t.Fail()
 		}
 	})
-	t.Run("Verifica se o nome recebido esta certo", func(t *testing.T) {
+	t.Run("Falha se o curso nao tem ID", func(t *testing.T) {
 		//Arrange
-		f := formando.Formando{}
+		m := matricula.Matricula{}
 		//Act
-		f.New("001", "Zeca", "Zeca@gmail.com", "923456789")
+		m.New("777", "099")
 		//Assert
-		if f.GetNomeFormando() != "Zeca" {
+		if m.GetIdCurso() == "" {
+			t.Fail()
+		}
+	})
+	t.Run("Verifica se o ID do formando esta certo", func(t *testing.T) {
+		//Arrange
+		m := matricula.Matricula{}
+		//Act
+		m.New("777", "099")
+		//Assert
+		if m.GetIdFormando() != "777" {
+			t.Fail()
+		}
+	})
+	t.Run("Verifica se o ID do curso esta certo", func(t *testing.T) {
+		//Arrange
+		m := matricula.Matricula{}
+		//Act
+		m.New("777", "099")
+		//Assert
+		if m.GetIdCurso() != "099" {
+			t.Fail()
+		}
+	})
+	t.Run("Falha se o ID do formando estiver certo", func(t *testing.T) {
+		//Arrange
+		m := matricula.Matricula{}
+		//Act
+		m.New("777", "099")
+		//Assert
+		if m.GetIdFormando() == "007" {
+			t.Fail()
+		}
+	})
+	t.Run("Falha se o ID do curso estiver certo", func(t *testing.T) {
+		//Arrange
+		m := matricula.Matricula{}
+		//Act
+		m.New("777", "099")
+		//Assert
+		if m.GetIdCurso() == "069" {
 			t.Fail()
 		}
 	})

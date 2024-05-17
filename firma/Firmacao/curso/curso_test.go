@@ -14,7 +14,7 @@ func TestCurso(t *testing.T) {
 		//act
 		curs.New("003", "cc", "fluxo", 12, "online")
 
-		curs.IniciarCurso()
+		curs.IniciarCurso(nil)
 		//assert
 		if curs.GetEstado() == "" {
 			fmt.Println(curs.GetNome())
@@ -33,7 +33,7 @@ func TestCurso(t *testing.T) {
 
 		//act
 		curs.New("", "", "", 0, "")
-		curs.IniciarCurso()
+		curs.IniciarCurso(nil)
 
 		//assert
 		if curs.GetEstado() == "inciado" {
@@ -53,9 +53,9 @@ func TestCurso(t *testing.T) {
 
 		curs.New("003", "cc", "fluxo", 12, "online")
 
-		curs.IniciarCurso()
+		curs.IniciarCurso(nil)
 		//act
-		curs.ConcluirCurso()
+		curs.ConcluirCurso(nil)
 
 		//assert
 		if curs.GetEstado() != "concluido" {
@@ -76,9 +76,9 @@ func TestCurso(t *testing.T) {
 
 		curs.New("", "", "", 0, "")
 
-		curs.IniciarCurso()
+		curs.IniciarCurso(nil)
 		//act
-		curs.ConcluirCurso()
+		curs.ConcluirCurso(nil)
 
 		//assert
 		if curs.GetEstado() == "concluido" {
@@ -99,7 +99,7 @@ func TestCurso(t *testing.T) {
 		curs.New("003", "cc", "fluxo", 12, "online")
 
 		//act
-		curs.ConcluirCurso()
+		curs.ConcluirCurso(nil)
 
 		//assert
 		if curs.GetEstado() == "concluido" {
@@ -118,10 +118,10 @@ func TestCurso(t *testing.T) {
 		//arrange
 		curs := curso.Curso{}
 		curs.New("", "", "", 0, "")
-		curs.IniciarCurso()
+		curs.IniciarCurso(nil)
 
 		//act
-		curs.ConcluirCurso()
+		curs.ConcluirCurso(nil)
 
 		//assert
 		if curs.GetEstado() == "concluido" {
@@ -140,8 +140,8 @@ func TestCurso(t *testing.T) {
 		//arrange
 		curs := curso.Curso{}
 		curs.New("003", "cc", "fluxo", 12, "online")
-		curs.IniciarCurso()
-		curs.ConcluirCurso()
+		curs.IniciarCurso(nil)
+		curs.ConcluirCurso(nil)
 
 		//act
 		curs.Salvar()

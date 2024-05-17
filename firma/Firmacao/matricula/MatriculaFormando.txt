@@ -1,411 +1,108 @@
-IdFormando: 9
-IdCurso: c001
-
-IdFormando: 16
-IdCurso: c001
-
-IdFormando: 98
-IdCurso: c001
-
-IdFormando: 97
-IdCurso: c001
-
-IdFormando: 25
-IdCurso: c001
-
-IdFormando: 8
-IdCurso: 43
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 92
-IdCurso: 103
-
-IdFormando: 99
-IdCurso: 003
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 90
-IdCurso: 57
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 90
-IdCurso: 57
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 90
-IdCurso: 57
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 90
-IdCurso: 57
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 90
-IdCurso: 57
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 90
-IdCurso: 57
-
-IdFormando: 001
-IdCurso: 003
-
-IdFormando: 90
-IdCurso: 57
-
-IdFormando: 53
-IdCurso: 003
-
-IdFormando: 43
-IdCurso: 103
-
 IdFormando: 001
 IdCurso: 003
 Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
 Data Inicio: 
 Data Fim: 
 
 IdFormando: 90
 IdCurso: 57
 Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
 Data Inicio: 
 Data Fim: 
 
 IdFormando: 90
 IdCurso: 57
 Nome do Curso: IT
-Data Inicio: 
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 2024-12-02
 Data Fim: 
 
 IdFormando: 001
 IdCurso: 003
 Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
 Data Inicio: 
 Data Fim: 
 
 IdFormando: 90
 IdCurso: 57
 Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
 Data Inicio: 
 Data Fim: 
 
 IdFormando: 90
 IdCurso: 57
 Nome do Curso: IT
-Data Inicio: 
+Horas: 120
+Conteudo Programatico: LAN
+Regime: onlineD
+Data Inicio: 2024-12-02
 Data Fim: 
 
 IdFormando: 001
 IdCurso: 003
 Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
 Data Inicio: 
 Data Fim: 
 
 IdFormando: 90
 IdCurso: 57
 Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
 Data Inicio: 
 Data Fim: 
 
 IdFormando: 90
 IdCurso: 57
 Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 2024-12-02
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
 Data Inicio: 2024-05-17
-Data Fim: 2024-05-17
-
-IdFormando: 001
-IdCurso: 003
-Nome do Curso: SAD
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 2024-05-17
-Data Fim: 2024-05-17
-
-IdFormando: 001
-IdCurso: 003
-Nome do Curso: SAD
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 2024-05-17
-Data Fim: 2024-05-17
-
-IdFormando: 001
-IdCurso: 003
-Nome do Curso: SAD
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 2024-05-17
-Data Fim: 2024-05-17
-
-IdFormando: 001
-IdCurso: 003
-Nome do Curso: SAD
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 2024-05-17
-Data Fim: 2024-05-17
-
-IdFormando: 001
-IdCurso: 003
-Nome do Curso: SAD
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 2024-05-17
-Data Fim: 2024-05-17
-
-IdFormando: 001
-IdCurso: 003
-Nome do Curso: SAD
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 2024-05-17
-Data Fim: 2024-05-17
-
-IdFormando: 001
-IdCurso: 003
-Nome do Curso: SAD
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 2024-05-17
-Data Fim: 2024-05-17
-
-IdFormando: 001
-IdCurso: 003
-Nome do Curso: SAD
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 
-Data Fim: 
-
-IdFormando: 90
-IdCurso: 57
-Nome do Curso: IT
-Data Inicio: 2024-05-17
-Data Fim: 2024-05-17
+Data Fim: 2024-12-02
 

@@ -6,12 +6,12 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 )
 
 type Matricula struct {
 	idFormando string
-	idCurso    string
 	curso      curso.Curso
 }
 
@@ -53,7 +53,7 @@ func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
 
 func (m Matricula) Salvar() {
 
-	if m.idFormando == "" || m.idCurso == "" {
+	if m.idFormando == "" || m.curso.GetIdCurso() == "" {
 		return
 	}
 
@@ -70,8 +70,8 @@ func (m Matricula) Salvar() {
 		return
 	}
 
-	dados := fmt.Sprintf("IdFormando: %s\nIdCurso: %s\nNome do Curso: %s\nData Inicio: %s\nData Fim: %s\n", m.idFormando, m.curso.GetIdCurso(), m.curso.GetNome(),
-		m.curso.GetDataInicio(), m.curso.GetDataFim())
+	dados := fmt.Sprintf("IdFormando: %s\nIdCurso: %s\nNome do Curso: %s\nHoras: %d\nConteudo Programatico: %s\nRegime: %s\nData Inicio: %s\nData Fim: %s\n", m.idFormando, m.curso.GetIdCurso(),
+	 m.curso.GetNome(),m.curso.GetHora(),m.curso.GetConteudoProgramatico(), m.curso.GetRegime(), m.curso.GetDataInicio(), m.curso.GetDataFim())
 	nomeArquivo := novoDir + "/MatriculaFormando.txt"
 	arquivo, err := os.OpenFile(nomeArquivo, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 
@@ -113,6 +113,9 @@ func (m Matricula) LerDados() string {
 
 func (m Matricula) converteEmStruct(dados string) []Matricula {
 	var matriculas []Matricula
+	var curso curso.Curso
+	var idCurso, dataFim, dataInicio, ctp, regime, nome string
+	var horas int
 
 	linhas := strings.Split(string(dados), "\n")
 
@@ -126,8 +129,27 @@ func (m Matricula) converteEmStruct(dados string) []Matricula {
 			case "IdFormando":
 				m.idFormando = valor
 			case "IdCurso":
-				m.idCurso = valor
+				idCurso = valor
+			case "Nome do Curso":
+				nome = valor
+			case "Horas":
+				horas, _ = strconv.Atoi(valor)
+			case "Conteudo Programatico":
+				ctp = valor
+			case "Regime":
+				regime = valor
+			case "Data Inicio":
+				dataInicio = valor
+			case "Data Fim":
+				dataFim = valor
+
 			}
+
+			c := *curso.New(idCurso,nome,ctp,horas, regime)
+			c.IniciarCurso(&dataInicio)
+			c.ConcluirCurso(&dataFim)
+			m.curso = c
+			
 		}
 
 		matriculas = append(matriculas, m)

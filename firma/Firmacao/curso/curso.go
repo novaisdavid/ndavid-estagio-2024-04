@@ -20,7 +20,6 @@ type Curso struct {
 	estado               string
 	dataInicio           string
 	dataFim              string
-	//data fim
 }
 
 func (c *Curso) New(id string, t string, cp string, h int, r string) *Curso {
@@ -73,13 +72,20 @@ func (c *Curso) GetDataFim() string {
 	return c.dataFim
 }
 
-func (c *Curso) IniciarCurso() {
+func (c *Curso) IniciarCurso(dataInicio *string) {
 	estado := "inciado"
 	dataatual := time.Now()
 
 	dataatualEmString := dataatual.Format("2006-01-02")
 
 	if c.idCurso != "" && c.titulo != "" && c.horas != 0 && c.regime != "" {
+		if dataInicio != nil {
+
+			c.estado = estado
+			c.dataInicio = *dataInicio
+			return
+		}
+
 		c.estado = estado
 		c.dataInicio = dataatualEmString
 		return
@@ -87,13 +93,20 @@ func (c *Curso) IniciarCurso() {
 
 }
 
-func (c *Curso) ConcluirCurso() {
+func (c *Curso) ConcluirCurso(dataInicio *string) {
 	estado := "concluido"
 	dataatual := time.Now()
 
 	dataatualEmString := dataatual.Format("2006-01-02")
 
 	if c.idCurso != "" && c.titulo != "" && c.horas != 0 && c.regime != "" && c.dataInicio != "" {
+		if dataInicio != nil {
+
+			c.estado = estado
+			c.dataFim = *dataInicio
+			return
+		}
+
 		c.estado = estado
 		c.dataFim = dataatualEmString
 		return

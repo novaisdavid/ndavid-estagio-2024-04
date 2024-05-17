@@ -136,6 +136,29 @@ func TestCurso(t *testing.T) {
 
 	})
 
+	t.Run("terminar um curso e salvar no ficheiro", func(t *testing.T) {
+		//arrange
+		curs := curso.Curso{}
+		curs.New("003", "cc", "fluxo", 12, "online")
+		curs.IniciarCurso()
+		curs.ConcluirCurso()
+
+		//act
+		curs.Salvar()
+
+		//assert
+		if curs.GetEstado() != "concluido" {
+			fmt.Println(curs.GetNome())
+			fmt.Println(curs.GetHora())
+			fmt.Println(curs.GetConteudoProgramatico())
+			fmt.Println(curs.GetEstado())
+			fmt.Println(curs.GetDataInicio())
+			fmt.Println(curs.GetDataFim())
+			t.Fail()
+		}
+
+	})
+
 	t.Run("cadatrar curso sem estado do  curso", func(t *testing.T) {
 		//arrange
 		curs := curso.Curso{}

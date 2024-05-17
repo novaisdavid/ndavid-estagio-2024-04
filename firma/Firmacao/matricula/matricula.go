@@ -1,7 +1,7 @@
 package matricula
 
 import (
-	//"Firma/repositorio"
+	"Firma/curso"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -12,17 +12,18 @@ import (
 type Matricula struct {
 	idFormando string
 	idCurso    string
+	curso      curso.Curso
 }
 
-func (m *Matricula) New(idFormando, idCurso string) *Matricula {
+func (m *Matricula) New(idFormando string, c curso.Curso) *Matricula {
 
-	if idFormando == "" || idCurso == "" {
+	if idFormando == "" || c.GetIdCurso() == "" {
 
 		return m
 	}
 
 	m.idFormando = idFormando
-	m.idCurso = idCurso
+	m.curso = c
 
 	return m
 
@@ -34,7 +35,7 @@ func (m *Matricula) GetIdFormando() string {
 }
 
 func (m *Matricula) GetIdCurso() string {
-	return m.idCurso
+	return m.curso.GetIdCurso()
 }
 
 func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
@@ -69,7 +70,8 @@ func (m Matricula) Salvar() {
 		return
 	}
 
-	dados := fmt.Sprintf("IdFormando: %s\nIdCurso: %s\n", m.idFormando, m.idCurso)
+	dados := fmt.Sprintf("IdFormando: %s\nIdCurso: %s\nNome do Curso: %s\nData Inicio: %s\nData Fim: %s\n", m.idFormando, m.curso.GetIdCurso(), m.curso.GetNome(),
+		m.curso.GetDataInicio(), m.curso.GetDataFim())
 	nomeArquivo := novoDir + "/MatriculaFormando.txt"
 	arquivo, err := os.OpenFile(nomeArquivo, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 
@@ -88,12 +90,23 @@ func (m Matricula) Salvar() {
 func (m Matricula) LerDados() string {
 	nomeArquivo := "MatriculaFormando.txt"
 
-	conteudo, erro := ioutil.ReadFile(nomeArquivo)
-	if erro != nil {
+	dir, err := os.Getwd()
+	if err != nil {
+		fmt.Println("Erro ao obter o diretório de trabalho:", err)
 		return ""
 	}
 
-	fmt.Println(string(conteudo))
+	novoDir := filepath.Join(dir, "..", "matricula")
+	err = os.Chdir(novoDir)
+	if err != nil {
+		fmt.Println("Erro ao mudar de diretório:", err)
+		return ""
+	}
+
+	conteudo, erro := ioutil.ReadFile(novoDir + "/" + nomeArquivo)
+	if erro != nil {
+		return ""
+	}
 
 	return string(conteudo)
 }

@@ -106,10 +106,6 @@ IdCurso: 003
 IdFormando: 001
 IdCurso: 003
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cae0b35 (funções de teste refatoradas)
 IdFormando: 001
 IdCurso: 003
 
@@ -140,7 +136,6 @@ IdCurso: 003
 IdFormando: 001
 IdCurso: 003
 
-<<<<<<< HEAD
 IdFormando: 001
 IdCurso: 003
 
@@ -159,7 +154,258 @@ IdCurso: 003
 IdFormando: 001
 IdCurso: 003
 
-=======
->>>>>>> 8df2725 (cursos teste)
-=======
->>>>>>> cae0b35 (funções de teste refatoradas)
+IdFormando: 001
+IdCurso: 003
+
+IdFormando: 92
+IdCurso: 103
+
+IdFormando: 99
+IdCurso: 003
+
+IdFormando: 001
+IdCurso: 003
+
+IdFormando: 90
+IdCurso: 57
+
+IdFormando: 001
+IdCurso: 003
+
+IdFormando: 90
+IdCurso: 57
+
+IdFormando: 001
+IdCurso: 003
+
+IdFormando: 90
+IdCurso: 57
+
+IdFormando: 001
+IdCurso: 003
+
+IdFormando: 90
+IdCurso: 57
+
+IdFormando: 001
+IdCurso: 003
+
+IdFormando: 90
+IdCurso: 57
+
+IdFormando: 001
+IdCurso: 003
+
+IdFormando: 90
+IdCurso: 57
+
+IdFormando: 001
+IdCurso: 003
+
+IdFormando: 90
+IdCurso: 57
+
+IdFormando: 53
+IdCurso: 003
+
+IdFormando: 43
+IdCurso: 103
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 2024-05-17
+Data Fim: 2024-05-17
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 2024-05-17
+Data Fim: 2024-05-17
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 2024-05-17
+Data Fim: 2024-05-17
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 2024-05-17
+Data Fim: 2024-05-17
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 2024-05-17
+Data Fim: 2024-05-17
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 2024-05-17
+Data Fim: 2024-05-17
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 2024-05-17
+Data Fim: 2024-05-17
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 2024-05-17
+Data Fim: 2024-05-17
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Data Inicio: 2024-05-17
+Data Fim: 2024-05-17
+

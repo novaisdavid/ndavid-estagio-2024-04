@@ -26,6 +26,7 @@ func FazerMatriculadeFormando(dados ...interface{}) {
 
 	f.New(id, dados[0].(string), dados[1].(string), dados[2].(string))
 	curso := c.BuscaUmCursoPorNomeRegime(dados[3].(string), dados[4].(string))
+	
 	if curso.GetIdCurso() == "" {
 		fmt.Println("")
 		fmt.Println("CURSO NÂO ENCONTRADO! FORMANDO NÂO MATRICULADO")
@@ -40,7 +41,7 @@ func FazerMatriculadeFormando(dados ...interface{}) {
 	fmt.Println("CARGA HORÁRIA: ", strconv.Itoa(curso.GetHora()))
 	fmt.Println("REGIME: ", curso.GetRegime())
 
-	m.New(f.GetIdFormando(), curso.GetIdCurso())
+	m.New(f.GetIdFormando(), curso)
 
 	m.Salvar()
 }

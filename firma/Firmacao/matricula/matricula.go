@@ -42,15 +42,27 @@ func (m *Matricula) GetNomeCurso() string {
 	return m.curso.GetNome()
 }
 
+func (m *Matricula) GetDataFim() string {
+	return m.curso.GetDataFim()
+}
+
 func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
 	dados := m.LerDados()
 	fm := m.converteEmStruct(dados)
+	var structAuliar Matricula
 
 	if len(fm) == 0 {
 		return Matricula{}
 	}
-	return fm[len(fm)-1]
 
+	for _, f := range fm {
+
+		if f.idFormando == idFormando && f.GetDataFim() != "" {
+			structAuliar = f
+		}
+	}
+
+	return structAuliar
 }
 
 func (m Matricula) Salvar() {
@@ -116,7 +128,7 @@ func (m Matricula) LerDados() string {
 func (m Matricula) converteEmStruct(dados string) []Matricula {
 	var matriculas []Matricula
 	var curso curso.Curso
-	var idCurso, dataFim, dataInicio, ctp, regime, nome string
+	var idCurso, idFormando, dataFim, dataInicio, ctp, regime, nome string
 	var horas int
 
 	linhas := strings.Split(string(dados), "\n")
@@ -129,7 +141,7 @@ func (m Matricula) converteEmStruct(dados string) []Matricula {
 			valor := strings.TrimSpace(campos[1])
 			switch chave {
 			case "IdFormando":
-				m.idFormando = valor
+				idFormando = valor
 			case "IdCurso":
 				idCurso = valor
 			case "Nome do Curso":
@@ -152,6 +164,7 @@ func (m Matricula) converteEmStruct(dados string) []Matricula {
 			c.IniciarCurso(&dataInicio)
 			c.ConcluirCurso(&dataFim)
 			m := Matricula{curso: c}
+			m.idFormando = idFormando
 			matriculas = append(matriculas, m)
 			cursosAdicionados[idCurso] = true
 		}

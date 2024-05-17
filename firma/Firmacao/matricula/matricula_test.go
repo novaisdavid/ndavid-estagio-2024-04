@@ -3,8 +3,8 @@ package matricula_test
 import (
 	curso "Firma/curso"
 	formando "Firma/formando"
+	"Firma/funcoes"
 	matricula "Firma/matricula"
-	"fmt"
 	"testing"
 )
 
@@ -171,26 +171,17 @@ func TestCriarMatriculaFormando(t *testing.T) {
 		f := formando.Formando{}
 		c := curso.Curso{}
 		m := matricula.Matricula{}
-		data := "2024-12-02"
 		f.New("100", "Zeca", "Zeca@gmail.com", "923456789")
 		c.New("57", "IT", "LAN", 120, "online")
-		c.IniciarCurso(nil)
-		c.ConcluirCurso(&data)
 
 		m.New(f.GetIdFormando(), c)
-		//m.Salvar()
-		e :=m.MostraUmEstudaMatriculado(f.GetIdFormando())
-		cs := c.BuscaUmCursoPorNome(e.GetNomeCurso())
-		//Act
-		//m.LerDados()
+		e := m.MostraUmEstudaMatriculado(f.GetIdFormando())
+		desconto := funcoes.ComparaSeDiasMenorOuIgual15(e.GetDataFim())
 
 		//Assert
-
-		if e != (matricula.Matricula{}) {
-			fmt.Println("DADOS DO ESTUDANTE ENCONTRADAO: ",e)
-			fmt.Println("DADOS2: ",e.GetIdCurso())
-			fmt.Println("DADOS3: ",cs)
+		if !desconto {
 			t.Fail()
+
 		}
 	})
 }

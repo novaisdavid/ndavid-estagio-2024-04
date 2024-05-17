@@ -7,3 +7,15 @@ IdCurso: c001
 IdFormando: 98
 IdCurso: c001
 
+IdFormando: 97
+IdCurso: c001
+
+IdFormando: 25
+IdCurso: c001
+
+IdFormando: 8
+IdCurso: 43
+
+IdFormando: 26
+IdCurso: 17
+

@@ -28,7 +28,7 @@ func TestCriarMatricula(t *testing.T) {
 			t.Fail()
 		}
 	})
-	t.Run("Criar Matricula do Formando", func(t *testing.T) {
+	t.Run("Verifica se a Matricula do Formando foi feita", func(t *testing.T) {
 		//Arrange
 		f := formando.Formando{}
 		c := curso.Curso{}

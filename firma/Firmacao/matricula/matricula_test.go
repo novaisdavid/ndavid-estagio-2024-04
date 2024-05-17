@@ -4,6 +4,7 @@ import (
 	curso "Firma/curso"
 	formando "Firma/formando"
 	matricula "Firma/matricula"
+	"fmt"
 	"testing"
 )
 
@@ -171,19 +172,24 @@ func TestCriarMatriculaFormando(t *testing.T) {
 		c := curso.Curso{}
 		m := matricula.Matricula{}
 		data := "2024-12-02"
-		f.New("90", "Zeca", "Zeca@gmail.com", "923456789")
+		f.New("100", "Zeca", "Zeca@gmail.com", "923456789")
 		c.New("57", "IT", "LAN", 120, "online")
 		c.IniciarCurso(nil)
 		c.ConcluirCurso(&data)
 
 		m.New(f.GetIdFormando(), c)
-		m.Salvar()
+		//m.Salvar()
+		e :=m.MostraUmEstudaMatriculado(f.GetIdFormando())
+		cs := c.BuscaUmCursoPorNome(e.GetNomeCurso())
 		//Act
-		m.LerDados()
+		//m.LerDados()
 
 		//Assert
 
-		if m.MostraUmEstudaMatriculado("90") == (matricula.Matricula{}) {
+		if e == (matricula.Matricula{}) {
+			fmt.Println("DADOS DO ESTUDANTE ENCONTRADAO: ",e)
+			fmt.Println("DADOS2: ",e.GetIdCurso())
+			fmt.Println("DADOS3: ",cs)
 			t.Fail()
 		}
 	})

@@ -38,17 +38,19 @@ func (m *Matricula) GetIdCurso() string {
 	return m.curso.GetIdCurso()
 }
 
+func (m *Matricula) GetNomeCurso() string {
+	return m.curso.GetNome()
+}
+
 func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
-	d := m.LerDados()
-	fm := m.converteEmStruct(d)
-	for _, f := range fm {
-		if f.idFormando == idFormando {
+	dados := m.LerDados()
+	fm := m.converteEmStruct(dados)
 
-			return f
-		}
+	if len(fm) == 0 {
+		return Matricula{}
 	}
+	return fm[len(fm)-1]
 
-	return Matricula{}
 }
 
 func (m Matricula) Salvar() {
@@ -71,7 +73,7 @@ func (m Matricula) Salvar() {
 	}
 
 	dados := fmt.Sprintf("IdFormando: %s\nIdCurso: %s\nNome do Curso: %s\nHoras: %d\nConteudo Programatico: %s\nRegime: %s\nData Inicio: %s\nData Fim: %s\n", m.idFormando, m.curso.GetIdCurso(),
-	 m.curso.GetNome(),m.curso.GetHora(),m.curso.GetConteudoProgramatico(), m.curso.GetRegime(), m.curso.GetDataInicio(), m.curso.GetDataFim())
+		m.curso.GetNome(), m.curso.GetHora(), m.curso.GetConteudoProgramatico(), m.curso.GetRegime(), m.curso.GetDataInicio(), m.curso.GetDataFim())
 	nomeArquivo := novoDir + "/MatriculaFormando.txt"
 	arquivo, err := os.OpenFile(nomeArquivo, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 
@@ -118,9 +120,9 @@ func (m Matricula) converteEmStruct(dados string) []Matricula {
 	var horas int
 
 	linhas := strings.Split(string(dados), "\n")
+	cursosAdicionados := make(map[string]bool)
 
 	for _, linha := range linhas {
-
 		campos := strings.SplitN(linha, ": ", 2)
 		if len(campos) == 2 {
 			chave := strings.TrimSpace(campos[0])
@@ -142,22 +144,19 @@ func (m Matricula) converteEmStruct(dados string) []Matricula {
 				dataInicio = valor
 			case "Data Fim":
 				dataFim = valor
-
 			}
-
-			c := *curso.New(idCurso,nome,ctp,horas, regime)
-			c.IniciarCurso(&dataInicio)
-			c.ConcluirCurso(&dataFim)
-			m.curso = c
-			
 		}
 
-		matriculas = append(matriculas, m)
-	}
-
-	if len(matriculas) == 0 {
-		return matriculas
+		if !cursosAdicionados[idCurso] && idCurso != "" && nome != "" && horas > 0 && ctp != "" && regime != "" && dataInicio != "" && dataFim != "" {
+			c := *curso.New(idCurso, nome, ctp, horas, regime)
+			c.IniciarCurso(&dataInicio)
+			c.ConcluirCurso(&dataFim)
+			m := Matricula{curso: c}
+			matriculas = append(matriculas, m)
+			cursosAdicionados[idCurso] = true
+		}
 	}
 
 	return matriculas
+
 }

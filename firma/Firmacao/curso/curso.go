@@ -118,10 +118,8 @@ func (c Curso) BuscaUmCursoPorNome(n string) Curso {
 
 	dados := c.LerDados()
 	cursos := c.converteEmStruct(dados)
-
 	for _, curso := range cursos {
 		if curso.titulo == n {
-
 			return curso
 		}
 	}

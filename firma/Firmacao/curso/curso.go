@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type Curso struct {
@@ -102,7 +103,9 @@ func (c Curso) Salvar() {
 		return
 	}
 
-	dados := fmt.Sprintf("IdCurso: %s\nTitulo: %s\nContéudo Pragramático: %s\nHoras: %d\nRegime: %s\n", c.idCurso, c.titulo, c.conteudoProgramatico, c.horas, c.regime)
+	dados := fmt.Sprintf("IdCurso: %s\nTitulo: %s\nContéudo Pragramático: %s\nHoras: %d\nRegime: %s\nEstado do Curso: %s\nData Inicio: %s\nData Fim: %s\n",
+		c.idCurso, c.titulo, c.conteudoProgramatico, c.horas, c.regime, c.estado, c.dataInicio, c.dataFim)
+
 	nomeArquivo := novoDir + "/Curso.txt"
 	arquivo, err := os.OpenFile(nomeArquivo, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 

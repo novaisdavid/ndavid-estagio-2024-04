@@ -186,7 +186,7 @@ func TestCriarMatriculaFormando(t *testing.T) {
 
 		//Assert
 
-		if e == (matricula.Matricula{}) {
+		if e != (matricula.Matricula{}) {
 			fmt.Println("DADOS DO ESTUDANTE ENCONTRADAO: ",e)
 			fmt.Println("DADOS2: ",e.GetIdCurso())
 			fmt.Println("DADOS3: ",cs)

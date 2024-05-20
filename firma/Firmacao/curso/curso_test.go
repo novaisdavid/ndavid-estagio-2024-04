@@ -233,7 +233,7 @@ func TestCurso(t *testing.T) {
 
 	})
 
-	t.Run("Enviar notificação", func(t *testing.T){
+	t.Run("verifica se o dia do inicio do curso é maior ou igual a dois", func(t *testing.T){
 		//arrange
 		curs := curso.Curso{}
 		curs.New("123", "IA", "Neurais", 112, "online")

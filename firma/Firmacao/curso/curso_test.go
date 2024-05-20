@@ -250,4 +250,26 @@ func TestCurso(t *testing.T) {
 		}
 
 	})
+
+	t.Run("Envia lembrete dois dias antes do inicio do curso", func(t *testing.T){
+		//arrange
+		curs := curso.Curso{}
+		curs.New("123", "IA", "Neurais", 112, "online")
+		dataInicio := "2024-05-17"
+		curs.IniciarCurso(&dataInicio)
+
+		// act
+		dias := funcoes.ComparaSeDiasMaiorOuIgualADois(curs.GetDataInicio())
+
+		if dias {
+			curs.EnviarLembrete()
+		}
+
+		// assert
+
+		if !dias {
+			t.Fail()
+		}
+
+	})
 }

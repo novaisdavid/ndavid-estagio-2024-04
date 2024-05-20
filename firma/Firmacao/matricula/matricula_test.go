@@ -171,7 +171,7 @@ func TestCriarMatriculaFormando(t *testing.T) {
 		f := formando.Formando{}
 		c := curso.Curso{}
 		m := matricula.Matricula{}
-		f.New("100", "Zeca", "Zeca@gmail.com", "923456789")
+		f.New("90", "Zeca", "Zeca@gmail.com", "923456789")
 		c.New("57", "IT", "LAN", 120, "online")
 
 		m.New(f.GetIdFormando(), c)

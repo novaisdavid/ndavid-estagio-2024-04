@@ -87,25 +87,3 @@ func CadastrarCursos(dados ...interface{}) {
 	fmt.Println("CURSO CADASTRADO COM SUCESSO!")
 
 }
-
-func CadastrarCursos(dados ...interface{}) {
-	rand.Seed(time.Now().UnixNano())
-	idCurso := rand.Intn(100)
-	c := curso.Curso{}
-
-	id := strconv.Itoa(idCurso)
-
-	if len(dados) >= 4 {
-
-		c.New(id, dados[0].(string), dados[1].(string), dados[2].(int), dados[3].(string))
-	}
-
-	fmt.Println("")
-	fmt.Println("CURSO: ", c.GetNome())
-	fmt.Println("CARGA HORÁRIA: ", c.GetHora())
-	fmt.Println("REGIME: ", c.GetRegime())
-	c.Salvar()
-	fmt.Println("")
-	fmt.Println("CURSO CADASTRADO COM SUCESSO!")
-
-}

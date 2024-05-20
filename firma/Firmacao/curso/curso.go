@@ -17,8 +17,9 @@ type Curso struct {
 	conteudoProgramatico string
 	horas                int
 	regime               string
-	//data inicio
-	//data fim
+	estado               string
+	dataInicio           string
+	dataFim              string
 }
 
 func (c *Curso) New(id string, t string, cp string, h int, r string) *Curso {
@@ -51,19 +52,74 @@ func (c *Curso) GetHora() int {
 	return c.horas
 }
 
-func (c *Curso) GetConteudoProgramatico() int {
+func (c *Curso) GetConteudoProgramatico() string {
 
-	return c.horas
+	return c.conteudoProgramatico
+}
+
+func (c *Curso) GetEstado() string {
+
+	return c.estado
+}
+
+func (c *Curso) GetDataInicio() string {
+
+	return c.dataInicio
+}
+
+func (c *Curso) GetDataFim() string {
+
+	return c.dataFim
+}
+
+func (c *Curso) IniciarCurso(dataInicio *string) {
+	estado := "inciado"
+	dataatual := time.Now()
+
+	dataatualEmString := dataatual.Format("2006-01-02")
+
+	if c.idCurso != "" && c.titulo != "" && c.horas != 0 && c.regime != "" {
+		if dataInicio != nil {
+
+			c.estado = estado
+			c.dataInicio = *dataInicio
+			return
+		}
+
+		c.estado = estado
+		c.dataInicio = dataatualEmString
+		return
+	}
+
+}
+
+func (c *Curso) ConcluirCurso(dataInicio *string) {
+	estado := "concluido"
+	dataatual := time.Now()
+
+	dataatualEmString := dataatual.Format("2006-01-02")
+
+	if c.idCurso != "" && c.titulo != "" && c.horas != 0 && c.regime != "" && c.dataInicio != "" {
+		if dataInicio != nil {
+
+			c.estado = estado
+			c.dataFim = *dataInicio
+			return
+		}
+
+		c.estado = estado
+		c.dataFim = dataatualEmString
+		return
+	}
+
 }
 
 func (c Curso) BuscaUmCursoPorNome(n string) Curso {
 
 	dados := c.LerDados()
 	cursos := c.converteEmStruct(dados)
-
 	for _, curso := range cursos {
 		if curso.titulo == n {
-
 			return curso
 		}
 	}
@@ -85,9 +141,9 @@ func (c Curso) BuscaUmCursoPorNomeRegime(n, r string) Curso {
 
 	return Curso{}
 }
-func (c Curso) Salvar() {
 
-	if c.idCurso == "" || c.titulo == "" || c.horas == 0 || c.conteudoProgramatico == "" || c.regime == "" {
+func (c Curso) Salvar() {
+	if c.idCurso == "" || c.titulo == "" || c.horas == 0 || c.conteudoProgramatico == "" || c.regime == "" || c.estado == "" {
 		return
 	}
 	dir, err := os.Getwd()

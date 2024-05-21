@@ -172,11 +172,12 @@ func TestCriarMatriculaFormando(t *testing.T) {
 		f := formando.Formando{}
 		c := curso.Curso{}
 		m := matricula.Matricula{}
-		f.New("001", "Zeca", "Zeca@gmail.com", "923456789")
-		c.New("57", "IT", "LAN", 120, "online")
+		f.New("90", "Zeca", "Zeca@gmail.com", "923456789")
+		c.New("34", "CCNA", "LAN, WAN", 120, "online")
 
 		m.New(f.GetIdFormando(), c)
 		e := m.MostraUmEstudaMatriculado(f.GetIdFormando())
+		fmt.Println(e)
 		desconto := funcoes.ComparaSeDiasMenorOuIgual15(e.GetDataFim())
 
 		//Assert

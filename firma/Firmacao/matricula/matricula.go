@@ -38,6 +38,10 @@ func (m *Matricula) GetIdCurso() string {
 	return m.curso.GetIdCurso()
 }
 
+func (m *Matricula) GetDataInicioCurso() string {
+	return m.curso.GetDataInicio()
+}
+
 func (m *Matricula) GetNomeCurso() string {
 	return m.curso.GetNome()
 }
@@ -63,6 +67,21 @@ func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
 	}
 
 	return structAuliar
+}
+
+func (m Matricula) MostraTodasMatriculasComDataInicio() []Matricula {
+	dados := m.LerDados()
+	matriculados := m.converteEmStruct(dados)
+	var matriculasComDataInicio []Matricula
+	fmt.Println("OS DADOS DOS MATRICUALDOS ANTES DO FOR: ", matriculados)
+	for _, mt := range matriculados {
+
+		if mt.curso.GetNome() != "" && mt.curso.GetDataInicio() != "" {
+			matriculasComDataInicio = append(matriculasComDataInicio, mt)
+		}
+	}
+	fmt.Println("OS DADOS DOS MATRICUALDOS DEPOIS DO FOR: ", matriculasComDataInicio)
+	return matriculasComDataInicio
 }
 
 func (m Matricula) Salvar() {

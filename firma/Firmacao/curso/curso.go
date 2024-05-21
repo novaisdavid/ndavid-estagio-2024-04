@@ -142,6 +142,20 @@ func (c Curso) BuscaUmCursoPorNomeRegime(n, r string) Curso {
 	return Curso{}
 }
 
+func (c Curso) BuscaCursoComdataInicio() Curso {
+	dados := c.LerDados()
+	cursos := c.converteEmStruct(dados)
+
+	for _, curso := range cursos {
+		if curso.dataInicio != "" && curso.titulo != "" {
+
+			return curso
+		}
+	}
+
+	return Curso{}
+}
+
 func (c Curso) Salvar() {
 	if c.idCurso == "" || c.titulo == "" || c.horas == 0 || c.conteudoProgramatico == "" || c.regime == "" || c.estado == "" {
 		return

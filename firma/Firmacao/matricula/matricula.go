@@ -71,7 +71,7 @@ func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
 
 func (m Matricula) MostraTodasMatriculasComDataInicio() []Matricula {
 	dados := m.LerDados()
-	matriculados := m.converteEmStruct(dados)
+	matriculados := m.converteEmStruct2(dados)
 	var matriculasComDataInicio []Matricula
 	fmt.Println("OS DADOS DOS MATRICUALDOS ANTES DO FOR: ", matriculados)
 	for _, mt := range matriculados {
@@ -187,8 +187,84 @@ func (m Matricula) converteEmStruct(dados string) []Matricula {
 			matriculas = append(matriculas, m)
 			cursosAdicionados[idCurso] = true
 		}
+		
 	}
-
+fmt.Println(" DENTRO DA STRUCT: ", matriculas)
 	return matriculas
 
+}
+
+func (m Matricula) converteEmStruct2(dados string) []Matricula {
+	var idCurso, idFormando, dataFim, dataInicio, ctp, regime, nome string
+	var horas int
+	var matriculas []Matricula
+
+	linhas := strings.Split(string(dados), "\n")
+	cursosAdicionados := make(map[string]bool)
+
+	for _, linha := range linhas {
+		campos := strings.SplitN(linha, ": ", 2)
+		if len(campos) == 2 {
+			chave := strings.TrimSpace(campos[0])
+			valor := strings.TrimSpace(campos[1])
+			switch chave {
+			case "IdFormando":
+				idFormando = valor
+			case "IdCurso":
+				idCurso = valor
+			case "Nome do Curso":
+				nome = valor
+			case "Horas":
+				horas, _ = strconv.Atoi(valor)
+			case "Conteudo Programatico":
+				ctp = valor
+			case "Regime":
+				regime = valor
+			case "Data Inicio":
+				dataInicio = valor
+			case "Data Fim":
+				dataFim = valor
+			}
+		}
+
+		// Verificar se todos os campos necessários estão preenchidos antes de adicionar o curso e a matrícula
+		if idFormando != "" && idCurso != "" && nome != "" && horas > 0 && ctp != "" && regime != "" && dataInicio != "" && dataFim != "" {
+			if !cursosAdicionados[idCurso] {
+				/*cur := curso.Curso{
+					idCurso:              idCurso,
+					nome:                 nome,
+					conteudoProgramatico: ctp,
+					horas:                horas,
+					regime:               regime,
+					dataInicio:           dataInicio,
+					dataFim:              dataFim,
+				}*/
+				cur := curso.Curso{}
+				cur.New(idCurso, nome, ctp, horas, regime)
+				cur.IniciarCurso(&dataInicio) 
+				cur.ConcluirCurso(&dataFim)
+				matricula := Matricula{
+					idFormando: idFormando,
+					curso:      cur,
+				}
+				matriculas = append(matriculas, matricula)
+				cursosAdicionados[idCurso] = true
+
+				// Resetar os campos para o próximo curso
+				idFormando = ""
+				idCurso = ""
+				nome = ""
+				horas = 0
+				ctp = ""
+				regime = ""
+				dataInicio = ""
+				dataFim = ""
+			}
+		}
+
+		
+	}
+
+	    fmt.Println("DENTRO DA STRUCT2: ", matriculas)
+		return matriculas
 }

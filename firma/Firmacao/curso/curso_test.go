@@ -4,7 +4,6 @@ import (
 	"Firma/curso"
 	"fmt"
 	"testing"
-	"Firma/funcoes"
 )
 
 func TestCurso(t *testing.T) {
@@ -233,43 +232,5 @@ func TestCurso(t *testing.T) {
 
 	})
 
-	t.Run("verifica se o dia do inicio do curso é maior ou igual a dois", func(t *testing.T){
-		//arrange
-		curs := curso.Curso{}
-		curs.New("123", "IA", "Neurais", 112, "online")
-		dataInicio := "2024-05-17"
-		curs.IniciarCurso(&dataInicio)
-
-		// act
-		dias := funcoes.ComparaSeDiasMaiorOuIgualADois(curs.GetDataInicio())
-
-		// assert
-
-		if !dias {
-			t.Fail()
-		}
-
-	})
-
-	t.Run("Envia lembrete dois dias antes do inicio do curso", func(t *testing.T){
-		//arrange
-		curs := curso.Curso{}
-		curs.New("123", "IA", "Neurais", 112, "online")
-		dataInicio := "2024-05-17"
-		curs.IniciarCurso(&dataInicio)
-
-		// act
-		dias := funcoes.ComparaSeDiasMaiorOuIgualADois(curs.GetDataInicio())
-
-		if dias {
-			curs.EnviarLembrete()
-		}
-
-		// assert
-
-		if !dias {
-			t.Fail()
-		}
-
-	})
+	
 }

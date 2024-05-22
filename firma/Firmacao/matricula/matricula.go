@@ -53,7 +53,6 @@ func (m *Matricula) GetDataFim() string {
 func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
 	dados := m.LerDados()
 	fm := m.ConverteEmStruct(dados)
-	fm := m.ConverteEmStruct(dados)
 	var structAuliar Matricula
 
 	if len(fm) == 0 {
@@ -72,7 +71,6 @@ func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
 
 func (m Matricula) MostraTodasMatriculasComDataInicio() []Matricula {
 	dados := m.LerDados()
-	matriculados := m.ConverteEmStruct(dados)
 	matriculados := m.ConverteEmStruct(dados)
 	var matriculasComDataInicio []Matricula
 	fmt.Println("OS DADOS DOS MATRICUALDOS ANTES DO FOR: ", matriculados)
@@ -147,7 +145,6 @@ func (m Matricula) LerDados() string {
 }
 
 func (m Matricula) ConverteEmStruct(dados string) []Matricula {
-func (m Matricula) ConverteEmStruct(dados string) []Matricula {
 	var idCurso, idFormando, dataFim, dataInicio, ctp, regime, nome string
 	var horas int
 	var matriculas []Matricula
@@ -206,10 +203,8 @@ func (m Matricula) ConverteEmStruct(dados string) []Matricula {
 			}
 		}
 
-
 	}
 
 	return matriculas
-	return matriculas
-}
 
+}

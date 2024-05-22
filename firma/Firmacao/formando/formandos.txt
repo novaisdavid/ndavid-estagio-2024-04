@@ -2,3 +2,13 @@ IdFormando: 90
 Nome: Zafir
 Email: zafir@gmail.com
 Telefone: 942678046
+
+IdFormando: 80
+Nome: Denilson
+Email: denilson@gmail.com
+Telefone: 944674041
+
+IdFormando: 001
+Nome: Technologies
+Email: technologies@gmail.com
+Telefone: 964574043

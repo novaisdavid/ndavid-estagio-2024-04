@@ -32,7 +32,7 @@ func TestServicos(t *testing.T) {
 		}
 
 		// assert
-		if enviou < 1 {
+		if enviou <1 {
 			fmt.Println(enviou)
 			t.Fail()
 		}

@@ -74,6 +74,7 @@ func (m Matricula) MostraTodasMatriculasComDataInicio() []Matricula {
 	matriculados := m.ConverteEmStruct(dados)
 	var matriculasComDataInicio []Matricula
 	fmt.Println("OS DADOS DOS MATRICUALDOS ANTES DO FOR: ", matriculados)
+
 	for _, mt := range matriculados {
 
 		if mt.curso.GetNome() != "" && mt.curso.GetDataInicio() != "" {
@@ -182,6 +183,7 @@ func (m Matricula) ConverteEmStruct(dados string) []Matricula {
 				cur := curso.Curso{}
 				cur.New(idCurso, nome, ctp, horas, regime)
 				cur.IniciarCurso(&dataInicio)
+				cur.IniciarCurso(&dataInicio)
 				cur.ConcluirCurso(&dataFim)
 				matricula := Matricula{
 					idFormando: idFormando,
@@ -204,4 +206,5 @@ func (m Matricula) ConverteEmStruct(dados string) []Matricula {
 	}
 
 	return matriculas
+
 }

@@ -23,7 +23,7 @@ func FazerMatriculadeFormando(dados ...interface{}) {
 	f := formando.Formando{}
 	c := curso.Curso{}
 	m := matricula.Matricula{}
-	id := "90"
+	id := "80"
 
 	if len(dados) < 5 {
 		fmt.Println("Por favor preenchas dos campos correctamente")
@@ -93,6 +93,13 @@ func CadastrarCursos(dados ...interface{}) {
 	fmt.Println("")
 	fmt.Println("CURSO CADASTRADO COM SUCESSO!")
 
+}
+
+func FuncaoBackground() {
+	m := matricula.Matricula{}
+	f := formando.Formando{}
+
+	EnviarLembretePeloWhatsapp(m, f)
 }
 
 func EnviarLembretePeloWhatsapp(m matricula.Matricula, f formando.Formando) bool {

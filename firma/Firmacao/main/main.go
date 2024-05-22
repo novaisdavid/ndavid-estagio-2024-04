@@ -113,6 +113,7 @@ func main() {
 	}
 
 	cmd.Flags().StringVarP(&nomeCursoC, "nomeCC", "n", "", "o nome do curso")
+	rootCmd.AddCommand(cmd)
 
 	var idCurso, idFormando string
 	var valorAvaliacao int

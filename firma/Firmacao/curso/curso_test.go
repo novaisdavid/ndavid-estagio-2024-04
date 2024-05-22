@@ -10,11 +10,12 @@ func TestCurso(t *testing.T) {
 	t.Run("iniciar curso", func(t *testing.T) {
 		//arrange
 		curs := curso.Curso{}
+		datainicio := "2024-05-31"
+		curs.New("003", "cc", "fluxo", 12, "online")
+		curs.DefinirDataDeInciodoCurso(&datainicio)
 
 		//act
-		curs.New("003", "cc", "fluxo", 12, "online")
-
-		curs.IniciarCurso(nil)
+		curs.IniciarCurso()
 		//assert
 		if curs.GetEstado() == "" {
 			fmt.Println(curs.GetNome())
@@ -33,7 +34,7 @@ func TestCurso(t *testing.T) {
 
 		//act
 		curs.New("", "", "", 0, "")
-		curs.IniciarCurso(nil)
+		curs.IniciarCurso()
 
 		//assert
 		if curs.GetEstado() == "inciado" {
@@ -50,12 +51,14 @@ func TestCurso(t *testing.T) {
 	t.Run("terminar um curso", func(t *testing.T) {
 		//arrange
 		curs := curso.Curso{}
-
+		datinicio := "2024-04-01"
+		data := "2024-05-12"
 		curs.New("003", "cc", "fluxo", 12, "online")
-
-		curs.IniciarCurso(nil)
+		curs.DefinirDataDeInciodoCurso(&datinicio)
+		curs.IniciarCurso()
+		curs.DefinirDataDeFimdoCurso(&data)
 		//act
-		curs.ConcluirCurso(nil)
+		curs.ConcluirCurso()
 
 		//assert
 		if curs.GetEstado() != "concluido" {
@@ -73,12 +76,12 @@ func TestCurso(t *testing.T) {
 	t.Run("terminar um curso sem dados do curso", func(t *testing.T) {
 		//arrange
 		curs := curso.Curso{}
-
+		data := "2024-05-17"
 		curs.New("", "", "", 0, "")
-
-		curs.IniciarCurso(nil)
+		curs.DefinirDataDeFimdoCurso(&data)
+		curs.IniciarCurso()
 		//act
-		curs.ConcluirCurso(nil)
+		curs.ConcluirCurso()
 
 		//assert
 		if curs.GetEstado() == "concluido" {
@@ -96,10 +99,12 @@ func TestCurso(t *testing.T) {
 	t.Run("terminar um curso sem ter de iniciar o curso", func(t *testing.T) {
 		//arrange
 		curs := curso.Curso{}
+		data := "2024-05-17"
 		curs.New("003", "cc", "fluxo", 12, "online")
+		curs.DefinirDataDeFimdoCurso(&data)
 
 		//act
-		curs.ConcluirCurso(nil)
+		curs.ConcluirCurso()
 
 		//assert
 		if curs.GetEstado() == "concluido" {
@@ -117,11 +122,12 @@ func TestCurso(t *testing.T) {
 	t.Run("terminar um curso sem dados do curso e sem iniciar", func(t *testing.T) {
 		//arrange
 		curs := curso.Curso{}
+		data := "2024-05-17"
 		curs.New("", "", "", 0, "")
-		curs.IniciarCurso(nil)
+		curs.DefinirDataDeFimdoCurso(&data)
 
 		//act
-		curs.ConcluirCurso(nil)
+		curs.ConcluirCurso()
 
 		//assert
 		if curs.GetEstado() == "concluido" {
@@ -139,11 +145,15 @@ func TestCurso(t *testing.T) {
 	t.Run("terminar um curso e salvar no ficheiro", func(t *testing.T) {
 		//arrange
 		curs := curso.Curso{}
+		datafim := "2024-05-12"
+		datainicio := "2024-04-06"
 		curs.New("003", "cc", "fluxo", 12, "online")
-		curs.IniciarCurso(nil)
-		curs.ConcluirCurso(nil)
+		curs.DefinirDataDeInciodoCurso(&datainicio)
+		curs.DefinirDataDeFimdoCurso(&datafim)
+		curs.IniciarCurso()
 
 		//act
+		curs.ConcluirCurso()
 		curs.Salvar()
 
 		//assert
@@ -232,5 +242,4 @@ func TestCurso(t *testing.T) {
 
 	})
 
-	
 }

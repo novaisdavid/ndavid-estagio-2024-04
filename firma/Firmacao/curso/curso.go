@@ -72,42 +72,65 @@ func (c *Curso) GetDataFim() string {
 	return c.dataFim
 }
 
-func (c *Curso) IniciarCurso(dataInicio *string) {
+func (c *Curso) IniciarCurso() {
 	estado := "inciado"
+
+	if c.idCurso != "" && c.titulo != "" && c.horas != 0 && c.regime != "" && c.dataInicio != "" {
+
+		c.estado = estado
+		return
+	}
+
+}
+
+func (c *Curso) ConcluirCurso() {
+	estado := "concluido"
+
+	if c.idCurso != "" && c.titulo != "" && c.horas != 0 && c.regime != "" && c.dataInicio != "" && c.dataFim != "" {
+		c.estado = estado
+		return
+	}
+
+}
+
+func (c *Curso) DefinirDataDeInciodoCurso(dataInicio *string) {
+
 	dataatual := time.Now()
 
 	dataatualEmString := dataatual.Format("2006-01-02")
 
 	if c.idCurso != "" && c.titulo != "" && c.horas != 0 && c.regime != "" {
-		if dataInicio != nil {
-
-			c.estado = estado
+		if dataInicio != nil && c.dataInicio == "" {
 			c.dataInicio = *dataInicio
 			return
 		}
 
-		c.estado = estado
+		if c.dataInicio != "" {
+			return
+		}
+
 		c.dataInicio = dataatualEmString
 		return
 	}
 
 }
 
-func (c *Curso) ConcluirCurso(dataInicio *string) {
-	estado := "concluido"
+func (c *Curso) DefinirDataDeFimdoCurso(dataFim *string) {
+
 	dataatual := time.Now()
 
 	dataatualEmString := dataatual.Format("2006-01-02")
 
-	if c.idCurso != "" && c.titulo != "" && c.horas != 0 && c.regime != "" && c.dataInicio != "" {
-		if dataInicio != nil {
-
-			c.estado = estado
-			c.dataFim = *dataInicio
+	if c.idCurso != "" && c.titulo != "" && c.horas != 0 && c.regime != "" {
+		if dataFim != nil && c.dataFim == "" {
+			c.dataFim = *dataFim
 			return
 		}
 
-		c.estado = estado
+		if c.dataFim != "" {
+			return
+		}
+
 		c.dataFim = dataatualEmString
 		return
 	}
@@ -237,6 +260,8 @@ func (c Curso) converteEmStruct(dados string) []Curso {
 						curso.titulo = campos[1]
 					case "Contéudo Pragramático":
 						curso.conteudoProgramatico = campos[1]
+					case "Estado":
+						curso.estado = campos[1]
 					case "Horas":
 						curso.horas, _ = strconv.Atoi(campos[1])
 					case "Regime":

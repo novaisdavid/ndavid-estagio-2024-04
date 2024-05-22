@@ -1817,3 +1817,12 @@ Estado do Curso: concluido
 Data Inicio: 2024-04-06
 Data Fim: 2024-05-12
 
+IdCurso: 003
+Titulo: cc
+Contéudo Pragramático: fluxo
+Horas: 12
+Regime: online
+Estado do Curso: concluido
+Data Inicio: 2024-04-06
+Data Fim: 2024-05-12
+

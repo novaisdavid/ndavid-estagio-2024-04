@@ -75,11 +75,11 @@ func main() {
 	cmd.Flags().StringVarP(&regimeC, "regimec", "r", "", "regime do curso")
 	cmd.Flags().IntVarP(&horas, "horas", "o", 0, "horas do curso")
 
-	var nomeCurso, idCurso, datainiciar, dataFim string
+	var nomeCurso string
 
 	cmd = &cobra.Command{
-		Use:   "curso",
-		Short: "iniciar ou terminar curso",
+		Use:   "Iniciarcurso",
+		Short: "iniciar curso",
 		Run: func(cmd *cobra.Command, args []string) {
 
 			if nomeCurso == "" {
@@ -87,25 +87,32 @@ func main() {
 				return
 			}
 
-			if idCurso == "" {
-				fmt.Println("O IDENTIFICADOR DO CURSO NÃO PODE SER VAZIO: ")
-				return
-			}
-
-			if datainiciar == "" {
-				fmt.Println("A DATA DE INICIO NÃO PODE SER VAZIO: ")
-				return
-			}
-			
-			servico.CadastrarCursos(titulo, conteudoProgramatico, horas, regimeC)
+			servico.IniciarCurso(nomeCurso)
 
 		},
 	}
 
-	cmd.Flags().StringVarP(&titulo, "titulo", "t", "", "o titulo do curos")
-	cmd.Flags().StringVarP(&conteudoProgramatico, "conteudo", "c", "", "o conteudo programático")
-	cmd.Flags().StringVarP(&regimeC, "regimec", "r", "", "regime do curso")
-	cmd.Flags().IntVarP(&horas, "horas", "o", 0, "horas do curso")
+	cmd.Flags().StringVarP(&nomeCurso, "nomeC", "n", "", "o nome do curso")
+	rootCmd.AddCommand(cmd)
+
+	var nomeCursoC string
+
+	cmd = &cobra.Command{
+		Use:   "Concluircurso",
+		Short: "terminar curso",
+		Run: func(cmd *cobra.Command, args []string) {
+
+			if nomeCursoC == "" {
+				fmt.Println("O NOME DO CURSO NAO PODE SER VAZIO: ")
+				return
+			}
+
+			servico.ConcluirCursoCurso(nomeCursoC)
+
+		},
+	}
+
+	cmd.Flags().StringVarP(&nomeCursoC, "nomeCC", "n", "", "o nome do curso")
 
 	fmt.Println("========== LEMBRETE ENVIADO ===========")
 	servico.FuncaoBackground()

@@ -114,6 +114,42 @@ func main() {
 
 	cmd.Flags().StringVarP(&nomeCursoC, "nomeCC", "n", "", "o nome do curso")
 
+	var idCurso, idEstudante string
+	var valorAvaliacao int
+
+	cmd = &cobra.Command{
+		Use:   "Avaliarcurso",
+		Short: "avaliar um curso",
+		Run: func(cmd *cobra.Command, args []string) {
+
+			if idCurso == "" {
+				fmt.Println("O IDENTIFICADOR DO CURSO NAO PODE SER VAZIO: ")
+				return
+			}
+
+			if idEstudante == "" {
+				fmt.Println("O IDENTIFICADOR DO ESTUDANTE NAO PODE SER VAZIO: ")
+				return
+			}
+
+			if valorAvaliacao == 0 {
+				fmt.Println("O OVALOR DA AVALIAÇÂO NÃO PODE SER ZERO/VAZIO: ")
+				return
+			}
+
+			avaliou := servico.AvaliarCurso(idCurso, idEstudante, valorAvaliacao)
+
+			if len(avaliou) > 0 {
+				fmt.Println("CURSO VALIADO!")
+			}
+
+		},
+	}
+
+	cmd.Flags().StringVarP(&idCurso, "idcurso", "i", "", "o nome do curso")
+	cmd.Flags().StringVarP(&idEstudante, "idFormando", "e", "", "o nome do curso")
+	cmd.Flags().IntVarP(&valorAvaliacao, "avaliacao", "n", 0, "o nome do curso")
+
 	fmt.Println("========== LEMBRETE ENVIADO ===========")
 	servico.FuncaoBackground()
 

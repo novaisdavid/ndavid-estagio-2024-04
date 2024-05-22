@@ -144,8 +144,6 @@ func (m Matricula) LerDados() string {
 }
 
 func (m Matricula) ConverteEmStruct(dados string) []Matricula {
-	var matriculas []Matricula
-	var curso curso.Curso
 	var idCurso, idFormando, dataFim, dataInicio, ctp, regime, nome string
 	var horas int
 	var matriculas []Matricula
@@ -178,17 +176,32 @@ func (m Matricula) ConverteEmStruct(dados string) []Matricula {
 			}
 		}
 
-		if !cursosAdicionados[idCurso] && idCurso != "" && nome != "" && horas > 0 && ctp != "" && regime != "" && dataInicio != "" && dataFim != "" {
-			c := *curso.New(idCurso, nome, ctp, horas, regime)
-			c.IniciarCurso(&dataInicio)
-			c.ConcluirCurso(&dataFim)
-			m := Matricula{curso: c}
-			m.idFormando = idFormando
-			matriculas = append(matriculas, m)
-			cursosAdicionados[idCurso] = true
+		if idFormando != "" && idCurso != "" && nome != "" && horas > 0 && ctp != "" && regime != "" && dataInicio != "" && dataFim != "" {
+			if !cursosAdicionados[idCurso] {
+
+				cur := curso.Curso{}
+				cur.New(idCurso, nome, ctp, horas, regime)
+				cur.IniciarCurso(&dataInicio)
+				cur.ConcluirCurso(&dataFim)
+				matricula := Matricula{
+					idFormando: idFormando,
+					curso:      cur,
+				}
+				matriculas = append(matriculas, matricula)
+				cursosAdicionados[idCurso] = true
+
+				idFormando = ""
+				idCurso = ""
+				nome = ""
+				horas = 0
+				ctp = ""
+				regime = ""
+				dataInicio = ""
+				dataFim = ""
+			}
 		}
+
 	}
 
 	return matriculas
-
 }

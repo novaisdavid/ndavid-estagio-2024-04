@@ -7,7 +7,6 @@ import (
 	"Firma/servico"
 	"fmt"
 	"testing"
-	"fmt"
 )
 
 func TestServicos(t *testing.T) {
@@ -23,8 +22,8 @@ func TestServicos(t *testing.T) {
 		for _, m := range mt {
 			form := formando.BuscaFormandoPorId(m.GetIdFormando())
 			diasMaior := funcoes.ComparaSeDiaMaiorOuIgual2(m.GetDataInicioCurso())
-			
-			if diasMaior && m.GetIdFormando() != "" { 
+
+			if diasMaior && m.GetIdFormando() != "" {
 				servico.EnviarLembretePeloWhatsapp(m, form)
 				enviou = enviou + 1
 

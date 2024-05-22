@@ -80,7 +80,6 @@ func (m Matricula) MostraTodasMatriculasComDataInicio() []Matricula {
 			matriculasComDataInicio = append(matriculasComDataInicio, mt)
 		}
 	}
-	fmt.Println("OS DADOS DOS MATRICUALDOS DEPOIS DO FOR: ", matriculasComDataInicio)
 	return matriculasComDataInicio
 }
 
@@ -149,6 +148,7 @@ func (m Matricula) ConverteEmStruct(dados string) []Matricula {
 	var curso curso.Curso
 	var idCurso, idFormando, dataFim, dataInicio, ctp, regime, nome string
 	var horas int
+	var matriculas []Matricula
 
 	linhas := strings.Split(string(dados), "\n")
 	cursosAdicionados := make(map[string]bool)

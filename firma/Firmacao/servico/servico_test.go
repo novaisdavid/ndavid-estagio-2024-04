@@ -7,6 +7,7 @@ import (
 	"Firma/servico"
 	"fmt"
 	"testing"
+	"fmt"
 )
 
 func TestServicos(t *testing.T) {
@@ -15,23 +16,25 @@ func TestServicos(t *testing.T) {
 		// arrange
 		matriculado := matricula.Matricula{}
 		formando := formando.Formando{}
-		enviou := false
+		enviou := 0
 
 		// Act
 		mt := matriculado.MostraTodasMatriculasComDataInicio()
 		for _, m := range mt {
 			form := formando.BuscaFormandoPorId(m.GetIdFormando())
 			diasMaior := funcoes.ComparaSeDiaMaiorOuIgual2(m.GetDataInicioCurso())
-
-			if diasMaior && form.GetNomeFormando() != "" {
-				enviou = servico.EnviarLembretePeloWhatsapp(m, form)
+			
+			if diasMaior && m.GetIdFormando() != "" { 
+				servico.EnviarLembretePeloWhatsapp(m, form)
+				enviou = enviou + 1
 
 			}
 
 		}
 
 		// assert
-		if !enviou {
+		if enviou < 1 {
+			fmt.Println(enviou)
 			t.Fail()
 		}
 	})

@@ -157,7 +157,6 @@ func (c Curso) BuscaCursoComdataInicio() Curso {
 }
 
 func (c Curso) Salvar() {
-
 	if c.idCurso == "" || c.titulo == "" || c.horas == 0 || c.conteudoProgramatico == "" || c.regime == "" || c.estado == "" {
 		return
 	}

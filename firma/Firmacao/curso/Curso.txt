@@ -1748,3 +1748,39 @@ Estado do Curso: concluido
 Data Inicio: 2024-05-21
 Data Fim: 2024-05-21
 
+IdCurso: 003
+Titulo: cc
+Contéudo Pragramático: fluxo
+Horas: 12
+Regime: online
+Estado do Curso: concluido
+Data Inicio: 2024-05-21
+Data Fim: 2024-05-21
+
+IdCurso: 003
+Titulo: cc
+Contéudo Pragramático: fluxo
+Horas: 12
+Regime: online
+Estado do Curso: concluido
+Data Inicio: 2024-05-21
+Data Fim: 2024-05-21
+
+IdCurso: 003
+Titulo: cc
+Contéudo Pragramático: fluxo
+Horas: 12
+Regime: online
+Estado do Curso: concluido
+Data Inicio: 2024-05-21
+Data Fim: 2024-05-21
+
+IdCurso: 003
+Titulo: cc
+Contéudo Pragramático: fluxo
+Horas: 12
+Regime: online
+Estado do Curso: concluido
+Data Inicio: 2024-05-21
+Data Fim: 2024-05-21
+

@@ -13,6 +13,8 @@ import (
 	//"net/url"
 	"strconv"
 	//"strings"
+	"os"
+	"path/filepath"
 	"time"
 )
 
@@ -153,5 +155,43 @@ func AvaliarCurso(m matricula.Matricula, idCurso, idFormando string, avaliacao i
 			ava[1] = (strconv.Itoa((60 - avaliacao) * 2))
 		}
 	}
+	if ava[0] != "" {
+		SalvarAvaliacao(idCurso, idFormando, ava)
+	}
 	return ava
+}
+func SalvarAvaliacao(idCurso, idFormando string, avaliacao [2]string) {
+
+	if idFormando == "" || idCurso == "" || avaliacao[0] == "" {
+		return
+	}
+
+	dir, err := os.Getwd()
+	if err != nil {
+		fmt.Println("Erro ao obter o diretório de trabalho:", err)
+		return
+	}
+
+	novoDir := filepath.Join(dir, "..", "matricula")
+	err = os.Chdir(novoDir)
+	if err != nil {
+		fmt.Println("Erro ao mudar de diretório:", err)
+		return
+	}
+
+	dados := fmt.Sprintf("IdFormando: %s\nIdCurso: %s\nNota da avaliacao: %s\nPenalizacao: %s\n", idFormando, idCurso,
+		avaliacao[0], avaliacao[1])
+	nomeArquivo := novoDir + "/CursosAvaliados.txt"
+	arquivo, err := os.OpenFile(nomeArquivo, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+
+	if err != nil {
+		return
+	}
+
+	defer arquivo.Close()
+
+	_, err = arquivo.WriteString(dados + "\n")
+	if err != nil {
+		return
+	}
 }

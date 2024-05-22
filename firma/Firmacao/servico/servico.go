@@ -113,7 +113,7 @@ func EnviarLembretePeloWhatsapp(m matricula.Matricula, f formando.Formando) bool
 	if contEnviouMensagem >= 1 {
 		return true
 	}
-	
+
 	return false
 
 	/*apiurl := "https://api.alvochat.com/instance1199/messages/chat"
@@ -138,4 +138,20 @@ func EnviarLembretePeloWhatsapp(m matricula.Matricula, f formando.Formando) bool
 
 	fmt.Println(string(body))*/
 
+}
+func AvaliarCurso(m matricula.Matricula, idCurso, idFormando string, avaliacao int) [2]string {
+	dados := m.LerDados()
+	matr := m.ConverteEmStruct(dados)
+	ava := [2]string{"", ""}
+	for _, x := range matr {
+
+		if x.GetIdFormando() == idFormando && x.GetIdCurso() == idCurso && avaliacao >= 0 && avaliacao <= 100 {
+			ava[0] = (strconv.Itoa(avaliacao))
+		}
+		if ava[0] != "" && avaliacao < 60 {
+
+			ava[1] = (strconv.Itoa((60 - avaliacao) * 2))
+		}
+	}
+	return ava
 }

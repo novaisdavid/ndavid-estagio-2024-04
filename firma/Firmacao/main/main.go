@@ -1,14 +1,14 @@
 package main
 
 import (
-	//"flag"
-	"fmt"
-	"github.com/spf13/cobra"
 	servico "Firma/servico"
+	"fmt"
+
+	"github.com/spf13/cobra"
 )
 
 func main() {
-	
+
 	var rootCmd = &cobra.Command{Use: "GESTFIRMA"}
 	var nome, email, telefone, curso, regime string
 	var cmd = &cobra.Command{
@@ -28,7 +28,7 @@ func main() {
 				return
 			}
 
-			servico.FazerMatriculadeFormando(nome, email, telefone,curso,regime)
+			servico.FazerMatriculadeFormando(nome, email, telefone, curso, regime)
 
 		},
 	}
@@ -44,7 +44,7 @@ func main() {
 	var horas int
 
 	cmd = &cobra.Command{
-		Use:   "curso",
+		Use:   "Novocurso",
 		Short: " cadastrar um novo curso",
 		Run: func(cmd *cobra.Command, args []string) {
 			if titulo == "" {
@@ -73,9 +73,45 @@ func main() {
 	cmd.Flags().StringVarP(&titulo, "titulo", "t", "", "o titulo do curos")
 	cmd.Flags().StringVarP(&conteudoProgramatico, "conteudo", "c", "", "o conteudo programático")
 	cmd.Flags().StringVarP(&regimeC, "regimec", "r", "", "regime do curso")
-	cmd.Flags().IntVarP(&horas,"horas","o",0,"horas do curso")
+	cmd.Flags().IntVarP(&horas, "horas", "o", 0, "horas do curso")
 
+	var nomeCurso, idCurso, datainiciar, dataFim string
 
+	cmd = &cobra.Command{
+		Use:   "curso",
+		Short: "iniciar ou terminar curso",
+		Run: func(cmd *cobra.Command, args []string) {
+
+			if nomeCurso == "" {
+				fmt.Println("O NOME DO CURSO NAO PODE SER VAZIO: ")
+				return
+			}
+
+			if idCurso == "" {
+				fmt.Println("O IDENTIFICADOR DO CURSO NÃO PODE SER VAZIO: ")
+				return
+			}
+
+			if datainiciar == "" {
+				fmt.Println("A DATA DE INICIO NÃO PODE SER VAZIO: ")
+				return
+			}
+			
+			servico.CadastrarCursos(titulo, conteudoProgramatico, horas, regimeC)
+
+		},
+	}
+
+	cmd.Flags().StringVarP(&titulo, "titulo", "t", "", "o titulo do curos")
+	cmd.Flags().StringVarP(&conteudoProgramatico, "conteudo", "c", "", "o conteudo programático")
+	cmd.Flags().StringVarP(&regimeC, "regimec", "r", "", "regime do curso")
+	cmd.Flags().IntVarP(&horas, "horas", "o", 0, "horas do curso")
+
+	fmt.Println("========== LEMBRETE ENVIADO ===========")
+	servico.FuncaoBackground()
+
+	fmt.Println("============***********=============")
+	fmt.Println("")
 	rootCmd.AddCommand(cmd)
 	rootCmd.Execute()
 }

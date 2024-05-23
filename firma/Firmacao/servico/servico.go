@@ -108,10 +108,10 @@ func EnviarLembretePeloWhatsapp(m matricula.Matricula, f formando.Formando) bool
 	contEnviouMensagem := 0
 
 	mt := m.MostraTodasMatriculasComDataInicio()
+
 	for _, m := range mt {
 		form := f.BuscaFormandoPorId(m.GetIdFormando())
 		diasMaior := funcoes.ComparaSeDiaMaiorOuIgual2(m.GetDataInicioCurso())
-
 		if diasMaior && form.GetNomeFormando() != "" {
 			fmt.Println("Caro Formando  ", form.GetNomeFormando(), " o seu curso de ", m.GetNomeCurso(), " vai começar daqui há dois dias")
 			contEnviouMensagem += 1
@@ -120,35 +120,10 @@ func EnviarLembretePeloWhatsapp(m matricula.Matricula, f formando.Formando) bool
 
 	}
 
-	if contEnviouMensagem >= 1 {
-		return true
-	}
-
-	return false
-
-	/*apiurl := "https://api.alvochat.com/instance1199/messages/chat"
-	data := url.Values{}
-	data.Set("to", "942678046")
-	data.Set("body", "WhatsApp API on alvochat.com works good")
-	data.Set("priority", "")
-	data.Set("preview_url", "")
-	data.Set("message_id", "")
-
-	payload := strings.NewReader(data.Encode())
-
-	req, _ := http.NewRequest("POST", apiurl, payload)
-
-	req.Header.Add("content-type", "application/x-www-form-urlencoded")
-
-	res, _ := http.DefaultClient.Do(req)
-
-	defer res.Body.Close()
-
-	body, _ := ioutil.ReadAll(res.Body)
-
-	fmt.Println(string(body))*/
+	return contEnviouMensagem >= 1
 
 }
+
 func AvaliarCurso(idCurso, idFormando string, avaliacao int) [2]string {
 	m := matricula.Matricula{}
 	dados := m.LerDados()
@@ -164,6 +139,7 @@ func AvaliarCurso(idCurso, idFormando string, avaliacao int) [2]string {
 			ava[1] = (strconv.Itoa((60 - avaliacao) * 2)) + "%"
 		}
 	}
+
 	if ava[0] != "" {
 		SalvarAvaliacao(idCurso, idFormando, ava)
 	}

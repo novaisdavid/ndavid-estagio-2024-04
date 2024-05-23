@@ -25,6 +25,16 @@ Regime: online
 Data Inicio: 2024-07-17
 Data Fim: 2024-08-10
 
+IdFormando: 31
+IdCurso: 451
+Nome do Curso: EVST
+Horas: 12
+Conteudo Programatico: Pirataria
+Regime: online
+Data Inicio: 2024-05-24
+Data Fim: 2024-08-10
+
+
 IdFormando: 001
 IdCurso: 003
 Nome do Curso: SAD
@@ -68,6 +78,15 @@ Horas: 100
 Conteudo Programatico: NAL
 Regime: presencial
 Data Inicio: 2024-06-03
+Data Fim: 2024-06-29
+
+IdFormando: 31
+IdCurso: 07
+Nome do Curso: AII
+Horas: 110
+Conteudo Programatico: NAL
+Regime: presencial
+Data Inicio: 2024-06-04
 Data Fim: 2024-06-29
 
 IdFormando: 001

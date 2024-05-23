@@ -6,16 +6,10 @@ import (
 	"Firma/funcoes"
 	matricula "Firma/matricula"
 	"fmt"
-
-	//"io/ioutil"
-	"math/rand"
-	//"net/http"
-	//"net/url"
 	"strconv"
-	//"strings"
 	"os"
 	"path/filepath"
-	"time"
+
 )
 
 func FazerMatriculadeFormando(dados ...interface{}) {
@@ -185,27 +179,4 @@ func SalvarAvaliacao(idCurso, idFormando string, avaliacao [2]string) {
 	if err != nil {
 		return
 	}
-}
-
-func CadastrarCursos(dados ...interface{}) {
-	rand.Seed(time.Now().UnixNano())
-	idCurso := rand.Intn(100)
-	c := curso.Curso{}
-
-	id := strconv.Itoa(idCurso)
-
-	if len(dados) >= 4 {
-
-		c.New(id, dados[0].(string), dados[1].(string), dados[2].(int), dados[3].(string))
-	}
-
-	fmt.Println("")
-	fmt.Println("CURSO: ", c.GetNome())
-	fmt.Println("CARGA HORÁRIA: ", c.GetHora())
-	fmt.Println("REGIME: ", c.GetRegime())
-	fmt.Println("CONTEUDO PROGRAMÁTICO: ", c.GetConteudoProgramatico())
-	c.Salvar()
-	fmt.Println("")
-	fmt.Println("CURSO CADASTRADO COM SUCESSO!")
-
 }

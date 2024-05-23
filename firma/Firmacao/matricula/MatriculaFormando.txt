@@ -2882,3 +2882,39 @@ Regime: online
 Data Inicio: 
 Data Fim: 
 
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 77
+Nome do Curso: iec
+Horas: 80
+Conteudo Programatico: introducao
+Regime: presencial
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+

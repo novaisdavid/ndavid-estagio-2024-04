@@ -53,7 +53,7 @@ func (m *Matricula) GetDataFim() string {
 func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
 	dados := m.LerDados()
 	fm := m.ConverteEmStruct(dados)
-	var structAuliar Matricula
+	var structAuxiliar Matricula
 
 	if len(fm) == 0 {
 		return Matricula{}
@@ -62,11 +62,11 @@ func (m Matricula) MostraUmEstudaMatriculado(idFormando string) Matricula {
 	for _, f := range fm {
 
 		if f.idFormando == idFormando && f.GetDataFim() != "" {
-			structAuliar = f
+			structAuxiliar = f
 		}
 	}
 
-	return structAuliar
+	return structAuxiliar
 }
 
 func (m Matricula) MostraTodasMatriculasComDataInicio() []Matricula {

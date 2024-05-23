@@ -101,7 +101,6 @@ func TestCriarMatriculaFormando(t *testing.T) {
 			t.Fail()
 		}
 
-		//Assert
 	})
 
 	t.Run("Criar Matricula do Formando sem dados do formando, não salva no repositorio", func(t *testing.T) {

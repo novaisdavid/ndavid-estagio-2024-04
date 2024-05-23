@@ -1,7 +1,7 @@
 package curso_test
 
 import (
-	"Firma/curso"
+	"Firma/domain/curso"
 	"fmt"
 	"testing"
 )

@@ -1,10 +1,10 @@
 package matricula_test
 
 import (
-	curso "Firma/curso"
-	formando "Firma/formando"
+	curso "Firma/domain/curso"
+	formando "Firma/domain/formando"
 	"Firma/funcoes"
-	matricula "Firma/matricula"
+	matricula "Firma/domain/matricula"
 	"fmt"
 	"testing"
 )

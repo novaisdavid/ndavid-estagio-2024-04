@@ -1,15 +1,14 @@
 package servico
 
 import (
-	curso "Firma/curso"
-	formando "Firma/formando"
+	curso "Firma/domain/curso"
+	formando "Firma/domain/formando"
+	matricula "Firma/domain/matricula"
 	"Firma/funcoes"
-	matricula "Firma/matricula"
 	"fmt"
-	"strconv"
 	"os"
 	"path/filepath"
-
+	"strconv"
 )
 
 func FazerMatriculadeFormando(dados ...interface{}) {

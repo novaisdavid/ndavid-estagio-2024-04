@@ -91,7 +91,8 @@ func ConcluirCursoCurso(nomeDocurso string) {
 
 	if curso != c {
 		curso.ConcluirCurso()
-		fmt.Println("CURSO CONCLUIDO")
+		fmt.Println("CURSO  CONCLUIDO")
+		fmt.Println("CURSO  CONCLUIDO")
 	}
 
 }

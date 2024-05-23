@@ -1,10 +1,10 @@
 package servico
 
 import (
-	curso "Firma/domain/curso"
-	formando "Firma/domain/formando"
-	matricula "Firma/domain/matricula"
+	curso "Firma/curso"
+	formando "Firma/formando"
 	"Firma/funcoes"
+	matricula "Firma/matricula"
 	"fmt"
 	"os"
 	"path/filepath"

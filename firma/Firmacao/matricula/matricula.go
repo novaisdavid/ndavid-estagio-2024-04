@@ -1,7 +1,7 @@
 package matricula
 
 import (
-	"Firma/domain/curso"
+	"Firma/curso"
 	"fmt"
 	"io/ioutil"
 	"os"

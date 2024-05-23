@@ -1,9 +1,9 @@
 package servico_test
 
 import (
-	"Firma/domain/formando"
+	"Firma/formando"
 	"Firma/funcoes"
-	"Firma/domain/matricula"
+	"Firma/matricula"
 	"Firma/servico"
 	"fmt"
 	"testing"

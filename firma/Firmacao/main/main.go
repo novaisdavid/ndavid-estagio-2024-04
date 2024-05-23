@@ -114,7 +114,7 @@ func main() {
 
 	cmd.Flags().StringVarP(&nomeCursoC, "nomeCC", "n", "", "o nome do curso")
 
-	var idCurso, idEstudante string
+	var idCurso, idFormando string
 	var valorAvaliacao int
 
 	cmd = &cobra.Command{
@@ -127,7 +127,7 @@ func main() {
 				return
 			}
 
-			if idEstudante == "" {
+			if idFormando == "" {
 				fmt.Println("O IDENTIFICADOR DO ESTUDANTE NAO PODE SER VAZIO: ")
 				return
 			}
@@ -137,7 +137,7 @@ func main() {
 				return
 			}
 
-			avaliou := servico.AvaliarCurso(idCurso, idEstudante, valorAvaliacao)
+			avaliou := servico.AvaliarCurso(idCurso, idFormando, valorAvaliacao)
 
 			if len(avaliou) > 0 {
 				fmt.Println("CURSO VALIADO!")
@@ -147,7 +147,7 @@ func main() {
 	}
 
 	cmd.Flags().StringVarP(&idCurso, "idcurso", "i", "", "o nome do curso")
-	cmd.Flags().StringVarP(&idEstudante, "idFormando", "e", "", "o nome do curso")
+	cmd.Flags().StringVarP(&idFormando, "idFormando", "e", "", "o nome do curso")
 	cmd.Flags().IntVarP(&valorAvaliacao, "avaliacao", "n", 0, "o nome do curso")
 
 	fmt.Println("========== LEMBRETE ENVIADO ===========")

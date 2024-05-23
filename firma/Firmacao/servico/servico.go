@@ -79,7 +79,7 @@ func IniciarCurso(nomeDocurso string) {
 
 	if curso != c {
 		curso.IniciarCurso()
-		fmt.Println("CURSO INICIADO")
+		fmt.Println("CURSO DE ", curso.GetNome(), " INICIADO")
 	}
 
 }
@@ -91,9 +91,14 @@ func ConcluirCursoCurso(nomeDocurso string) {
 
 	if curso != c {
 		curso.ConcluirCurso()
-		fmt.Println("CURSO  CONCLUIDO")
-		fmt.Println("CURSO  CONCLUIDO")
+		fmt.Println("CURSO DE ", curso.GetNome(), " CONCLUIDO")
+		EmitirCertificado(curso.GetNome())
 	}
+
+}
+
+func EmitirCertificado(nomeDocurso string) {
+	fmt.Println("CERTIFICADOS DO  CURSO DE ", nomeDocurso, " EMITIDOS")
 
 }
 

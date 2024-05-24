@@ -8,7 +8,7 @@ Projeto firmação (Execução do software)
 
 Ex: ./main  matricular --nome Tito --email tito@gmail.com --telefone 923456789 --curso cc --regime online
 
-    OBS.:  Se a último curso feito pelo formando estiver dentro do prazo de 15 dias após a última a formação, a sua nova matricula receberá um desconto de 25%.
+    OBS:  Se a último curso feito pelo formando estiver dentro do prazo de 15 dias após a última a formação, a sua nova matricula receberá um desconto de 25%.
 
 4- Para iniciar um curso, deverá executar o seguinte comando: " ./main Iniciarcurso --nomeC <nome do curso> "
 

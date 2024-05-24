@@ -106,15 +106,15 @@ func main() {
 			avaliou := servico.AvaliarCurso(idCurso, idFormando, valorAvaliacao)
 
 			if len(avaliou) > 0 {
-				fmt.Println("CURSO VALIADO!")
+				fmt.Println("CURSO AVALIADO!")
 			}
 
 		},
 	}
 
-	cmd.Flags().StringVarP(&idCurso, "idcurso", "i", "", "o nome do curso")
-	cmd.Flags().StringVarP(&idFormando, "idFormando", "e", "", "o nome do curso")
-	cmd.Flags().IntVarP(&valorAvaliacao, "avaliacao", "n", 0, "o nome do curso")
+	cmd.Flags().StringVarP(&idCurso, "idcurso", "i", "", "o identificador do curso")
+	cmd.Flags().StringVarP(&idFormando, "idFormando", "f", "", "o identificador do formando")
+	cmd.Flags().IntVarP(&valorAvaliacao, "avaliacao", "a", 0, "nota da avaliação")
 
 	fmt.Println("========== LEMBRETE ENVIADO ===========")
 	servico.FuncaoBackground()

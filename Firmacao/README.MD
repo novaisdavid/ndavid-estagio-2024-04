@@ -2,29 +2,29 @@ Projeto firmação (Execução do software)
 
 1- Acesse o diretorio main ( que está dentro do diretorio firmacao)
 
-2- No diretorio main, via terminal execute o comando: " go build -o GESTFIRMA"
+2- No diretorio main, via terminal execute o comando: " go build -o gestfirma"
 
-3- Ainda no terminal para matricular um formando execute o seguinte comando: " ./GESTFIRMA  matricular --nome <nome do formando> --email <email do formando> --telefone <número de telefone do formando> --curso <curso para matricula> --regime <online ou presencial> "
+3- Ainda no terminal para matricular um formando execute o seguinte comando: " ./gestfirma  matricular --nome <nome do formando> --email <email do formando> --telefone <número de telefone do formando> --curso <curso para matricula> --regime <online ou presencial> "
 
-Ex: ./GESTFIRMA  matricular --nome Tito --email tito@gmail.com --telefone 923456789 --curso cc --regime online
+Ex: ./gestfirma  matricular --nome Tito --email tito@gmail.com --telefone 923456789 --curso cc --regime online
 
    OBS:  Se a último curso feito pelo formando estiver dentro do prazo de 15 dias após a última a formação, a sua nova matricula receberá um desconto de 25%.
 
-4- Para iniciar um curso, deverá executar o seguinte comando: " ./GESTFIRMA Iniciarcurso --nomeC <nome do curso> "
+4- Para iniciar um curso, deverá executar o seguinte comando: " ./gestfirma Iniciarcurso --nomeC <nome do curso> "
 
-Ex: ./GESTFIRMA Iniciarcurso --nomeC Ingles
+Ex: ./gestfirma Iniciarcurso --nomeC Ingles
 
    OBS: Uma informação de lembrete é enviada dois dias antes do inicio do curso aos formandos.
 
-5- Para concluir um curso, deverá executar o seguinte comando: " ./GESTFIRMA Concluircurso --nomeC <nome do curso> "
+5- Para concluir um curso, deverá executar o seguinte comando: " ./gestfirma Concluircurso --nomeC <nome do curso> "
 
-Ex: ./GESTFIRMA Concluircurso --nomeC Ingles
+Ex: ./gestfirma Concluircurso --nomeC Ingles
 
    OBS: Na conclusão de um curso, é enviada uma informação de certificados emitidos.
 
-6- Para avaliar um curso, deverá executar o seguinte comando:  " ./GESTFIRMA Avaliarcurso --idcurso <ID do curso> --idFormando <ID do formando> --avaliacao <nota da avaliacao de 0 à 100> "
+6- Para avaliar um curso, deverá executar o seguinte comando:  " ./gestfirma Avaliarcurso --idcurso <ID do curso> --idFormando <ID do formando> --avaliacao <nota da avaliacao de 0 à 100> "
 
-Ex:  ./GESTFIRMA Avaliarcurso --idcurso 57 --idFormando 90 --avaliacao 50
+Ex:  ./gestfirma Avaliarcurso --idcurso 57 --idFormando 90 --avaliacao 50
 
    OBS: Caso a avaliação receber um valor abaixo dos 60, o formador receberá uma penalização de 2% a cada 1% abaixo dos 60.
 

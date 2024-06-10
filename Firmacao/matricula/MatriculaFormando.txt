@@ -1,0 +1,3190 @@
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 2024-05-10
+Data Fim: 2024-06-24
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 2024-05-24
+Data Fim: 2024-06-24
+
+IdFormando: 30
+IdCurso: 21
+Nome do Curso: CSD
+Horas: 12
+Conteudo Programatico: Pirataria
+Regime: online
+Data Inicio: 2024-07-17
+Data Fim: 2024-08-10
+
+IdFormando: 31
+IdCurso: 451
+Nome do Curso: EVST
+Horas: 12
+Conteudo Programatico: Pirataria
+Regime: online
+Data Inicio: 2024-05-24
+Data Fim: 2024-08-10
+
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 32
+Nome do Curso: JAVA
+Horas: 56
+Conteudo Programatico: estrutura de decisão
+Regime: online
+Data Inicio: 2024-05-24
+Data Fim: 2024-06-24
+
+IdFormando: 90
+IdCurso: 18
+Nome do Curso: C++
+Horas: 65
+Conteudo Programatico: estrutura condicional
+Regime: online
+Data Inicio: 2024-04-14
+Data Fim: 2024-05-17
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 87
+Nome do Curso: AI
+Horas: 100
+Conteudo Programatico: NAL
+Regime: presencial
+Data Inicio: 2024-06-03
+Data Fim: 2024-06-29
+
+IdFormando: 31
+IdCurso: 07
+Nome do Curso: AII
+Horas: 110
+Conteudo Programatico: NAL
+Regime: presencial
+Data Inicio: 2024-06-04
+Data Fim: 2024-06-29
+
+IdFormando: 001
+IdCurso: 30
+Nome do Curso: PNP
+Horas: 60
+Conteudo Programatico: funcoes
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 07
+Nome do Curso: IEC
+Horas: 70
+Conteudo Programatico: Ética Profissional
+Regime: online
+Data Inicio: 2024-05-03
+Data Fim: 2024-05-12
+
+IdFormando: 100
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 2024-05-17
+Data Fim: 2024-05-07
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 002
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 67
+IdCurso: 103
+
+IdFormando: 100
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 1000
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 1000
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 1000
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 1000
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 1000
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 900
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 900
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 002
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 006666666
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 00
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 77
+Nome do Curso: iec
+Horas: 80
+Conteudo Programatico: introducao
+Regime: presencial
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 001
+IdCurso: 003
+Nome do Curso: SAD
+Horas: 40
+Conteudo Programatico: 1-Tomada de Decisao
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 90
+IdCurso: 57
+Nome do Curso: IT
+Horas: 120
+Conteudo Programatico: LAN
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 103
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+
+IdFormando: 80
+IdCurso: 003
+Nome do Curso: cc
+Horas: 12
+Conteudo Programatico: fluxo
+Regime: online
+Data Inicio: 
+Data Fim: 
+

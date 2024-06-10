@@ -1,0 +1,192 @@
+
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 100%
+Penalizacao: 
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 80%
+Penalizacao: 
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50%
+Penalizacao: 20%
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 80%
+Penalizacao: 
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50%
+Penalizacao: 20%
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 100
+Penalizacao: 
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 80
+Penalizacao: 
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 80
+Penalizacao: 
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50
+Penalizacao: 20
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 100%
+Penalizacao: 
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 80%
+Penalizacao: 
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50%
+Penalizacao: 20%
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 80%
+Penalizacao: 
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50%
+Penalizacao: 20%
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 100%
+Penalizacao: 
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 80%
+Penalizacao: 
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50%
+Penalizacao: 20%
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 80%
+Penalizacao: 
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50%
+Penalizacao: 20%
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50%
+Penalizacao: 20%
+
+IdFormando: 90
+IdCurso: 57
+Nota da avaliacao: 50%
+Penalizacao: 20%
+

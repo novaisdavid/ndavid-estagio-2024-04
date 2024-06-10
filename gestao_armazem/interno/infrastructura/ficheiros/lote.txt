@@ -1,0 +1,68 @@
+Id: lt001
+Produto: {Id:001, Nome: pao, DataValidade: 2024-05-01}
+Quantidade: 900,
+DataValidade: 2024-04-01
+
+Id: lt002
+Produto: {Id:003, Nome: pao3, DataValidade: 2024-06-01}
+Quantidade: 900,
+DataValidade: 2024-09-01
+
+Id: lt003
+Produto: {Id:002, Nome: pao2, DataValidade: 2024-04-01}
+Quantidade: 900,
+DataValidade: 2024-11-01
+
+Id: lt004
+Produto: {Id:003, Nome: pao3, DataValidade: 2024-06-01}
+Quantidade: 500,
+DataValidade: 2024-07-01
+
+Id: lt005
+Produto: {Id:005, Nome: pao5, DataValidade: 2024-10-21}
+Quantidade: 800,
+DataValidade: 2024-11-01
+
+Id: lt006
+Produto: {Id:003, Nome: pao3, DataValidade: 2024-06-01}
+Quantidade: 100,
+DataValidade: 2024-07-01
+
+Id: lt007
+Produto: {Id:003, Nome: pao3, DataValidade: 2024-06-01}
+Quantidade: 100,
+DataValidade: 2024-11-01
+
+Id: lt006
+Produto: {Id:003, Nome: pao3, DataValidade: 2024-06-01}
+Quantidade: 100,
+DataValidade: 2024-06-01
+
+Id: lt016
+Produto: {Id:011, Nome: pao3, DataValidade: 2024-08-11}
+Quantidade: 1020,
+DataValidade: 2024-08-11
+Id: lt206
+Produto: {Id:121, Nome: arroz integral, DataValidade: 2024-06-11}
+Quantidade: 300,
+DataValidade: 2024-08-11
+Id: lt306
+Produto: {Id:121, Nome: arroz integral, DataValidade: 2024-08-11}
+Quantidade: 100,
+DataValidade: 2024-08-11
+Id: lt061
+Produto: {Id:663, Nome: leite, DataValidade: 2025-06-06}
+Quantidade: 100,
+DataValidade: 2025-06-06
+Id: lt026
+Produto: {Id:543, Nome: pao3, DataValidade: 2024-08-01}
+Quantidade: 100,
+DataValidade: 2024-08-01
+Id: lt106
+Produto: {Id:333, Nome: pao3, DataValidade: 2024-08-01}
+Quantidade: 100,
+DataValidade: 2024-08-01
+Id: lt306
+Produto: {Id:443, Nome: pao3, DataValidade: 2024-08-01}
+Quantidade: 100,
+DataValidade: 2024-08-01

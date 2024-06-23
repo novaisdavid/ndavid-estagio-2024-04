@@ -1,7 +1,7 @@
 package lote
 
 import (
-	produto "ACMELDA/interno/dominio/entidades/produto"
+	produto "github.com/acmllda/interno/dominio/entidades/produto"
 	"fmt"
 	"io/ioutil"
 	"os"

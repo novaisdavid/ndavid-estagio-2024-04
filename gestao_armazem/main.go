@@ -1,7 +1,7 @@
 package main
 
 import (
-	"ACMELDA/interno/interface/cli"
+	"github.com/acmllda/interno/interface/cli"
 )
 
 func main() {

@@ -1,11 +1,11 @@
 package expedirMercadoria_test
 
 import (
-	expedirMercadoria "ACMELDA/interno/casosDeUso/expedirMercadoria"
-	"ACMELDA/interno/dominio/agregados/guiaRemessa"
-	"ACMELDA/interno/dominio/entidades/lote"
-	"ACMELDA/interno/dominio/entidades/produto"
-	guiaRemessaRepositorio "ACMELDA/interno/dominio/repositorio/guiaRemessaRepositorio"
+	expedirMercadoria "github.com/acmllda/interno/casosDeUso/expedirMercadoria"
+	"github.com/acmllda/interno/dominio/agregados/guiaRemessa"
+	"github.com/acmllda/interno/dominio/entidades/lote"
+	"github.com/acmllda/interno/dominio/entidades/produto"
+	guiaRemessaRepositorio "github.com/acmllda/interno/dominio/repositorio/guiaRemessaRepositorio"
 	"testing"
 )
 

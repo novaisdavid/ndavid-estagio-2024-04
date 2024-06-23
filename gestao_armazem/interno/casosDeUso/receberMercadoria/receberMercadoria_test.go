@@ -1,11 +1,11 @@
 package recebermercadoria_test
 
 import (
-	recebermercadoria "ACMELDA/interno/casosDeUso/receberMercadoria"
-	notarecebimento "ACMELDA/interno/dominio/agregados/notaRecebimento"
-	"ACMELDA/interno/dominio/entidades/lote"
-	"ACMELDA/interno/dominio/entidades/produto"
-	notarecebimentorepositorio "ACMELDA/interno/dominio/repositorio/notaRecebimentoRepositorio"
+	recebermercadoria "github.com/acmllda/interno/casosDeUso/receberMercadoria"
+	notarecebimento "github.com/acmllda/interno/dominio/agregados/notaRecebimento"
+	"github.com/acmllda/interno/dominio/entidades/lote"
+	"github.com/acmllda/interno/dominio/entidades/produto"
+	notarecebimentorepositorio "github.com/acmllda/interno/dominio/repositorio/notaRecebimentoRepositorio"
 	"testing"
 )
 

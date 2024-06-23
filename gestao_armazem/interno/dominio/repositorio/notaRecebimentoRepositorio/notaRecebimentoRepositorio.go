@@ -1,7 +1,7 @@
 package notarecebimentorepositorio
 
 import (
-	notarecebimento "ACMELDA/interno/dominio/agregados/notaRecebimento"
+	notarecebimento "github.com/acmllda/interno/dominio/agregados/notaRecebimento"
 	"errors"
 )
 

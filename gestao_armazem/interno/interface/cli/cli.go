@@ -1,7 +1,7 @@
 package cli
 
 import (
-	"ACMELDA/interno/interface/servicos"
+	"github.com/acmllda/interno/interface/servicos"
 	"fmt"
 	"os"
 

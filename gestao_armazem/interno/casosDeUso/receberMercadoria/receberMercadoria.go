@@ -1,8 +1,8 @@
 package recebermercadoria
 
 import (
-	notarecebimento "ACMELDA/interno/dominio/agregados/notaRecebimento"
-	notarecebimentorepositorio "ACMELDA/interno/dominio/repositorio/notaRecebimentoRepositorio"
+	notarecebimento "github.com/acmllda/interno/dominio/agregados/notaRecebimento"
+	notarecebimentorepositorio "github.com/acmllda/interno/dominio/repositorio/notaRecebimentoRepositorio"
 )
 
 type ReceberMercadoria struct {

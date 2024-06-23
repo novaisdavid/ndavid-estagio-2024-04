@@ -1,7 +1,7 @@
 package guiaRemessaRepository
 
 import (
-	"ACMELDA/interno/dominio/agregados/guiaRemessa"
+	"github.com/acmllda/interno/dominio/agregados/guiaRemessa"
 	"errors"
 )
 

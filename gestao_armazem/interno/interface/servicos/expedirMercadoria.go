@@ -1,8 +1,8 @@
 package servicos
 
 import (
-	"ACMELDA/interno/casosDeUso/expedirMercadoria"
-	"ACMELDA/interno/dominio/agregados/guiaRemessa"
+	"github.com/acmllda/interno/casosDeUso/expedirMercadoria"
+	"github.com/acmllda/interno/dominio/agregados/guiaRemessa"
 	"fmt"
 	"math/rand"
 	"strconv"

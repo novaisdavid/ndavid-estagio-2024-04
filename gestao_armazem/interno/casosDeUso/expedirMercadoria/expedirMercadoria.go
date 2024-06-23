@@ -1,9 +1,9 @@
 package expedirMercadoria
 
 import (
-	guiaremessa "ACMELDA/interno/dominio/agregados/guiaRemessa"
-	"ACMELDA/interno/dominio/entidades/lote"
-	guiaRemessaRepositorio "ACMELDA/interno/dominio/repositorio/guiaRemessaRepositorio"
+	guiaremessa "github.com/acmllda/interno/dominio/agregados/guiaRemessa"
+	"github.com/acmllda/interno/dominio/entidades/lote"
+	guiaRemessaRepositorio "github.com/acmllda/interno/dominio/repositorio/guiaRemessaRepositorio"
 )
 
 type ExpedirMercadoria struct {

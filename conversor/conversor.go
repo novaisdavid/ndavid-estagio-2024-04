@@ -1,16 +1,44 @@
 package conversor
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
-func Conversor(numeroEmRomano string) int {
-	if numeroEmRomano == "I" {
-		fmt.Println("zzzzzzzz")
-		return 1
+type Conve struct {
+	tabela map[string]int
+}
+
+func (c Conve) NewConv() Conve {
+	c.tabela = make(map[string]int)
+
+	c.tabela["I"] = 1
+	c.tabela["IV"] = 4
+	c.tabela["v"] = 5
+	c.tabela["IX"] = 9
+	c.tabela["X"] = 10
+	c.tabela["L"] = 50
+	c.tabela["C"] = 100
+	c.tabela["D"] = 500
+	c.tabela["M"] = 1000
+
+	return c
+}
+
+func (c Conve) Conversor(numeroEmRomano string) int {
+	separador := strings.Split(numeroEmRomano, "")
+	valorSaida := 0
+
+	for _, x := range separador {
+		for chave, valor := range c.tabela {
+			if chave == x {
+				fmt.Println("CHAVE: ", chave, " --------- VALOR: ", valor)
+				valorSaida = valorSaida + valor
+			}
+
+		}
+
 	}
-	if numeroEmRomano == "II" {
-		fmt.Println("AAAAAAA")
-		return 2
-	}
-	fmt.Println("OOOOOOOO")
-	return -1
+	fmt.Println("VALOR SAIDA: ", valorSaida)
+	return valorSaida
 }

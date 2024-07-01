@@ -1,8 +1,6 @@
 package conversor
 
 import (
-	"fmt"
-	//"strconv"
 	"strings"
 )
 
@@ -27,25 +25,18 @@ func (c Conve) NewConv() Conve {
 }
 
 func (c Conve) Conversor(numeroEmRomano string) int {
-	valorSaida := 0
+
+	tamanho := len(numeroEmRomano)
 	total := 0
-	sepaNumeroRomano := strings.Split(numeroEmRomano, "")
+	for i := 0; i < tamanho; i++ {
+		valorSaida := c.tabela[strings.ToUpper(string(numeroEmRomano[i]))]
 
-	if len(sepaNumeroRomano) == 1 {
-		return c.tabela[sepaNumeroRomano[0]]
-	}
-
-	for ca, x := range sepaNumeroRomano {
-		fmt.Println("CHAVE: ", ca, " ----- VAlor: ", x)
-		valorSaida = c.tabela[x]
-
-		if valorSaida < c.tabela[sepaNumeroRomano[ca+1]] {
+		if i+1 < tamanho && valorSaida < c.tabela[string(numeroEmRomano[i+1])] {
 			total -= valorSaida
 		} else {
 			total += valorSaida
 		}
 	}
-	fmt.Println("VALOR TOTAL: ", total)
 
 	return total
 }

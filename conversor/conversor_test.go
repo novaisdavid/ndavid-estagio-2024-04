@@ -52,24 +52,45 @@ func TestConversorDeRomanoParaNatural(t *testing.T) {
 
 	t.Run("Deve Converter XIX numero de Romano para numero natural", func(t *testing.T) {
 		// arrange
-		numeroEmRomano := "XL"
+		numeroEmRomano := "XIX"
 		conversor := conv.Conve{}.NewConv()
 
 		//act
 		numero := conversor.Conversor(numeroEmRomano)
 
 		//assert
-		if numero != 0 {
+		if numero != 19 {
 			t.Errorf("O numero %d não deve ser diferente de 4", numero)
 		}
 	})
-}
 
-/* for i := 0; i < n; i++ {
-    value := romanToIntMap[rune(s[i])]
-    if i < n-1 && value < romanToIntMap[rune(s[i+1])] {
-        total -= value
-    } else {
-        total += value
-    }
-}*/
+	t.Run("Deve Converter DX numero de Romano para numero natural", func(t *testing.T) {
+		// arrange
+		numeroEmRomano := "DX"
+		conversor := conv.Conve{}.NewConv()
+
+		//act
+		numero := conversor.Conversor(numeroEmRomano)
+
+		//assert
+		if numero != 510 {
+			t.Errorf("O numero %d não deve ser diferente de 4", numero)
+		}
+	})
+
+	t.Run("Deve Converter MD numero de Romano para numero natural", func(t *testing.T) {
+		// arrange
+		numeroEmRomano := "MD"
+		conversor := conv.Conve{}.NewConv()
+
+		//act
+		numero := conversor.Conversor(numeroEmRomano)
+
+		//assert
+		if numero != 1500 {
+			t.Errorf("O numero %d não deve ser diferente de 1500", numero)
+		}
+	})
+
+
+}

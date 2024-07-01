@@ -30,7 +30,6 @@ func (c Conve) Conversor(numeroEmRomano string) int {
 	total := 0
 	for i := 0; i < tamanho; i++ {
 		valorSaida := c.tabela[strings.ToUpper(string(numeroEmRomano[i]))]
-
 		if i+1 < tamanho && valorSaida < c.tabela[string(numeroEmRomano[i+1])] {
 			total -= valorSaida
 		} else {

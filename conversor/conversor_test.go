@@ -5,11 +5,12 @@ import (
 	"testing"
 )
 
+var conversor = conv.Conve{}.NewConv()
+
 func TestConversorDeRomanoParaNatural(t *testing.T) {
 	t.Run("Deve Converter I de Romano para numero natural", func(t *testing.T) {
 		// arrange
 		numeroEmRomano := "I"
-		conversor := conv.Conve{}.NewConv()
 
 		//act
 		numero := conversor.Conversor(numeroEmRomano)
@@ -24,7 +25,6 @@ func TestConversorDeRomanoParaNatural(t *testing.T) {
 	t.Run("Deve Converter II de Romano para numero natural", func(t *testing.T) {
 		// arrange
 		numeroEmRomano := "II"
-		conversor := conv.Conve{}.NewConv()
 
 		//act
 		numero := conversor.Conversor(numeroEmRomano)
@@ -39,7 +39,6 @@ func TestConversorDeRomanoParaNatural(t *testing.T) {
 	t.Run("Deve Converter dois numero de Romano para numero natural", func(t *testing.T) {
 		// arrange
 		numeroEmRomano := "IV"
-		conversor := conv.Conve{}.NewConv()
 
 		//act
 		numero := conversor.Conversor(numeroEmRomano)
@@ -53,7 +52,6 @@ func TestConversorDeRomanoParaNatural(t *testing.T) {
 	t.Run("Deve Converter XIX numero de Romano para numero natural", func(t *testing.T) {
 		// arrange
 		numeroEmRomano := "XIX"
-		conversor := conv.Conve{}.NewConv()
 
 		//act
 		numero := conversor.Conversor(numeroEmRomano)
@@ -67,7 +65,6 @@ func TestConversorDeRomanoParaNatural(t *testing.T) {
 	t.Run("Deve Converter DX numero de Romano para numero natural", func(t *testing.T) {
 		// arrange
 		numeroEmRomano := "DX"
-		conversor := conv.Conve{}.NewConv()
 
 		//act
 		numero := conversor.Conversor(numeroEmRomano)
@@ -81,7 +78,6 @@ func TestConversorDeRomanoParaNatural(t *testing.T) {
 	t.Run("Deve Converter MD numero de Romano para numero natural", func(t *testing.T) {
 		// arrange
 		numeroEmRomano := "MD"
-		conversor := conv.Conve{}.NewConv()
 
 		//act
 		numero := conversor.Conversor(numeroEmRomano)
@@ -91,6 +87,5 @@ func TestConversorDeRomanoParaNatural(t *testing.T) {
 			t.Errorf("O numero %d não deve ser diferente de 1500", numero)
 		}
 	})
-
 
 }

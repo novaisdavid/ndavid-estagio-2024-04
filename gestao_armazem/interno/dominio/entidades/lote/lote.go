@@ -1,13 +1,14 @@
 package lote
 
 import (
-	produto "github.com/acmllda/interno/dominio/entidades/produto"
 	"fmt"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strconv"
 	"strings"
+
+	produto "github.com/acmllda/interno/dominio/entidades/produto"
 )
 
 type Lote struct {
@@ -83,12 +84,12 @@ func (l Lote) lerDadosArquivo() string {
 		return ""
 	}
 
-	defer func() {
+	/*defer func() {
 		err = os.Chdir(dir)
 		if err != nil {
 			fmt.Println("Erro ao voltar ao diretório de trabalho:", err)
 		}
-	}()
+	}()*/
 
 	nomeArquivo := "lote.txt"
 	novoDir := filepath.Join(dir, "interno", "infrastructura", "ficheiros")

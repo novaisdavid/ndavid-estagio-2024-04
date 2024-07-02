@@ -1,12 +1,11 @@
 package recebermercadoria
 
 import (
-	notarecebimento "github.com/acmllda/interno/dominio/agregados/notaRecebimento"
-	notarecebimentorepositorio "github.com/acmllda/interno/dominio/repositorio/notaRecebimentoRepositorio"
+	notarecebimento "github.com/acmllda/interno/dominio/agregados"
 )
 
 type ReceberMercadoria struct {
-	notaRepositorio notarecebimentorepositorio.NotaRecebimentoRepositorio
+	notaRepositorio notarecebimento.NotaRecebimentoRepositorio
 }
 
 func (r ReceberMercadoria) Receber(n *notarecebimento.NotaRecebimento) bool {

@@ -1,14 +1,13 @@
 package expedirMercadoria
 
 import (
-	guiaremessa "github.com/acmllda/interno/dominio/agregados/guiaRemessa"
+	guiaremessa "github.com/acmllda/interno/dominio/agregados"
 	"github.com/acmllda/interno/dominio/entidades/lote"
-	guiaRemessaRepositorio "github.com/acmllda/interno/dominio/repositorio/guiaRemessaRepositorio"
 )
 
 type ExpedirMercadoria struct {
 	lote            lote.Lote
-	guiaRepositorio guiaRemessaRepositorio.GuiaRemessaRepositorio
+	guiaRepositorio guiaremessa.GuiaRemessaRepositorio
 }
 
 func (e ExpedirMercadoria) Executa(g *guiaremessa.GuiaRemessa) bool {

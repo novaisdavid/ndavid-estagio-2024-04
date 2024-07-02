@@ -2,7 +2,7 @@ package servicos
 
 import (
 	"github.com/acmllda/interno/casosDeUso/expedirMercadoria"
-	"github.com/acmllda/interno/dominio/agregados/guiaRemessa"
+	 guiaRemessa "github.com/acmllda/interno/dominio/agregados"
 	"fmt"
 	"math/rand"
 	"strconv"
@@ -16,7 +16,7 @@ func ExpedirMercadoria(idProduto string, quantidade int) {
 	guia := guiaRemessa.NewGuiaRemessa(strconv.Itoa(idGuia), idProduto, quantidade)
 
 	expedir := expedirMercadoria.ExpedirMercadoria{}
-	expediu := expedir.Executa(&guia)
+	expediu := expedir.Executa(guia)
 
 	if expediu {
 		fmt.Println("MERCADORIA EXPEDIDADA")

@@ -1,4 +1,4 @@
-package guiaRemessa
+package agregados
 
 import (
 	"time"
@@ -11,8 +11,8 @@ type GuiaRemessa struct {
 	dataExpedicao time.Time
 }
 
-func NewGuiaRemessa(i, pi string, q int) GuiaRemessa {
-	return GuiaRemessa{
+func NewGuiaRemessa(i, pi string, q int) *GuiaRemessa {
+	return &GuiaRemessa{
 		id:            i,
 		produtoID:     pi,
 		quantidade:    q,

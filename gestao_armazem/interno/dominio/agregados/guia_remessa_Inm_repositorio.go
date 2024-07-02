@@ -1,23 +1,22 @@
-package guiaRemessaRepository
+package agregados
 
 import (
-	"github.com/acmllda/interno/dominio/agregados/guiaRemessa"
 	"errors"
 )
 
 type GuiaRemessaRepositorio struct {
-	guias map[string]*guiaRemessa.GuiaRemessa
+	guias map[string]*GuiaRemessa
 }
 
 func (r GuiaRemessaRepositorio) New() *GuiaRemessaRepositorio {
-	return &GuiaRemessaRepositorio{guias: make(map[string]*guiaRemessa.GuiaRemessa)}
+	return &GuiaRemessaRepositorio{guias: make(map[string]*GuiaRemessa)}
 }
 
-func (r *GuiaRemessaRepositorio) CriarGuia(g *guiaRemessa.GuiaRemessa) {
+func (r *GuiaRemessaRepositorio) CriarGuia(g *GuiaRemessa) {
 	r.guias[g.Id()] = g
 }
 
-func (r *GuiaRemessaRepositorio) RecuperarGuia(id string) (*guiaRemessa.GuiaRemessa, error) {
+func (r *GuiaRemessaRepositorio) RecuperarGuia(id string) (*GuiaRemessa, error) {
 	g, existe := r.guias[id]
 	if !existe {
 		return nil, errors.New("guia de remessa não encontrada")
@@ -25,8 +24,8 @@ func (r *GuiaRemessaRepositorio) RecuperarGuia(id string) (*guiaRemessa.GuiaReme
 	return g, nil
 }
 
-func (r *GuiaRemessaRepositorio) RecuperarTodasGuias() []*guiaRemessa.GuiaRemessa {
-	var todasGuias []*guiaRemessa.GuiaRemessa
+func (r *GuiaRemessaRepositorio) RecuperarTodasGuias() []*GuiaRemessa {
+	var todasGuias []*GuiaRemessa
 	for _, guia := range r.guias {
 		todasGuias = append(todasGuias, guia)
 	}

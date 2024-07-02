@@ -1,4 +1,4 @@
-package notarecebimento
+package agregados
 
 type NotaRecebimento struct {
 	id         string
@@ -7,8 +7,8 @@ type NotaRecebimento struct {
 	validade   string
 }
 
-func New(i, pi string, q int, v string) NotaRecebimento {
-	return NotaRecebimento{id: i, produtoId: pi, quantidade: q, validade: v}
+func (n NotaRecebimento) New(i, pi string, q int, v string) *NotaRecebimento {
+	return &NotaRecebimento{id: i, produtoId: pi, quantidade: q, validade: v}
 }
 
 func (n NotaRecebimento) Id() string {

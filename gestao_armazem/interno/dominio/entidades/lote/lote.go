@@ -84,22 +84,21 @@ func (l Lote) lerDadosArquivo() string {
 		return ""
 	}
 
-	/*defer func() {
+	defer func() {
 		err = os.Chdir(dir)
 		if err != nil {
 			fmt.Println("Erro ao voltar ao diretório de trabalho:", err)
 		}
-	}()*/
+	}()
 
 	nomeArquivo := "lote.txt"
-	novoDir := filepath.Join(dir, "interno", "infrastructura", "ficheiros")
+	novoDir := filepath.Join(dir, "..", "..", "infrastructura", "ficheiros")
 	err = os.Chdir(novoDir)
 
 	if err != nil {
 		fmt.Println("Erro ao mudar de diretório2:", err)
 		return ""
 	}
-
 	dados, err := ioutil.ReadFile(novoDir + "/" + nomeArquivo)
 	if err != nil {
 		fmt.Println("Erro ao ler os dados:", err)

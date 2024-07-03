@@ -1,6 +1,7 @@
 package expedirMercadoria_test
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/acmllda/interno/casosDeUso/expedirMercadoria"
@@ -72,8 +73,9 @@ func TestExpedirMercadoria(t *testing.T) {
 		l := lote.New("", produto.Produto{}, 0, "")
 
 		//act
-		p := l.EncontraProdutoEmUmOuMaisLotes(guia.ProdutoID())
 
+		p := l.EncontraProdutoEmUmOuMaisLotes(guia.ProdutoID())
+		fmt.Println("O PRODUTO: ", p)
 		// assert
 		if len(p) == 0 {
 			t.Fail()

@@ -38,7 +38,7 @@ var salarioBruto = s.CalcularSalariobruto(subsidioTransporteMensal, subsidioAlim
 var totalSujeicaoIrt = s.CalcularSujeicaoIrt(subsidioTransporteMensal, subsidioAlimentacaoMensal)
 var inss = s.CalcualrInssDoTrabalhador(salarioBruto) // rever se na materia coletavel o salrio é base ou bruto
 var materialColetavel = s.CalcularMateriaColetavel(salarioBase, totalSujeicaoIrt, inss)
-var irt = s.CalcularIrt(materialColetavel, salarioBase)
+var irt = s.CalcularIrt(materialColetavel)
 var totalDesconto = s.CalcularTotalDesconto(inss, irt)
 
 func TestCalcularSubsidioMensalDeAlimentacao(t *testing.T) {
@@ -310,7 +310,7 @@ func TestCalcularIrt(t *testing.T) {
 
 	t.Run("Deve calcular o irt", func(t *testing.T) {
 		//act
-		irt := s.CalcularIrt(materialColetavel, salarioBase)
+		irt := s.CalcularIrt(materialColetavel)
 		//assert
 
 		if irt < 0 {

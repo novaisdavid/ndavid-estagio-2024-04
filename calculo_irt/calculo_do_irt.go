@@ -77,10 +77,10 @@ func (i CalculoIrt) CalcularMateriaColetavel(paramentro ...float64) float64 {
 
 }
 
-func (i CalculoIrt) CalcularIrt(materialColetavel, salarioBase float64) float64 {
+func (i CalculoIrt) CalcularIrt(materialColetavel float64) float64 {
 	irt := 0.0
 	for _, valor := range i.tabelaIrt {
-		if salarioBase >= valor.ValorInicial && salarioBase <= valor.Limite {
+		if materialColetavel >= valor.ValorInicial && materialColetavel <= valor.Limite {
 			irt = valor.ParcelaFixa + (materialColetavel-valor.Excesso)*valor.Taxa
 		}
 	}

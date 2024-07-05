@@ -1,5 +1,7 @@
 package entidade
 
+import "fmt"
+
 type TabelaIrt struct {
 	ValorInicial float64
 	Limite       float64
@@ -85,5 +87,6 @@ func (i CalculoIrt) CalcularTotalDesconto(inss, irt float64) float64 {
 }
 
 func (i CalculoIrt) CalcularSalarioLiquido(salarioBruto, totalDesconto float64) float64 {
+	fmt.Println("O SALARIO BRUTO: ", salarioBruto)
 	return salarioBruto - totalDesconto
 }

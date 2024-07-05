@@ -13,8 +13,8 @@ func CalcularIrt(irt dados.CalculoIrt, dadosIrt dados.DadosIrt) {
 	subsidioTransporteMensal := irt.CalcularSubsidioMensal(dadosIrt.DiasUteis(), dadosIrt.SubsidioTransporte())
 	salarioBaseAposFalta := irt.CalcualrSalarioBaseApoisFalta(dadosIrt.DiasUteis(), dadosIrt.Falta(), dadosIrt.SalarioBase())
 	salarioBruto := irt.CalcularSalariobruto(float64(dadosIrt.DiasUteis()),
-		dadosIrt.SubsidioAlimentacao(),
-		dadosIrt.SubsidioTransporte(),
+		subsidioAlimentacaoMensal,
+		subsidioTransporteMensal,
 		dadosIrt.Premios(),
 		dadosIrt.SalarioBase(),
 	)

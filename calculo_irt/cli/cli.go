@@ -21,8 +21,8 @@ func Cli(calculoIrt calculo.CalculoIrt, dadosDoIrt dadosIrt.DadosIrt) {
 		Short: "calcular o irt de um funcionário",
 		Run: func(cmd *cobra.Command, args []string) {
 
-			if salarioBase < 25000 {
-				fmt.Println("O salário base não pode ser a baixo de 25.000,00 kz")
+			if salarioBase <= 0 {
+				fmt.Println("O salário base não pode ser negativo ou menor ou igaul a zero(0)")
 				return
 			}
 

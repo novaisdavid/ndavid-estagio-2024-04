@@ -51,6 +51,7 @@ func (i CalculoIrt) CalcularSujeicaoIrt(subsidioAlimetacoMensal, subATransporteM
 	if (excessoAlimentcao + excessoTransporte) < 0 {
 		return 0
 	}
+
 	return excessoAlimentcao + excessoTransporte
 }
 

@@ -24,7 +24,7 @@ func tabelaIrt() []calculo.TabelaIrt {
 }
 
 var tabela = tabelaIrt()
-var s = calculo.CalculoIrt{}.NewIrt(tabela)
+var calculadorIrt = calculo.CalculoIrt{}.NewIrt(tabela)
 var diasUteis = 30
 var salarioBase = 30000.0
 var premios = 5000.0
@@ -32,19 +32,19 @@ var falta = 2
 var subsidioAlimentacaoDiario = 400.00
 var subsidioTransporteDiario = 500.00
 
-var subsidioTransporteMensal = s.CalcularSubsidioMensal(diasUteis, subsidioTransporteDiario)
-var subsidioAlimentacaoMensal = s.CalcularSubsidioMensal(diasUteis, subsidioAlimentacaoDiario)
-var salarioBruto = s.CalcularSalariobruto(subsidioTransporteMensal, subsidioAlimentacaoMensal)
-var totalSujeicaoIrt = s.CalcularSujeicaoIrt(subsidioTransporteMensal, subsidioAlimentacaoMensal)
-var inss = s.CalcualrInssDoTrabalhador(salarioBruto)
-var materialColetavel = s.CalcularMateriaColetavel(salarioBruto, totalSujeicaoIrt, inss)
-var irt = s.CalcularIrt(materialColetavel)
-var totalDesconto = s.CalcularTotalDesconto(inss, irt)
+var subsidioTransporteMensal = calculadorIrt.CalcularSubsidioMensal(diasUteis, subsidioTransporteDiario)
+var subsidioAlimentacaoMensal = calculadorIrt.CalcularSubsidioMensal(diasUteis, subsidioAlimentacaoDiario)
+var salarioBruto = calculadorIrt.CalcularSalariobruto(subsidioTransporteMensal, subsidioAlimentacaoMensal)
+var totalSujeicaoIrt = calculadorIrt.CalcularSujeicaoIrt(subsidioTransporteMensal, subsidioAlimentacaoMensal)
+var inss = calculadorIrt.CalcualrInssDoTrabalhador(salarioBruto)
+var materialColetavel = calculadorIrt.CalcularMateriaColetavel(salarioBruto, totalSujeicaoIrt, inss)
+var irt = calculadorIrt.CalcularIrt(materialColetavel)
+var totalDesconto = calculadorIrt.CalcularTotalDesconto(inss, irt)
 
 func TestCalcularSubsidioMensalDeAlimentacao(t *testing.T) {
 	t.Run("Deve calcular o subsidio de alimentação mensal caso for informado dias uteis de trabalho e o subsidio diario de alimentação", func(t *testing.T) {
 		//act
-		subsidioAlimentacaoMensal := s.CalcularSubsidioMensal(diasUteis, subsidioAlimentacaoDiario)
+		subsidioAlimentacaoMensal := calculadorIrt.CalcularSubsidioMensal(diasUteis, subsidioAlimentacaoDiario)
 
 		//assert
 		if subsidioAlimentacaoMensal <= 0 {
@@ -54,7 +54,7 @@ func TestCalcularSubsidioMensalDeAlimentacao(t *testing.T) {
 
 	t.Run("Deve calcular o subsidio de alimentação mensal caso for informado apenas o subsidio diario de alimentação", func(t *testing.T) {
 		//act
-		subsidioAlimentacaoMensal := s.CalcularSubsidioMensal(0, subsidioAlimentacaoDiario)
+		subsidioAlimentacaoMensal := calculadorIrt.CalcularSubsidioMensal(0, subsidioAlimentacaoDiario)
 
 		//assert
 		if subsidioAlimentacaoMensal <= 0 {
@@ -67,7 +67,7 @@ func TestCalcularSubsidioMensalDeAlimentacao(t *testing.T) {
 func TestCalcularSubsidioMensalDeTransporte(t *testing.T) {
 	t.Run("Deve calcular o subsidio de transporte mensal caso for informado os dias uteis de trabalho subsidio diario de transporte", func(t *testing.T) {
 		//act
-		subsidioTransporteMensal := s.CalcularSubsidioMensal(diasUteis, subsidioTransporteDiario)
+		subsidioTransporteMensal := calculadorIrt.CalcularSubsidioMensal(diasUteis, subsidioTransporteDiario)
 
 		//assert
 		if subsidioTransporteMensal <= 0 {
@@ -77,7 +77,7 @@ func TestCalcularSubsidioMensalDeTransporte(t *testing.T) {
 
 	t.Run("Não deve calcular o subsidio de transporte mensal caso não for informado os dias uteis de trabalho subsidio diario de transporte", func(t *testing.T) {
 		//act
-		subsidioTransporteMensal := s.CalcularSubsidioMensal(0, 0)
+		subsidioTransporteMensal := calculadorIrt.CalcularSubsidioMensal(0, 0)
 
 		//assert
 		if subsidioTransporteMensal > 0 {
@@ -87,7 +87,7 @@ func TestCalcularSubsidioMensalDeTransporte(t *testing.T) {
 
 	t.Run("Deve calcular o subsidio de transporte mensal caso for informado apenas subsidio diario de transporte", func(t *testing.T) {
 		//act
-		subsidioTransporteMensal := s.CalcularSubsidioMensal(0, subsidioTransporteDiario)
+		subsidioTransporteMensal := calculadorIrt.CalcularSubsidioMensal(0, subsidioTransporteDiario)
 
 		//assert
 		if subsidioTransporteMensal <= 0 {
@@ -97,7 +97,7 @@ func TestCalcularSubsidioMensalDeTransporte(t *testing.T) {
 
 	t.Run("Não deve calcular o subsidio de transporte mensal caso não for informado os dias uteis de trabalho e o subsidio diario de transporte", func(t *testing.T) {
 		//act
-		subsidioTransporteMensal := s.CalcularSubsidioMensal(0, 0)
+		subsidioTransporteMensal := calculadorIrt.CalcularSubsidioMensal(0, 0)
 
 		//assert
 		if subsidioTransporteMensal > 0 {
@@ -110,7 +110,7 @@ func TestCalcularSubsidioMensalDeTransporte(t *testing.T) {
 func TestCalcularSalarioBase(t *testing.T) {
 	t.Run("Deve calcular o salario bruto com dias uteis de trabalho informado", func(t *testing.T) {
 		//act
-		salarioBruto := s.CalcularSalariobruto(subsidioTransporteMensal, subsidioAlimentacaoMensal, float64(premios), float64(salarioBase))
+		salarioBruto := calculadorIrt.CalcularSalariobruto(subsidioTransporteMensal, subsidioAlimentacaoMensal, float64(premios), float64(salarioBase))
 
 		//assert
 
@@ -121,7 +121,7 @@ func TestCalcularSalarioBase(t *testing.T) {
 
 	t.Run("Deve calcular o salario bruto sem dias uteis de trabalho informado", func(t *testing.T) {
 		//act
-		salarioBruto := s.CalcularSalariobruto(subsidioTransporteMensal, subsidioAlimentacaoMensal, float64(premios), float64(salarioBase))
+		salarioBruto := calculadorIrt.CalcularSalariobruto(subsidioTransporteMensal, subsidioAlimentacaoMensal, float64(premios), float64(salarioBase))
 
 		//assert
 		if salarioBruto <= 0 {
@@ -132,7 +132,7 @@ func TestCalcularSalarioBase(t *testing.T) {
 	t.Run("Deve calcular o salario base apôs falta com dias uteis de trabalho informado", func(t *testing.T) {
 
 		//act
-		salarioBaseAposFalta := s.CalcualrSalarioBaseApoisFalta(diasUteis, falta, salarioBase)
+		salarioBaseAposFalta := calculadorIrt.CalcualrSalarioBaseApoisFalta(diasUteis, falta, salarioBase)
 
 		//assert
 
@@ -143,7 +143,7 @@ func TestCalcularSalarioBase(t *testing.T) {
 
 	t.Run("Deve calcular o salario base apôs falta sem dias uteis de trabalho informado", func(t *testing.T) {
 		//act
-		salarioBaseAposFalta := s.CalcualrSalarioBaseApoisFalta(0, falta, salarioBase)
+		salarioBaseAposFalta := calculadorIrt.CalcualrSalarioBaseApoisFalta(0, falta, salarioBase)
 
 		//assert
 		if salarioBaseAposFalta <= 0 {
@@ -156,7 +156,7 @@ func TestCalcularSalarioBase(t *testing.T) {
 func TestCalcularInssDoTrabalhador(t *testing.T) {
 	t.Run("Deve calcular o inss do trabalhador no salario bruto ou iliquido", func(t *testing.T) {
 		//act
-		inss := s.CalcualrInssDoTrabalhador(salarioBruto)
+		inss := calculadorIrt.CalcualrInssDoTrabalhador(salarioBruto)
 
 		//assert
 
@@ -167,7 +167,7 @@ func TestCalcularInssDoTrabalhador(t *testing.T) {
 
 	t.Run("Não deve calcular o inss do trabalhador sem o salário bruto ou iliquido", func(t *testing.T) {
 		//act
-		inss := s.CalcualrInssDoTrabalhador(0)
+		inss := calculadorIrt.CalcualrInssDoTrabalhador(0)
 		//assert
 		if inss > 0 {
 			t.Errorf("O inss não deve ser maior %.2f ", inss)
@@ -178,7 +178,7 @@ func TestCalcularInssDoTrabalhador(t *testing.T) {
 func TestCalcularSujeicaoDoIrt(t *testing.T) {
 	t.Run("Deve calcular a sujeição do irt", func(t *testing.T) {
 		//act
-		totalSujeicaoIrt := s.CalcularSujeicaoIrt(subsidioTransporteMensal, subsidioAlimentacaoMensal)
+		totalSujeicaoIrt := calculadorIrt.CalcularSujeicaoIrt(subsidioTransporteMensal, subsidioAlimentacaoMensal)
 		//assert
 
 		if totalSujeicaoIrt < 0 {
@@ -186,21 +186,11 @@ func TestCalcularSujeicaoDoIrt(t *testing.T) {
 		}
 	})
 
-	t.Run("Deve calcular a sujeição do irt sem dias uteis de trabalho informado", func(t *testing.T) {
+	t.Run("Não deve calcular a sujeição do irt sem subsidio de transporte, alimentação diario informado", func(t *testing.T) {
 		//act
-		totalSujeicaoIrt := s.CalcularSujeicaoIrt(subsidioTransporteMensal, subsidioAlimentacaoMensal)
+		totalSujeicaoIrt := calculadorIrt.CalcularSujeicaoIrt(0, 0)
+
 		//assert
-
-		if totalSujeicaoIrt < 0 {
-			t.Errorf("A sujeição de irt não pode ser menor %.2f ", totalSujeicaoIrt)
-		}
-	})
-
-	t.Run("Não deve calcular a sujeição do irt sem subsidio de transporte, alimentação diario e dias uteis de trabalho informado", func(t *testing.T) {
-		//act
-		totalSujeicaoIrt := s.CalcularSujeicaoIrt(0, 0)
-		//assert
-
 		if totalSujeicaoIrt > 0 {
 			t.Errorf("A sujeição de irt não pode ser menor %.2f ", totalSujeicaoIrt)
 		}
@@ -209,42 +199,22 @@ func TestCalcularSujeicaoDoIrt(t *testing.T) {
 
 func TestCalcularMateriaColetave(t *testing.T) {
 	t.Run("Deve calcular a materia coletavel", func(t *testing.T) {
-		// arrange
-		subsidioTransporteMensal := s.CalcularSubsidioMensal(diasUteis, subsidioTransporteDiario)
-		subsidioAlimentacaoMensal := s.CalcularSubsidioMensal(diasUteis, subsidioAlimentacaoDiario)
-		totalSujeicaoIrt := s.CalcularSujeicaoIrt(subsidioTransporteMensal, subsidioAlimentacaoMensal)
-		inss := s.CalcualrInssDoTrabalhador(salarioBase)
 
 		//act
-		materialColetavel := s.CalcularMateriaColetavel(salarioBase, totalSujeicaoIrt, inss)
+		materialColetavel := calculadorIrt.CalcularMateriaColetavel(salarioBase, totalSujeicaoIrt, inss)
 		//assert
 		if materialColetavel < 0 {
 			t.Errorf("O material coletavel não deve ser igual %.2f", materialColetavel)
 		}
 	})
 
-	t.Run("Deve calcular a materia coletavel sem dias uteis de trabalho informado", func(t *testing.T) {
+	t.Run("Não deve calcular a materia coletavel sem subsidio de transporte, alimentação mensal", func(t *testing.T) {
 		// arrange
-		subsidioTransporteMensal := s.CalcularSubsidioMensal(0, subsidioTransporteDiario)
-		subsidioAlimentacaoMensal := s.CalcularSubsidioMensal(0, subsidioAlimentacaoDiario)
-		totalSujeicaoIrt := s.CalcularSujeicaoIrt(subsidioTransporteMensal, subsidioAlimentacaoMensal)
-		inss := s.CalcualrInssDoTrabalhador(salarioBase)
+		totalSujeicaoIrt := calculadorIrt.CalcularSujeicaoIrt(0, 0)
+		inss := calculadorIrt.CalcualrInssDoTrabalhador(salarioBase)
 
 		//act
-		materialColetavel := s.CalcularMateriaColetavel(salarioBase, totalSujeicaoIrt, inss)
-		//assert
-		if materialColetavel < 0 {
-			t.Errorf("O material coletavel não deve ser igual %.2f", materialColetavel)
-		}
-	})
-
-	t.Run("Não deve calcular a materia coletavel sem subsidio de transporte, alimentação mensal e  dias uteis de trabalho informado", func(t *testing.T) {
-		// arrange
-		totalSujeicaoIrt := s.CalcularSujeicaoIrt(0, 0)
-		inss := s.CalcualrInssDoTrabalhador(salarioBase)
-
-		//act
-		materialColetavel := s.CalcularMateriaColetavel(salarioBase, totalSujeicaoIrt, inss)
+		materialColetavel := calculadorIrt.CalcularMateriaColetavel(salarioBase, totalSujeicaoIrt, inss)
 		//assert
 		if materialColetavel < 0 {
 			t.Errorf("O material coletavel não deve ser igual %.2f", materialColetavel)
@@ -254,50 +224,9 @@ func TestCalcularMateriaColetave(t *testing.T) {
 
 func TestCalcularDescontoTotal(t *testing.T) {
 	t.Run("Deve calcular o total de desconto", func(t *testing.T) {
-		// arrange
 
 		//act
-		totalDesconto := s.CalcularTotalDesconto(inss, irt)
-		//assert
-
-		if totalDesconto < 0 {
-			t.Errorf("O total de desconto não pode ser negativo %.2f", totalDesconto)
-		}
-	})
-
-	t.Run("Deve calcular o total de desconto sem dias uteis de trabalho informado", func(t *testing.T) {
-		//act
-		totalDesconto := s.CalcularTotalDesconto(inss, irt)
-		//assert
-
-		if totalDesconto < 0 {
-			t.Errorf("O total de desconto não pode ser negativo %.2f", totalDesconto)
-		}
-	})
-
-	t.Run("Deve calcular o total de desconto sem dias uteis de trabalho informado", func(t *testing.T) {
-		//act
-		totalDesconto := s.CalcularTotalDesconto(inss, irt)
-		//assert
-
-		if totalDesconto < 0 {
-			t.Errorf("O total de desconto não pode ser negativo %.2f", totalDesconto)
-		}
-	})
-
-	t.Run("Deve calcular o total de desconto sem subsidio de transporte, alimentação mensal e dias uteis de trabalho", func(t *testing.T) {
-		//act
-		totalDesconto := s.CalcularTotalDesconto(inss, irt)
-		//assert
-
-		if totalDesconto < 0 {
-			t.Errorf("O total de desconto não pode ser calculado %.2f ", totalDesconto)
-		}
-	})
-
-	t.Run("Deve calcular o total de desconto sem dias uteis de trabalho", func(t *testing.T) {
-		//act
-		totalDesconto := s.CalcularTotalDesconto(inss, irt)
+		totalDesconto := calculadorIrt.CalcularTotalDesconto(inss, irt)
 		//assert
 
 		if totalDesconto < 0 {
@@ -310,11 +239,21 @@ func TestCalcularIrt(t *testing.T) {
 
 	t.Run("Deve calcular o irt", func(t *testing.T) {
 		//act
-		irt := s.CalcularIrt(materialColetavel)
+		irt := calculadorIrt.CalcularIrt(materialColetavel)
 		//assert
 
 		if irt < 0 {
 			t.Errorf("O irt não pode ser negativo %.2f", irt)
+		}
+	})
+
+	t.Run("Não deve calcular o irt sem materia coletavel", func(t *testing.T) {
+		//act
+		irt := calculadorIrt.CalcularIrt(0)
+		//assert
+
+		if irt < 0 {
+			t.Errorf("O irt não pode ser claculado %.2f", irt)
 		}
 	})
 }
@@ -322,10 +261,20 @@ func TestCalcularIrt(t *testing.T) {
 func TestCalcularSalarioLiquido(t *testing.T) {
 	t.Run("Deve calcular o salário líquido", func(t *testing.T) {
 		//act
-		salaioLiquido := s.CalcularSalarioLiquido(salarioBruto, totalDesconto)
+		salaioLiquido := calculadorIrt.CalcularSalarioLiquido(salarioBruto, totalDesconto)
 		//assert
 		if salaioLiquido < 0 {
 			t.Errorf("O salário líquido não pode ser negativo %.2f", totalDesconto)
 		}
 	})
+
+	t.Run("Não deve calcular o salário líquido sem o salário bruto", func(t *testing.T) {
+		//act
+		salaioLiquido := calculadorIrt.CalcularSalarioLiquido(0, totalDesconto)
+		//assert
+		if salaioLiquido > 0 {
+			t.Errorf("O salário líquido não pode ser calculado %.2f", totalDesconto)
+		}
+	})
+
 }

@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	
+
 	tabela := []dadosIrt.TabelaIrt{
 		{ValorInicial: 0, Limite: 100000, ParcelaFixa: 0, Excesso: 0, Taxa: 0},
 		{ValorInicial: 1001000, Limite: 150000, ParcelaFixa: 0, Excesso: 100001, Taxa: 0.13},

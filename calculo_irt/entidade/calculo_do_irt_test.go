@@ -121,7 +121,8 @@ func TestCalcularSalarioBase(t *testing.T) {
 
 	t.Run("Deve calcular o salario bruto sem dias uteis de trabalho informado", func(t *testing.T) {
 		//act
-		salarioBruto := calculadorIrt.CalcularSalariobruto(subsidioTransporteMensal, subsidioAlimentacaoMensal, float64(premios), float64(salarioBase))
+		salarioBruto := calculadorIrt.CalcularSalariobruto(subsidioTransporteMensal, subsidioAlimentacaoMensal, 
+			float64(premios), float64(salarioBase))
 
 		//assert
 		if salarioBruto <= 0 {
